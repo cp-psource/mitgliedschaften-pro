@@ -1,5 +1,5 @@
 <?php
-class MS_Addon_Bbpress extends MS_Addon {
+class MS_Addon_Bbpress extends MS_Addon { 
 
 	/**
 	 * The Add-on ID
