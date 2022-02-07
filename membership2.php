@@ -20,7 +20,7 @@
  *
  * @copyright WMS N@W (https://n3rds.work/)
  *
- * Authors: DerN3rd, Philipp Stracker, Fabio Jun Onishi, Victor Ivanov, Jack Kitterhing, Rheinard Korf, Ashok Kumar Nath, Paul Kevin
+ * Authors: DerN3rd
  * 
  *
  * @license http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2 (GPL-2.0)

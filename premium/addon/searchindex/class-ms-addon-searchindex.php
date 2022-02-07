@@ -142,30 +142,30 @@ class MS_Addon_Searchindex extends MS_Addon {
 	 */
 	public function register( $list ) {
 		$list[ self::ID ] = (object) array(
-			'name' => __( 'Search Index', 'membership2' ),
-			'description' => __( 'Allow Search Engines to index protected content.', 'membership2' ),
+			'name' => __( 'Suchindex', 'membership2' ),
+			'description' => __( 'Erlaube Suchmaschinen, geschützte Inhalte zu indizieren.', 'membership2' ),
 			'icon' => 'wpmui-fa wpmui-fa-search',
 			'details' => array(
 				array(
 					'type' => MS_Helper_Html::TYPE_HTML_TEXT,
 					'value' => sprintf(
 						'%s<br><br>%s',
-						__( 'The special Membership "<b>Search Index</b>" is available in your Protection Rules page.<br>All content that is made available for that Membership is always visible to search engine crawlers.', 'membership2' ),
-						__( 'Supported Search Engines: Google, Yahoo, Bing', 'membership2' )
+						__( 'Der spezielle Mitgliedschafts-"<b>Suchindex</b>" ist auf Deiner Seite "Schutzregeln" verfügbar.<br>Alle Inhalte, die für diese Mitgliedschaft verfügbar gemacht werden, sind für Suchmaschinen-Crawler immer sichtbar.', 'membership2' ),
+						__( 'Unterstützte Suchmaschinen: Google, Yahoo, Bing', 'membership2' )
 					),
 				),
 				array(
 					'id' => 'first_click_free',
 					'type' => MS_Helper_Html::INPUT_TYPE_RADIO_SLIDER,
-					'title' => __( 'First Click Free', 'membership2' ),
+					'title' => __( 'Erster Klick Frei', 'membership2' ),
 					'desc' => sprintf(
-						__( 'All content that is available for Search engines is also available for all visitors that <b>directly arrive from a search engine</b> ("%sFirst Click Free%s" policy)<br>Disabling this feature might earn your site penalties by Google', 'membership2' ),
+						__( 'Alle Inhalte, die für Suchmaschinen verfügbar sind, stehen auch allen Besuchern zur Verfügung, die <b>direkt von einer Suchmaschine kommen</b> ("%sFirst Click Free%s" policy)<br>Disabling this feature might earn your site penalties by Google', 'membership2' ),
 						'<a href="http://googlewebmastercentral.blogspot.com/2008/10/first-click-free-for-web-search.html" target="_blank">',
 						'</a>'
 					),
 					'class' => 'has-labels',
-					'before' => __( 'Disable "First Click Free"', 'membership2' ),
-					'after' => __( 'Allow "First Click Free"', 'membership2' ),
+					'before' => __( '„Erster Klick Frei“ deaktivieren', 'membership2' ),
+					'after' => __( '"Erster Klick Frei" zulassen', 'membership2' ),
 					'value' => $this->first_click_free,
 					'ajax_data' => array(
 						'action' => $this->ajax_action(),
@@ -217,7 +217,7 @@ class MS_Addon_Searchindex extends MS_Addon {
 	 * @return array Modified list of type names.
 	 */
 	public function get_types( $types ) {
-		$types[self::MEMBERSHIP_TYPE] = __( 'Search Index', 'membership2' );
+		$types[self::MEMBERSHIP_TYPE] = __( 'Suchindex', 'membership2' );
 
 		return $types;
 	}
@@ -331,8 +331,8 @@ class MS_Addon_Searchindex extends MS_Addon {
 		if ( self::MEMBERSHIP_TYPE == $membership->type ) {
 			$badge = sprintf(
 				'<span class="ms-badge" data-wpmui-tooltip="%2$s" data-width="180">%1$s</span>',
-				__( 'Search-Engine', 'membership2' ),
-				__( 'Define what content can be indexed by a Search Engine', 'membership2' )
+				__( 'Suchmaschine', 'membership2' ),
+				__( 'Definiere, welche Inhalte von einer Suchmaschine indexiert werden können', 'membership2' )
 			);
 		}
 
