@@ -505,7 +505,7 @@ class MS_Controller_Plugin extends MS_Controller {
 			),
 			'billing'           => false,
 			'addon'             => array(
-				'title' => __( 'Add-ons', 'membership2' ),
+				'title' => __( 'Erweiterungen', 'membership2' ),
 				'slug'  => 'addon',
 			),
 			'settings'          => array(

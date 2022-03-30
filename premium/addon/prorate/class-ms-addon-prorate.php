@@ -57,22 +57,22 @@ class MS_Addon_Prorate extends MS_Addon {
 	public function register( $list ) {
 		$list[ self::ID ] = (object) array(
 			'name' => __( 'Pro-Rating', 'membership2' ),
-			'description' => __( 'Pro-Rate previous payments when switching memberships.', 'membership2' ),
+			'description' => __( 'Anteilige vorherige Zahlungen beim Wechseln der Mitgliedschaft.', 'membership2' ),
 			'icon' => 'wpmui-fa wpmui-fa-money',
 			'details' => array(
 				array(
 					'type' => MS_Helper_Html::TYPE_HTML_TEXT,
-					'value' => __( 'Pro-Rating is applied when a user upgrades/downgrades a membership. Not when he cancels and subscribes in two steps.<br><br>Reason:<br>When a user cancels a membership he keeps access to the membership until the current period expires (exception: permanent access expires instantly)', 'membership2' ),
+					'value' => __( 'Pro-Rating wird angewendet, wenn ein Benutzer eine Mitgliedschaft hoch- oder herunterstuft. Nicht, wenn er in zwei Schritten kündigt und abonniert.<br><br>Grund:<br>Wenn ein Benutzer eine Mitgliedschaft kündigt, behält er den Zugriff auf die Mitgliedschaft, bis der aktuelle Zeitraum abläuft (Ausnahme: Der dauerhafte Zugriff erlischt sofort).', 'membership2' ),
 				),
 				array(
 					'type' => MS_Helper_Html::TYPE_HTML_TEXT,
-					'title' => '<b>' . __( 'When Multiple Memberships Add-on is disabled', 'membership2' ) . '</b>',
-					'value' => __( 'Changing a membership always expires the old memberships and adds a subscription for the the new membership <em>in one step</em>. Pro Rating is always applied here.', 'membership2' ),
+					'title' => '<b>' . __( 'Wenn das Add-on für mehrere Mitgliedschaften deaktiviert ist', 'membership2' ) . '</b>',
+					'value' => __( 'Das Ändern einer Mitgliedschaft lässt immer die alten Mitgliedschaften auslaufen und fügt ein Abonnement für die neue Mitgliedschaft <em>in einem Schritt</em> hinzu. Pro Rating wird hier immer angewendet.', 'membership2' ),
 				),
 				array(
 					'type' => MS_Helper_Html::TYPE_HTML_TEXT,
-					'title' => '<b>' . __( 'When Multiple Memberships Add-on is enabled', 'membership2' ) . '</b>',
-					'value' => __( 'Only when you manually set the "Cancel and Pro-Rate" setting in the Upgrade Paths settings of the membership then the change is recognized as upgrade/downgrade. In this case the old membership is deactivated when the new subscription is created.<br>If you do not set this option the default logic applies: The user can access the old membership for the duration he paid, even when he cancels earlier. So no Pro-Rating then.', 'membership2' ),
+					'title' => '<b>' . __( 'Wenn das Add-on für mehrere Mitgliedschaften aktiviert ist', 'membership2' ) . '</b>',
+					'value' => __( 'Nur wenn Du die Einstellung „Kündigen und anteilig“ in den Upgrade-Pfad-Einstellungen der Mitgliedschaft manuell setzt, wird die Änderung als Upgrade/Downgrade erkannt. In diesem Fall wird die alte Mitgliedschaft deaktiviert, wenn das neue Abonnement erstellt wird.<br>Wenn Du diese Option nicht setzt, gilt die Standardlogik: Der Benutzer kann für die von ihm bezahlte Dauer auf die alte Mitgliedschaft zugreifen, auch wenn er früher kündigt. Also kein Pro-Rating.', 'membership2' ),
 				),
 			),
 		);
@@ -130,7 +130,7 @@ class MS_Addon_Prorate extends MS_Addon {
 		if ( $pro_rate > 0 ) {
 			$invoice->pro_rate = $pro_rate;
 			$notes[] = sprintf(
-				__( 'Pro-Rate Discount: %s.', 'membership2' ) . ' ',
+				__( 'Anteiliger Rabatt: %s.', 'membership2' ) . ' ',
 				$invoice->currency . ' ' . $pro_rate
 			);
 		}

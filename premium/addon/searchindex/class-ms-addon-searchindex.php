@@ -1,6 +1,6 @@
 <?php
 /**
- * Add-on: Allow Search-Engines to index protected content.
+ * Add-on: Erlaube Suchmaschinen, geschützte Inhalte zu indizieren.
  *
  * @since  1.0.1.0
  */
