@@ -46,7 +46,7 @@
  *
  * @since  1.0.0
  */
-require 'lib/psource-plugin-update/plugin-update-checker.php';
+require 'psource/psource-plugin-update/psource-plugin-updater.php';
 $MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=mitgliedschaften-pro', 
 	__FILE__, 

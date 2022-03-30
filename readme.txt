@@ -29,7 +29,13 @@ PS Mitgliederschaften ist das benutzerfreundlichste Mitgliedschafts-Plugin für 
 
 == ChangeLog ==
 
-= 1.2.1 = Schutzregeln für PS Forum integriert
+= 1.2.1 =
+
+* Psource Updater V.1.1
+
+= 1.2.1 = 
+
+* Schutzregeln für PS Forum integriert
 
 = 1.2.0 = DerN3rd =
 
