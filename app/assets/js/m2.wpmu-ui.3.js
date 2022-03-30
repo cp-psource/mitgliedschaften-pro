@@ -1,17 +1,17 @@
-/*! Membership 2 Pro - v1.1.8
+/*! PS-Mitgliedschaften Pro - v1.1.8
  * https://n3rds.work/docs/ps-mitgliedschaften-plugin-handbuch/
- * Copyright (c) 2019-2021; * Licensed GPLv2+ */
-/*! WPMU Dev code library - v3.0.4
- * http://premium.wpmudev.org/
- * Copyright (c) 2017; * Licensed GPLv2+ */
+ * Copyright (c) 2019-2022; * Licensed GPLv2+ */
+/*! WMS N@W Code library - v3.0.4
+ * https://n3rds.work/
+ * Copyright (c) 22; * Licensed GPLv2+ */
 /*!
- * WPMU Dev UI library
- * (Philipp Stracker for WPMU Dev)
+ * WMS N@W UI library
+ * (DerN3rd WMS N@W)
  *
  * This library provides a Javascript API via the global wpmUi object.
  *
  * @version  1.0.0
- * @author   Philipp Stracker for WPMU Dev
+ * @author   DerN3rd WMS N@W
  * @link     http://appendto.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/
  * @requires jQuery
  */

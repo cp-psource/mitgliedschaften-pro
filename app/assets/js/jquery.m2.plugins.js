@@ -1,6 +1,6 @@
-/*! Membership 2 Pro - v1.1.8
+/*! PS-Mitgliedschaften Pro - v1.1.8
  * https://n3rds.work/docs/ps-mitgliedschaften-plugin-handbuch/
- * Copyright (c) 2019-2021; * Licensed GPLv2+ */
+ * Copyright (c) 2019-2022; * Licensed GPLv2+ */
 /*!------------------------------------------------------
  * jQuery nearest v1.0.3
  * http://github.com/jjenzz/jQuery.nearest

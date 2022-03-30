@@ -57,6 +57,8 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 * Login hat Modernes Flex CSS Spendiert bekommen
 * Textanpassung Login
+* Weitere Textübersetzungen (JS)
+* Minify JS
 
 = 1.2.2 =
 
