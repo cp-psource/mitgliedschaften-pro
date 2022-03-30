@@ -968,7 +968,7 @@ class MS_Controller_Frontend extends MS_Controller {
 					'show_remember'   => true,
 					'label_username'  => __( 'Benutzername', 'membership2' ),
 					'label_password'  => __( 'Passwort', 'membership2' ),
-					'label_remember'  => __( 'Mich merken', 'membership2' ),
+					'label_remember'  => __( 'Login speichern', 'membership2' ),
 					'label_log_in'    => __( 'Anmelden', 'membership2' ),
 					'id_login_form'   => 'loginform',
 					'id_username'     => 'user_login',

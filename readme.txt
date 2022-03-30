@@ -56,6 +56,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 = 1.2.3 =
 
 * Login hat Modernes Flex CSS Spendiert bekommen
+* Textanpassung Login
 
 = 1.2.2 =
 
