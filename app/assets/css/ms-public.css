@@ -391,7 +391,9 @@ label.ms-validation-error:before {
   float: none;
 }
 .ms-form.ms-no-labels p {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ms-form:after {
   content: '';

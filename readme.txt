@@ -53,6 +53,10 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == ChangeLog ==
 
+= 1.2.3 =
+
+* Login hat Modernes Flex CSS Spendiert bekommen
+
 = 1.2.2 =
 
 * Psource Updater V.1.1
