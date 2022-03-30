@@ -1,6 +1,6 @@
 /**
- * WPMU Dev Card-List styles
- * (Philipp Stracker for WPMU Dev)
+ * Psource Card-List styles
+ * (DerN3rd WMS N@W)
  *
  * @since 1.1.0
  */
@@ -26,6 +26,12 @@
   box-sizing: border-box;
   opacity: .8;
 }
+@media screen and (max-width: 782px){
+  #wpwrap .wpmui-list-wrapper .list-card,
+  .wpmui-list-wrapper .list-card {
+    width: 100% !important;
+  }
+}
 #wpwrap .wpmui-list-wrapper .list-card .badge-container,
 .wpmui-list-wrapper .list-card .badge-container {
   overflow: hidden;
@@ -46,6 +52,12 @@
   border: 1px solid #BBB;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   z-index: 20;
+}
+@media screen and (max-width: 782px){
+  #wpwrap .wpmui-list-wrapper .list-card.active,
+  .wpmui-list-wrapper .list-card.active {
+  width: 100% !important;
+  }
 }
 #wpwrap .wpmui-list-wrapper .list-card.active .desc,
 #wpwrap .wpmui-list-wrapper .list-card.active .name,

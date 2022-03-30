@@ -32,6 +32,7 @@ PS Mitgliederschaften ist das benutzerfreundlichste Mitgliedschafts-Plugin für 
 = 1.2.1 =
 
 * Psource Updater V.1.1
+* Erweiterungen sind jetzt auch Responsiv gut bedienbar
 
 = 1.2.1 = 
 
