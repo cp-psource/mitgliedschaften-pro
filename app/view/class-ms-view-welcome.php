@@ -35,7 +35,7 @@ class MS_View_Welcome extends MS_View {
 				</h2>
 
 				<div class="ms-welcome-text">
-					<?php _e( 'Hallo und willkommen bei <strong>Mitgliedschaften</ strong>. Befolge diese einfache Einrichtung <br />, um die Einstellungen zu ermitteln, die für Deine Anforderungen am relevantesten sind. Keine Sorge, Du<br />kannst diese Einstellungen später jederzeit wieder ändern', 'membership2' ); ?>
+					<?php _e( 'Hallo und willkommen bei <strong>Mitgliedschaften</ strong>. Befolge diese einfache Einrichtung, <br /> um die Einstellungen zu ermitteln, die für Deine Anforderungen am relevantesten sind. Keine Sorge, Du<br />kannst diese Einstellungen später jederzeit wieder ändern', 'membership2' ); ?>
 				</div>
 
 				<div class="ms-welcome-image-box">
