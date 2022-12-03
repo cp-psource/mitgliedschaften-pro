@@ -4,7 +4,7 @@
  * Plugin URI:  https://n3rds.work
  * Description: Framework to support creating WordPress plugins and themes.
  * Version:     3.0.5
- * Author:      WPMU DEV
+ * Author:      WMS N@W
  * Author URI:  https://n3rds.work
  * Textdomain:  wpmu-lib
  *

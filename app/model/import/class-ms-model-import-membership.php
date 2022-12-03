@@ -1,6 +1,6 @@
 <?php
 /**
- * Imports data from WPMU DEV Membership plugin.
+ * Imports data from WMS N@W Membership plugin.
  *
  * @since  1.0.0
  * @package Membership2
