@@ -59,6 +59,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 * Textanpassung Login
 * Weitere Textübersetzungen (JS)
 * Minify JS
+* WP_Scripts::localize Fix
 
 = 1.2.2 =
 

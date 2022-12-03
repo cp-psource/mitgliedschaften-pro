@@ -1066,7 +1066,7 @@ class MS_Controller_Plugin extends MS_Controller {
 		wp_localize_script(
 			'ms-admin',
 			'ms_admin_text',
-			$this->admin_localize_text()
+			array($this->admin_localize_text())
 		);
 	}
 

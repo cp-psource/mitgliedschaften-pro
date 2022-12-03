@@ -150,7 +150,7 @@ class MS_Rule_MenuItem_Model extends MS_Rule {
 	 *
 	 * Menu-Item protection is split into two steps to ensure correct
 	 * menu-visibility when users are members of multiple memberships.
-	 * http://premium.wpmudev.org/forums/topic/multiple-membership-types-defaults-to-less-access-protected-content
+	 * https://n3rds.workforums/topic/multiple-membership-types-defaults-to-less-access-protected-content
 	 *
 	 * Relevant Action Hooks:
 	 * - wp_get_nav_menu_items

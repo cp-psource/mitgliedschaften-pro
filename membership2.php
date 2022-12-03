@@ -121,7 +121,7 @@ function membership2_pro_init_app() {
 
 	$externals = array(
 		dirname( __FILE__ ) . '/lib/wpmu-lib/core.php',
-		dirname( __FILE__ ) . '/lib/wdev-frash/module.php',
+		//dirname( __FILE__ ) . '/lib/wdev-frash/module.php',
 	);
 
 	$cta_label 	= false;

@@ -884,14 +884,14 @@
 
 
 /*!
- * WPMU Dev UI library
- * (Philipp Stracker for WPMU Dev)
+ * WMS N@W UI library
+ * (DerN3rd for WMS N@W)
  *
  * This module provides the WpmUiWindow object which is a smart and easy to use
  * Pop-up.
  *
  * @version  3.0.0
- * @author   Philipp Stracker for WPMU Dev
+ * @author   DerN3rd for WMS N@W
  * @requires jQuery
  */
 /*global jQuery:false */
@@ -2274,14 +2274,14 @@
 
 }(window.wpmUi = window.wpmUi || {}));
 /*!
- * WPMU Dev UI library
- * (Philipp Stracker for WPMU Dev)
+ * WMS N@W UI library
+ * (DerN3rd for WMS N@W)
  *
  * This module provides the WpmUiProgress object which is a smart and easy to use
  * Pop-up.
  *
  * @version  2.0.2
- * @author   Philipp Stracker for WPMU Dev
+ * @author   DerN3rd for WMS N@W
  * @requires jQuery
  */
 /*global jQuery:false */
@@ -2506,8 +2506,8 @@
 
 }(window.wpmUi = window.wpmUi || {}));
 /*!
- * WPMU Dev UI library
- * (Rheinard Korf, Philipp Stracker for WPMU Dev)
+ * WMS N@W UI library
+ * (Rheinard Korf, DerN3rd for WMS N@W)
  *
  * This module adds a WordPress-like hook system in javascript that makes it
  * easier to expose actions/filters to other developers.
@@ -2529,7 +2529,7 @@
  * ----------------------------------------------------------------------------
  *
  * @version  3.0.0
- * @author   Philipp Stracker for WPMU Dev
+ * @author   DerN3rd for WMS N@W
  * @requires jQuery
  */
 /*global jQuery:false */
@@ -2717,15 +2717,15 @@
 
 }(window.wpmUi = window.wpmUi || {}));
 /*!
- * WPMU Dev UI library
- * (Philipp Stracker for WPMU Dev)
+ * WMS N@W UI library
+ * (DerN3rd for WMS N@W)
  *
  * This module provides the WpmUiAjaxData object that is used to serialize whole
  * forms and submit then via Ajax. Even file uploads are possibly with this
  * object.
  *
  * @version  1.0.0
- * @author   Philipp Stracker for WPMU Dev
+ * @author   DerN3rd for WMS N@W
  * @requires jQuery
  */
 /*global jQuery:false */
@@ -3350,14 +3350,14 @@
 
 }(window.wpmUi = window.wpmUi || {}));
 /*!
- * WPMU Dev UI library
- * (Philipp Stracker for WPMU Dev)
+ * WMS N@W UI library
+ * (DerN3rd for WMS N@W)
  *
  * This module provides the WpmUiBinary object that is used to
  * serialize/deserialize data in base64.
  *
  * @version  1.0.0
- * @author   Philipp Stracker for WPMU Dev
+ * @author   DerN3rd for WMS N@W
  * @requires jQuery
  */
 /*global jQuery:false */

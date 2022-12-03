@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: WPMU Dev code library
- * Plugin URI:  http://premium.wpmudev.org/
+ * Plugin Name: WMS N@W code library
+ * Plugin URI:  https://n3rds.work
  * Description: Framework to support creating WordPress plugins and themes.
  * Version:     3.0.5
  * Author:      WPMU DEV
- * Author URI:  http://premium.wpmudev.org/
+ * Author URI:  https://n3rds.work
  * Textdomain:  wpmu-lib
  *
  * ============================================================================
