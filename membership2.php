@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PS Mitgliedschaften PRO
  * Plugin URI:  https://n3rds.work/piestingtal_source/ps-mitgliedschaften-plugin/
- * Version:     1.2.2
+ * Version:     1.2.3
  * Description: Das leistungsstärkste, benutzerfreundlichste und flexibelste Mitgliedschafts-Plugin für WordPress-Seiten.
  * Requires at least: 4.6
  * Tested up to: 5.7
@@ -75,7 +75,7 @@ function membership2_pro_init_app() {
 	 *
 	 * @since  1.0.0
 	 */
-	define( 'MS_PLUGIN_VERSION', '1.2.2' );
+	define( 'MS_PLUGIN_VERSION', '1.2.3' );
 
 	/**
 	 * Free or pro plugin?
