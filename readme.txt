@@ -4,7 +4,7 @@ Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free
 Tags: multisite, suche, netzwerksuche
 Requires at least: 4.9
 Tested up to: 5.6
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,6 +52,10 @@ Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktion
 Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
 
 == ChangeLog ==
+
+= 1.2.4 = DerN3rd =
+
+* Psource Updater 1.2 (Security Fixes, PhP8 Optimierung)
 
 = 1.2.3 =
 
