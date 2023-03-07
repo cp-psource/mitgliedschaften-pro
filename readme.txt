@@ -72,6 +72,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 * Fix: Fix: Incomplete multi-character sanitization
 * Fix: Inefficient regular expression
+* Fix: DOM text reinterpreted as HTML
 
 = 1.2.5 =
 

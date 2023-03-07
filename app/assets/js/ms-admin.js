@@ -2868,6 +2868,12 @@ window.ms_init.view_settings_mailchimp = function init() {
 /*global ms_data:false */
 /*global ms_functions:false */
 
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+  
 window.ms_init.view_settings_media = function init() {
     jQuery('#direct_access').on('ms-ajax-updated', function() {
         //update nginx rules
@@ -2876,13 +2882,13 @@ window.ms_init.view_settings_media = function init() {
             var array = excludedFiles.split(',');
             var $wp_content = jQuery('#wp_content_dir').val();
             var $extensions = array.join("|");
-            var newRule = "location ~* ^" + $wp_content + "/.*&#92;.(" + $extensions + ")$ {" +
+            var newRule = "location ~* ^" + $wp_content + "/.*\\.(" + $extensions + ")$ {" +
                 " \n  allow all;" +
                 "\n}";
-            jQuery('.application-servers-nginx-extra-instructions').html(newRule);
+            jQuery('.application-servers-nginx-extra-instructions').html(escapeHtml(newRule));
         }
     });
-
+  
     jQuery('#application_server').on('ms-ajax-updated', function() {
         //show server div
         var $selected = jQuery('#application_server').val();
