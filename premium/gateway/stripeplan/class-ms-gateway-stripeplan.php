@@ -169,7 +169,7 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 	/**
 	 * Creates the external Stripe-ID of the specified item.
 	 *
-	 * This ID takes the current WordPress Site-URL into account to avoid
+	 * This ID takes the current ClassicPress Site-URL into account to avoid
 	 * collissions when several Membership2 sites use the same stripe account.
 	 *
 	 * @since  1.0.0

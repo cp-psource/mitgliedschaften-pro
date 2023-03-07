@@ -248,7 +248,7 @@ class MS_Helper_Html extends MS_Helper {
 
 	/**
 	 * Echo the header of a content box. That box has a similar layout to a
-	 * normal WordPress meta-box.
+	 * normal ClassicPress meta-box.
 	 * The box has a title and description and can optionally be collapsible.
 	 *
 	 * @since  1.0.0
@@ -264,7 +264,7 @@ class MS_Helper_Html extends MS_Helper {
 			$state 	= ('closed' === $state ? 'closed' : 'open');
 			$handle = sprintf(
 				'<div class="handlediv" title="%s"></div>',
-				__( 'Klicke zum Umschalten', 'membership2' ) // Intentionally no text-domain, so we use WordPress default translation.
+				__( 'Klicke zum Umschalten', 'membership2' ) // Intentionally no text-domain, so we use ClassicPress default translation.
 			);
 		}
 		$box_class = $state;

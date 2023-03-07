@@ -1,7 +1,7 @@
 <?php
 /**
  * Communication model - user sign up.
- * Triggered when a new user creates an WordPress account.
+ * Triggered when a new user creates an ClassicPress account.
  *
  * Persisted by parent class MS_Model_CustomPostType.
  *

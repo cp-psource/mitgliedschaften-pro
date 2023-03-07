@@ -235,7 +235,7 @@ class MsTheLib_Array extends MsTheLib {
 	}
 
 	/**
-	 * By default WordPress escapes all GPC values with slashes.
+	 * By default ClassicPress escapes all GPC values with slashes.
 	 * {@see wp-includes/load.php wp_magic_quotes()}
 	 *
 	 * This function can be used to strip slashes of a list of parameters. This

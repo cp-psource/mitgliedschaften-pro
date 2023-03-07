@@ -4,10 +4,10 @@
  *
  * Modifications to use more than a list table within a page, avoiding element-id collisions.
  *
- * Copied from WordPress 3.8.3 as its recommendation
+ * Copied from ClassicPress 3.8.3 as its recommendation
  * http://codex.wordpress.org/Class_Reference/WP_ListTable
  * This class's access is marked as private. That means it is not intended for use by plugin
- * and theme developers as it is subject to change without warning in any future WordPress release.
+ * and theme developers as it is subject to change without warning in any future ClassicPress release.
  * If you would still like to make use of the class, you should make a copy to use and distribute
  * with your own project, or else use it at your own risk.
  *

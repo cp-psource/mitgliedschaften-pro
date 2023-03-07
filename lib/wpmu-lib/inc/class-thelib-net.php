@@ -73,7 +73,7 @@ class MsTheLib_Net extends MsTheLib {
 
 	/**
 	 * Changes a relative URL to an absolute URL.
-	 * This function uses WordPress `home_url()` to expand a relative URL.
+	 * This function uses ClassicPress `home_url()` to expand a relative URL.
 	 *
 	 * @uses home_url()
 	 *

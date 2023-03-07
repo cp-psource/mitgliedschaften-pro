@@ -12,7 +12,7 @@ class MS_Rule_MemberCaps_ListTable extends MS_Helper_ListTable_Rule {
 		parent::__construct( $model );
 		$this->name['singular'] 		= __( 'Fähigkeit', 'membership2' );
 		$this->name['plural'] 			= __( 'Fähigkeiten', 'membership2' );
-		$this->name['default_access'] 	= __( 'Standard WordPress Logik', 'membership2' );
+		$this->name['default_access'] 	= __( 'Standard ClassicPress Logik', 'membership2' );
 	}
 
 	public function get_columns() {

@@ -12,7 +12,7 @@ class MS_Rule_MemberRoles_ListTable extends MS_Helper_ListTable_Rule {
 		parent::__construct( $model );
 		$this->name['singular'] 		= __( 'Rolle', 'membership2' );
 		$this->name['plural'] 			= __( 'Rollen', 'membership2' );
-		$this->name['default_access'] 	= __( 'Standard WordPress Logik', 'membership2' );
+		$this->name['default_access'] 	= __( 'Standard ClassicPress Logik', 'membership2' );
 	}
 
 	public function get_columns() {

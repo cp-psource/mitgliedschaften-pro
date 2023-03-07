@@ -9,7 +9,7 @@ echo get_ms_registration_form_fields();
 echo '<div class="ms-extra-fields">';
 
 /**
- * Trigger default WordPress action to allow other plugins
+ * Trigger default ClassicPress action to allow other plugins
  * to add custom fields to the registration form.
  *
  * signup_extra_fields Defined in wp-signup.php which is used

@@ -94,7 +94,7 @@ class MS_Model_Simulate extends MS_Model_Transient {
 	 * Makes the current user a non-admin user during simulation
 	 *
 	 * @since  1.0.0
-	 * @param  string $result Set to False to use default WordPress value.
+	 * @param  string $result Set to False to use default ClassicPress value.
 	 * @return string Empty value means "no Administrator on this installation".
 	 */
 	public function admin_filter( $result ) {
@@ -258,8 +258,8 @@ class MS_Model_Simulate extends MS_Model_Transient {
 
 		/*
 		 * The following condition is needed to bypass Upfront virtual pages.
-		 * By checking for the WordPress filters we can find out if the current
-		 * page is rendered by WordPress or not (...not means Upfront)
+		 * By checking for the ClassicPress filters we can find out if the current
+		 * page is rendered by ClassicPress or not (...not means Upfront)
 		 */
 		$show_infos = true;
 		if ( ! is_admin() && ! did_action( 'wp_print_footer_scripts' ) ) {

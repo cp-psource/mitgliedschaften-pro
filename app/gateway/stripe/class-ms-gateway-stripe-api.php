@@ -136,7 +136,7 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 	}
 
 	/**
-	 * Add card info to Stripe customer profile and to WordPress user meta.
+	 * Add card info to Stripe customer profile and to ClassicPress user meta.
 	 *
 	 * @since  1.0.0
 	 * @api
@@ -174,7 +174,7 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 		 */
 		do_action( 'ms_gateway_stripe_credit_card_saved', $card, $member, $this );
 
-		// 2. Save card to WordPress user meta.
+		// 2. Save card to ClassicPress user meta.
 
 		if ( $card ) {
 			$member->set_gateway_profile(

@@ -1,6 +1,6 @@
 <?php
 /**
- * Add-On controller for: Add WordPress Res API
+ * Add-On controller for: Add ClassicPress Res API
  *
  * @since 1.0.4
  *
@@ -67,7 +67,7 @@ class MS_Addon_WPRest extends MS_Addon {
 	
 		$list[ self::ID ] = (object) array(
 			'name' 			=> __( 'Rest API', 'membership2' ),
-			'description' 	=> __( 'Aktiviere die WordPress REST-API für Mitgliedschaften', 'membership2' ),
+			'description' 	=> __( 'Aktiviere die ClassicPress REST-API für Mitgliedschaften', 'membership2' ),
 			'icon' 			=> 'wpmui-fa wpmui-fa-angle-double-up',
 			'action' 		=> array( __( 'Pro Version', 'membership2' ) ),
 		);

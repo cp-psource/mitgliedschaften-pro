@@ -16,7 +16,7 @@ class MS_Rule_ReplaceMenu_View extends MS_View {
 			'ms_view_membership_protectedcontent_header',
 			array(
 				'title' => __( 'Menüs ersetzen', 'membership2' ),
-				'desc' 	=> __( 'Ersetze oder schütze WordPress-Menüs.', 'membership2' ),
+				'desc' 	=> __( 'Ersetze oder schütze ClassicPress-Menüs.', 'membership2' ),
 			),
 			MS_Rule_ReplaceMenu::RULE_ID,
 			$this

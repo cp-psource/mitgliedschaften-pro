@@ -139,7 +139,7 @@ class MS_Controller_Pages extends MS_Controller {
 	}
 
 	/**
-	 * This filter is called by WordPress when the page-listtable is created to
+	 * This filter is called by ClassicPress when the page-listtable is created to
 	 * display all available Posts/Pages. We use this filter to add a note
 	 * to all pages that are special membership pages.
 	 *

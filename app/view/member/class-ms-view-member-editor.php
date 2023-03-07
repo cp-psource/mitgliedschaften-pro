@@ -71,7 +71,7 @@ class MS_View_Member_Editor extends MS_View {
 			'title' => array(
 				'type' => MS_Helper_Html::TYPE_HTML_TEXT,
 				'class' => 'group-title',
-				'value' => __( 'Erstelle einen neuen WordPress-Benutzer', 'membership2' ),
+				'value' => __( 'Erstelle einen neuen ClassicPress-Benutzer', 'membership2' ),
 			),
 			'username' => array(
 				'id' => 'username',

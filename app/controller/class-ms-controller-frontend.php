@@ -102,10 +102,10 @@ class MS_Controller_Frontend extends MS_Controller {
 			);
 
 			/**
-			 * This allows WordPress to provide the default register form.
+			 * This allows ClassicPress to provide the default register form.
 			 *
 			 * Set the filter response to FALSE to stop Membership2 from
-			 * handling the registration process. WordPress or other plugins can
+			 * handling the registration process. ClassicPress or other plugins can
 			 * register users in that case.
 			 *
 			 * @since  1.0.0
@@ -127,7 +127,7 @@ class MS_Controller_Frontend extends MS_Controller {
 			$this->add_action( 'wp_logout', 'logout_redirect', 10 );
 
 			if ( ! defined( 'DOING_AJAX' ) ) {
-				//Normal WordPress login check
+				//Normal ClassicPress login check
 				$this->add_action( 'wp_login', 'handle_verification_code', 10, 2 );
 			}
 
@@ -511,7 +511,7 @@ class MS_Controller_Frontend extends MS_Controller {
 	 * @return string The filtered content.
 	 */
 	public function register_form( $content ) {
-		// Check if the WordPress settings allow user registration.
+		// Check if the ClassicPress settings allow user registration.
 		if ( ! MS_Model_Member::can_register() ) {
 			return __( 'Eine Registrierung ist derzeit nicht erlaubt.', 'membership2' );
 		}

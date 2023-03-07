@@ -286,7 +286,7 @@ class MS_Controller_Plugin extends MS_Controller {
 	}
 
 	/**
-	 * Returns the WordPress hook that identifies a Membership2 admin page.
+	 * Returns the ClassicPress hook that identifies a Membership2 admin page.
 	 *
 	 * Important: In order for this function to work as expected it needs to
 	 * be called *after* the admin-menu was registered!
@@ -386,7 +386,7 @@ class MS_Controller_Plugin extends MS_Controller {
 		/*
 		 * Create primary menu item: Membership.
 		 *
-		 * The menu title is not translatable because of a bug in WordPress core
+		 * The menu title is not translatable because of a bug in ClassicPress core
 		 * https://core.trac.wordpress.org/ticket/18857
 		 * Until this bug is closed the title (2nd argument) can't be translated
 		 */
@@ -431,7 +431,7 @@ class MS_Controller_Plugin extends MS_Controller {
 			);
 
 			/*
-			 * WordPress does not support absolute URLs in the admin-menu.
+			 * ClassicPress does not support absolute URLs in the admin-menu.
 			 * So we have to manny modify the menu-link href value if our slug
 			 * is an absolute URL.
 			 */

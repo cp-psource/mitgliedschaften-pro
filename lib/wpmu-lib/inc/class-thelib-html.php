@@ -60,7 +60,7 @@ class MsTheLib_Html extends MsTheLib  {
 
 
 	/**
-	 * Displays a WordPress pointer on the current admin screen.
+	 * Displays a ClassicPress pointer on the current admin screen.
 	 *
 	 * @since  1.1.0
 	 * @api
@@ -273,7 +273,7 @@ class MsTheLib_Html extends MsTheLib  {
 
 
 	/**
-	 * Generates full code for a plugin list in WordPress 4.0 style, including
+	 * Generates full code for a plugin list in ClassicPress 4.0 style, including
 	 * the filter and search section in the top.
 	 *
 	 * All items are included in page load and displayed or filtered via

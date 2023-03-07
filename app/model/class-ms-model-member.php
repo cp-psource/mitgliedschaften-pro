@@ -2,7 +2,7 @@
 /**
  * Member model.
  *
- * Defines several details about a WordPress user.
+ * Defines several details about a ClassicPress user.
  * The Member object allows us to quickly check if the user did subscribe to a
  * certain membership, and other useful stuff.
  *
@@ -702,7 +702,7 @@ class MS_Model_Member extends MS_Model {
 				 *   Use filter `ms_admin_user_capability`  or
 				 *   define( 'MS_ADMIN_CAPABILITY', '...' )
 				 *
-				 * @var string|bool A WordPress capability or boolean false.
+				 * @var string|bool A ClassicPress capability or boolean false.
 				 */
 				$controller = MS_Plugin::instance()->controller;
 				if ( $controller ) {
@@ -993,9 +993,9 @@ class MS_Model_Member extends MS_Model {
 		$class = get_class( $this );
 
 		/**
-		 * Tell WordPress core that we do NOT want to trigger the
+		 * Tell ClassicPress core that we do NOT want to trigger the
 		 * Password-Reset email while updating the user now.
-		 * New since WordPress 4.3.0
+		 * New since ClassicPress 4.3.0
 		 *
 		 * @since  1.0.2.2
 		 */
@@ -1055,7 +1055,7 @@ class MS_Model_Member extends MS_Model {
 	 * @throws Exception
 	 */
 	private function create_new_user() {
-		// Check if the WordPress settings allow user registration.
+		// Check if the ClassicPress settings allow user registration.
 		if ( ! MS_Model_Member::can_register() ) {
 			throw new Exception( __( 'Eine Registrierung ist derzeit nicht zulässig.', 'membership2' ), 1 );
 			return;

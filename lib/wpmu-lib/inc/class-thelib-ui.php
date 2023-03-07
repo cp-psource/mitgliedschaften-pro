@@ -22,7 +22,7 @@ class MsTheLib_Ui extends MsTheLib {
 	// Styles for mslib3()->html->element() output.
 	const MODULE_HTML = 'html_element';
 
-	// WordPress media gallery support.
+	// ClassicPress media gallery support.
 	const MODULE_MEDIA = 'media';
 
 	// Fontawesome CSS icons.

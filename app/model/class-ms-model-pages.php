@@ -34,7 +34,7 @@ class MS_Model_Pages extends MS_Model_Option {
 	const MS_PAGE_REG_COMPLETE 		= 'registration-complete';
 
 	/**
-	 * Association between membership page-types and WordPress post_ids.
+	 * Association between membership page-types and ClassicPress post_ids.
 	 *
 	 * @since  1.0.0
 	 *
@@ -60,7 +60,7 @@ class MS_Model_Pages extends MS_Model_Option {
 
 	/**
 	 * Returns a MS_Model_Pages setting value (these are the association between
-	 * our Membership Page types and WordPress posts)
+	 * our Membership Page types and ClassicPress posts)
 	 *
 	 * @since  1.0.0
 	 * @param  string $key The setting key.
@@ -1001,7 +1001,7 @@ class MS_Model_Pages extends MS_Model_Option {
 	}
 
 	/**
-	 * Creates a new WordPress menu and adds all top level pages to this menu.
+	 * Creates a new ClassicPress menu and adds all top level pages to this menu.
 	 *
 	 * @since  1.0.0
 	 */

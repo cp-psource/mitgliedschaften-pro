@@ -12,7 +12,7 @@ class MS_Rule_Special_View extends MS_View {
 		$header_data = apply_filters(
 			'ms_view_membership_protectedcontent_header',
 			array(
-				'title' => __( 'Wähle spezielle WordPress-Seiten, die Du schützen möchtest', 'membership2' ),
+				'title' => __( 'Wähle spezielle ClassicPress-Seiten, die Du schützen möchtest', 'membership2' ),
 				'desc' 	=> '',
 			),
 			MS_Rule_Special::RULE_ID,

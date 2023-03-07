@@ -461,7 +461,7 @@ class MS_Model_Addon extends MS_Model_Option {
 					'id' 		=> 'protection_type',
 					'type' 		=> MS_Helper_Html::INPUT_TYPE_RADIO,
 					'title' 	=> __( 'Schutzmethode', 'membership2' ),
-					'desc' 		=> __( 'Du kannst die Art und Weise ändern, in der Mitgliedschaften die Standard-URL zu Deinen WordPress-Medienbibliotheksdateien ändert.<br>Dies geschieht zum besseren Schutz, indem Du den tatsächlichen Dateinamen und den Pfad ausblendest.', 'membership2' ),
+					'desc' 		=> __( 'Du kannst die Art und Weise ändern, in der Mitgliedschaften die Standard-URL zu Deinen ClassicPress-Medienbibliotheksdateien ändert.<br>Dies geschieht zum besseren Schutz, indem Du den tatsächlichen Dateinamen und den Pfad ausblendest.', 'membership2' ),
 					'value' 	=> $settings->downloads['protection_type'],
 					'field_options' => MS_Rule_Media_Model::get_protection_types(),
 					'data_ms' 	=> array(
@@ -524,14 +524,14 @@ class MS_Model_Addon extends MS_Model_Option {
 
 		$list[ self::ADDON_ADV_MENUS ] = (object) array(
 			'name' 			=> __( 'Erweiterter Menüschutz', 'membership2' ),
-			'description' 	=> __( 'Fügt den allgemeinen Einstellungen eine neue Option hinzu, die steuert, wie WordPress-Menüs geschützt werden.<br/>Schütze einzelne Menüelemente, ersetze den Inhalt von WordPress-Menüpositionen oder ersetze jedes Menü einzeln.', 'membership2' ),
+			'description' 	=> __( 'Fügt den allgemeinen Einstellungen eine neue Option hinzu, die steuert, wie ClassicPress-Menüs geschützt werden.<br/>Schütze einzelne Menüelemente, ersetze den Inhalt von ClassicPress-Menüpositionen oder ersetze jedes Menü einzeln.', 'membership2' ),
 			'footer' 		=> $options_text,
 			'class' 		=> 'ms-options',
 			'details' 		=> array(
 				array(
 					'id' 			=> 'menu_protection',
 					'type' 			=> MS_Helper_Html::INPUT_TYPE_SELECT,
-					'title' 		=> __( 'Wähle aus, wie Du Deine WordPress-Menüs schützen möchtest.', 'membership2' ),
+					'title' 		=> __( 'Wähle aus, wie Du Deine ClassicPress-Menüs schützen möchtest.', 'membership2' ),
 					'value' 		=> $settings->menu_protection,
 					'field_options' => array(
 						'item' 			=> __( 'Einzelne Menüelemente schützen (Standard)', 'membership2' ),
@@ -564,7 +564,7 @@ class MS_Model_Addon extends MS_Model_Option {
 				array(
 					'id' 		=> 'ms-toggle-' . self::ADDON_MEMBERCAPS_ADV,
 					'title' 	=> __( 'Erweiterter Funktionsschutz', 'membership2' ),
-					'desc' 		=> __( 'Ermöglicht den Schutz einzelner WordPress-Funktionen. Bei Aktivierung wird die Registerkarte "Benutzerrollen" durch eine Registerkarte "Mitgliederfunktionen" ersetzt, auf der Du einzelne WordPress-Funktionen anstelle von Rollen schützen und zuweisen kannst.', 'membership2' ),
+					'desc' 		=> __( 'Ermöglicht den Schutz einzelner ClassicPress-Funktionen. Bei Aktivierung wird die Registerkarte "Benutzerrollen" durch eine Registerkarte "Mitgliederfunktionen" ersetzt, auf der Du einzelne ClassicPress-Funktionen anstelle von Rollen schützen und zuweisen kannst.', 'membership2' ),
 					'type' 		=> MS_Helper_Html::INPUT_TYPE_RADIO_SLIDER,
 					'value'	 	=> self::is_enabled( self::ADDON_MEMBERCAPS_ADV ),
 					'class' 	=> 'toggle-plugin',

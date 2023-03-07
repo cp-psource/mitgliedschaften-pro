@@ -83,7 +83,7 @@ class MS_Rule_Content_Model extends MS_Rule {
 	 * Verify access to the current content.
 	 *
 	 * This rule will return NULL (not relevant), because the comments are
-	 * protected via WordPress hooks instead of protecting the whole page.
+	 * protected via ClassicPress hooks instead of protecting the whole page.
 	 *
 	 * @since  1.0.0
 	 *

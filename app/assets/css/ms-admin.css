@@ -260,7 +260,7 @@
   border: 0;
 }
 
-/* WordPress-style List tables */
+/* ClassicPress-style List tables */
 .ms-wrap .widefat {
   margin: 10px 0;
 }
@@ -297,7 +297,7 @@
 .ms-wrap .search-box .wpmui-field-input {
   float: none !important;
   margin-top: 0 !important;
-  /* important: Some WordPress fields have a margin that needs to be cleared here */
+  /* important: Some ClassicPress fields have a margin that needs to be cleared here */
   margin-bottom: 0 !important;
 }
 .ms-wrap .tablenav.bottom {

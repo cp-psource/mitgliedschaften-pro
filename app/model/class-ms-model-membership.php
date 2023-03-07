@@ -1158,7 +1158,7 @@ class MS_Model_Membership extends MS_Model_CustomPostType {
 	 * @since  1.0.0
 	 * @api
 	 *
-	 * @param  string $role A WordPress user-role.
+	 * @param  string $role A ClassicPress user-role.
 	 * @return MS_Model_Membership The guest membership.
 	 */
 	public static function get_guest() {
@@ -1190,7 +1190,7 @@ class MS_Model_Membership extends MS_Model_CustomPostType {
 	 * @since  1.0.0
 	 * @api
 	 *
-	 * @param  string $role A WordPress user-role.
+	 * @param  string $role A ClassicPress user-role.
 	 * @return MS_Model_Membership The guest membership.
 	 */
 	public static function get_user() {

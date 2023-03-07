@@ -96,7 +96,7 @@ class MS_Rule_CptItem_Model extends MS_Rule {
 			$excluded = MS_Rule_CptGroup_Model::get_excluded_content();
 
 			/*
-			 * We need an array. WordPress will give us an array, when the
+			 * We need an array. ClassicPress will give us an array, when the
 			 * WP_Query did query for multiple post-types at once.
 			 * We check each post-type individually!
 			 */
@@ -203,7 +203,7 @@ class MS_Rule_CptItem_Model extends MS_Rule {
 					// Custom post type
 					$has_access = parent::has_access( $id, $admin_has_access );
 				} else {
-					// WordPress core pages are ignored by this rule.
+					// ClassicPress core pages are ignored by this rule.
 					$has_access = null;
 				}
 			}

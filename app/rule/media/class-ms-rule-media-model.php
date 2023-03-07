@@ -403,7 +403,7 @@ class MS_Rule_Media_Model extends MS_Rule {
 		static $Uploads_Url_Len = 0;
 		global $wpdb;
 
-		// First let WordPress try to find the Attachment ID.
+		// First let ClassicPress try to find the Attachment ID.
 		$id = $this->thumbnail_url_to_id( $url );
 
 		if ( $id ) {

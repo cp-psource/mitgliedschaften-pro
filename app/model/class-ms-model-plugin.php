@@ -662,7 +662,7 @@ class MS_Model_Plugin extends MS_Model {
 	 * Setup cron plugin services.
 	 *
 	 * Setup cron to call actions.
-	 * The action-hook is called via the WordPress Cron implementation on a
+	 * The action-hook is called via the ClassicPress Cron implementation on a
 	 * regular basis - this hooks are set up only once.
 	 *
 	 * The Cron jobs can be manually executed by opening the admin page
@@ -770,8 +770,8 @@ class MS_Model_Plugin extends MS_Model {
 	}
 
 	/**
-	 * Copies the full WordPress Admin menu before any restriction is applied
-	 * by WordPress or an Plugin. This menu-information is used on the
+	 * Copies the full ClassicPress Admin menu before any restriction is applied
+	 * by ClassicPress or an Plugin. This menu-information is used on the
 	 * Membership2/Accessible Content settings pages
 	 *
 	 * @since  1.0.0

@@ -390,7 +390,7 @@ class MS_Model_Upgrade extends MS_Model {
 			}
 		}
 
-		// 2. See if WordPress uses an old plugin in the DB. Update it.
+		// 2. See if ClassicPress uses an old plugin in the DB. Update it.
 		if ( is_multisite() ) {
 			$global_plugins = (array) get_site_option( 'active_sitewide_plugins', array() );
 			foreach ( $global_plugins as $key => $the_path ) {

@@ -16,7 +16,7 @@ if ( ! defined( 'WDEV_DEBUG' ) ) {
  */
 class MS_Helper_Debug extends MS_Helper {
 	/**
-	 * Logs errors to WordPress debug log.
+	 * Logs errors to ClassicPress debug log.
 	 *
 	 * The following constants ned to be set in wp-config.php
 	 * or elsewhere where turning on and off debugging makes sense.
@@ -25,7 +25,7 @@ class MS_Helper_Debug extends MS_Helper {
 	 *     define('WP_DEBUG', true);
 	 *     // Enables logging to /wp-content/debug.log
 	 *     define('WP_DEBUG_LOG', true);
-	 *     // Force debug messages in WordPress to be turned off (using logs instead)
+	 *     // Force debug messages in ClassicPress to be turned off (using logs instead)
 	 *     define('WP_DEBUG_DISPLAY', false);
 	 *
 	 * @since  1.0.0

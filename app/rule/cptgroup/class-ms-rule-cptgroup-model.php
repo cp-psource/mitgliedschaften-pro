@@ -74,7 +74,7 @@ class MS_Rule_CptGroup_Model extends MS_Rule {
 			$final_post_types = array();
 
 			/*
-			 * We need an array. WordPress will give us an array, when the
+			 * We need an array. ClassicPress will give us an array, when the
 			 * WP_Query did query for multiple post-types at once.
 			 * We check each post-type individually!
 			 */
@@ -85,7 +85,7 @@ class MS_Rule_CptGroup_Model extends MS_Rule {
 			foreach ( $post_types as $post_type ) {
 				$allow = false;
 
-				// Do not protect special "Membership2" or default WordPress content
+				// Do not protect special "Membership2" or default ClassicPress content
 				if ( in_array( $post_type, $excluded ) ) { $allow = true; }
 
 				// Do not protect if the post-type is published
@@ -147,7 +147,7 @@ class MS_Rule_CptGroup_Model extends MS_Rule {
 			// Custom post type
 			$has_access = parent::has_access( $post_type, $admin_has_access );
 		} else {
-			// WordPress core pages are ignored by this rule.
+			// ClassicPress core pages are ignored by this rule.
 			$has_access = null;
 		}
 

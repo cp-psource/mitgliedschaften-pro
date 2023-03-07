@@ -38,7 +38,7 @@ PHP
 
 JS
 - Big improvements to the `wpmUi.popup()` function (templates, custom css, ...)
-- Add WordPress-like hook integration `wpmUi.add_action()`, `wpmUi.do_action()`, ...
+- Add ClassicPress-like hook integration `wpmUi.add_action()`, `wpmUi.do_action()`, ...
 - Update select2 library from v3.5 to v4.0
 - Remove tiny-scrollbar JS library
 
@@ -164,7 +164,7 @@ Migration notes
 1.0.7 - 2014-07-28
 ----------------------------------------------------------------------
 - Make message() persitent: Message is displayed even after redirect
-- add_js() and add_css() now accept a script-alias instead of url to load core WordPress scripts.
+- add_js() and add_css() now accept a script-alias instead of url to load core ClassicPress scripts.
 - New function TheLib::current_url()
 
 1.0.6 - 2014-07-21

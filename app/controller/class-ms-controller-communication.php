@@ -539,7 +539,7 @@ class MS_Controller_Communication extends MS_Controller {
 	}
 
 	/**
-	 * Prepare WordPress to add our custom TinyMCE button to the WYSIWYG editor.
+	 * Prepare ClassicPress to add our custom TinyMCE button to the WYSIWYG editor.
 	 *
 	 * @since  1.0.1.0
 	 *
@@ -584,7 +584,7 @@ class MS_Controller_Communication extends MS_Controller {
 		$plugin_url = MS_Plugin::instance()->url;
 
 		// This is a dummy reference (ms-admin.js is always loaded)!
-		// Actually this line would not be needed, but WordPress will not show
+		// Actually this line would not be needed, but ClassicPress will not show
 		// our button when this is missing...
 		$plugin_array['ms_variable'] = $plugin_url . 'app/assets/js/ms-admin.js';
 

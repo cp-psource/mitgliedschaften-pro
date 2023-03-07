@@ -159,7 +159,7 @@ if ( ! function_exists( 'ms_registration_form_extra_fields' ) ) {
 	function ms_registration_form_extra_fields() {
 
 		/**
-		* Trigger default WordPress action to allow other plugins
+		* Trigger default ClassicPress action to allow other plugins
 		* to add custom fields to the registration form.
 		*
 		* signup_extra_fields Defined in wp-signup.php which is used

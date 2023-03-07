@@ -226,11 +226,11 @@ class MS_Model_Export_Base extends MS_Model {
 	 *
 	 * The export-ID will be same during this request but may change in the next
 	 * export. This ID ensures that all links inside the export file are valid
-	 * but that we do not use actual WordPress IDs.
+	 * but that we do not use actual ClassicPress IDs.
 	 *
 	 * @since  1.1.3
 	 * @param  string $type Type
-	 * @param  int $internal_id WordPress ID
+	 * @param  int $internal_id ClassicPress ID
 	 * @return int Export-ID
 	 */
 	protected function exp_id( $type, $internal_id ) {

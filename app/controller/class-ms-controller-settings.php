@@ -298,7 +298,7 @@ class MS_Controller_Settings extends MS_Controller {
 			wp_publish_post( $pg_regi->ID );
 		}
 
-		// Create new WordPress menu-items.
+		// Create new ClassicPress menu-items.
 		MS_Model_Pages::create_menu( MS_Model_Pages::MS_PAGE_ACCOUNT );
 		if ( ! $membership->private ) {
 			MS_Model_Pages::create_menu( MS_Model_Pages::MS_PAGE_MEMBERSHIPS );
@@ -309,7 +309,7 @@ class MS_Controller_Settings extends MS_Controller {
 		$settings->plugin_enabled = true;
 		$settings->save();
 
-		// Enable the "Allow user registration" setting of WordPress
+		// Enable the "Allow user registration" setting of ClassicPress
 		MS_Model_Member::allow_registration();
 	}
 

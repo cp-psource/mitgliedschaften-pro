@@ -854,7 +854,7 @@ class MS_Controller_Gateway extends MS_Controller {
 	 *
 	 * @since  1.0.0
 	 *
-	 * @param WP_Query $wp_query The WordPress query object
+	 * @param WP_Query $wp_query The ClassicPress query object
 	 */
 	public function handle_payment_return( $wp_query ) {
 		// Do not check custom loops.
@@ -914,7 +914,7 @@ class MS_Controller_Gateway extends MS_Controller {
 	 *
 	 * @since  1.0.4
 	 *
-	 * @param WP_Query $wp_query The WordPress query object
+	 * @param WP_Query $wp_query The ClassicPress query object
 	 */
 	public function handle_webhook( $wp_query ) {
 		// Do not check custom loops.

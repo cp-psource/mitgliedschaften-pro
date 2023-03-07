@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WMS N@W code library
  * Plugin URI:  https://n3rds.work
- * Description: Framework to support creating WordPress plugins and themes.
+ * Description: Framework to support creating ClassicPress plugins and themes.
  * Version:     3.0.5
  * Author:      WMS N@W
  * Author URI:  https://n3rds.work

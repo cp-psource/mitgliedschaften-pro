@@ -186,7 +186,7 @@ class MS_View_Help extends MS_View {
 			</tr>
 			<tr class="alternate">
 				<td><span><?php _e( 'Alle Mitglieder', 'membership2' ); ?></span></td>
-				<td><?php _ex( 'Listet alle WordPress-Benutzer auf und ermöglicht die Verwaltung ihrer Mitgliedschaften', 'help', 'membership2' ); ?></td>
+				<td><?php _ex( 'Listet alle ClassicPress-Benutzer auf und ermöglicht die Verwaltung ihrer Mitgliedschaften', 'help', 'membership2' ); ?></td>
 			</tr>
 			<tr>
 				<td><span><?php _e( 'Mitglied hinzufügen', 'membership2' ); ?></span></td>
@@ -348,7 +348,7 @@ class MS_View_Help extends MS_View {
 		<div id="ms-membership-register-user" class="ms-help-box">
 			<h3><code>[ms-membership-register-user]</code></h3>
 
-			<?php _ex( 'Zeigt ein Registrierungsformular an. Besucher können mit diesem Formular ein WordPress-Benutzerkonto erstellen', 'help', 'membership2' ); ?>
+			<?php _ex( 'Zeigt ein Registrierungsformular an. Besucher können mit diesem Formular ein ClassicPress-Benutzerkonto erstellen', 'help', 'membership2' ); ?>
 			<div class="ms-help-toggle"><?php _ex( 'Erweitern', 'help', 'membership2' ); ?></div>
 			<div class="ms-help-details" style="display:none">
 				<ul>

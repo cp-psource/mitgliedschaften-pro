@@ -230,7 +230,7 @@
     };
 
     /**
-     * Displays a WordPress-like message to the user.
+     * Displays a ClassicPress-like message to the user.
      *
      * @since  1.0.0
      * @param  string|object args Message options object or message-text.
@@ -818,7 +818,7 @@
     };
 
     /**
-     * Initialize the WordPress-ish accordeon boxes:
+     * Initialize the ClassicPress-ish accordeon boxes:
      * Open or close boxes when user clicks the toggle icon.
      *
      * @since  1.0.0
@@ -841,7 +841,7 @@
     }
 
     /**
-     * Initialize the WordPress-ish tab navigation:
+     * Initialize the ClassicPress-ish tab navigation:
      * Change the tab on click.
      *
      * @since  1.0.0
@@ -2221,7 +2221,7 @@
         }
 
         /**
-         * Toggle all checkboxes in a WordPress-ish table when the user clicks
+         * Toggle all checkboxes in a ClassicPress-ish table when the user clicks
          * the check-all checkbox in the header or footer.
          *
          * @since  1.0.0
@@ -2245,7 +2245,7 @@
 
         /**
          * Toggle the check-all checkexbox in the header/footer in a
-         * WordPress-ish table when a single checkbox in the body is changed.
+         * ClassicPress-ish table when a single checkbox in the body is changed.
          *
          * @since  1.0.0
          */
@@ -2509,18 +2509,18 @@
  * WMS N@W UI library
  * (Rheinard Korf, DerN3rd for WMS N@W)
  *
- * This module adds a WordPress-like hook system in javascript that makes it
+ * This module adds a ClassicPress-like hook system in javascript that makes it
  * easier to expose actions/filters to other developers.
  *
  * ----------------------------------------------------------------------------
- * @file A WordPress-like hook system for JavaScript.
+ * @file A ClassicPress-like hook system for JavaScript.
  *
  * This file demonstrates a simple hook system for JavaScript based on the hook
- * system in WordPress. The purpose of this is to make your code extensible and
+ * system in ClassicPress. The purpose of this is to make your code extensible and
  * allowing other developers to hook into your code with their own callbacks.
  *
  * There are other ways to do this, but this will feel right at home for
- * WordPress developers.
+ * ClassicPress developers.
  *
  * @author Rheinard Korf
  * @license GPL2 (https://www.gnu.org/licenses/gpl-2.0.html)
@@ -2551,7 +2551,7 @@
     /**
      * All actions/filters are stored in the filters object.
      *
-     * In WordPress actions and filters are synonyms - only difference is, that
+     * In ClassicPress actions and filters are synonyms - only difference is, that
      * a filter will return a value, while an action does not return a value.
      */
     wpmUi.filters = wpmUi.filters || {};
@@ -2563,7 +2563,7 @@
      *
      * @param tag The tag specified by do_action()
      * @param callback The callback function to call when do_action() is called
-     * @param priority The order in which to call the callbacks. Default: 10 (like WordPress)
+     * @param priority The order in which to call the callbacks. Default: 10 (like ClassicPress)
      */
     wpmUi.add_action = function(tag, callback, priority) {
         wpmUi.add_filter(tag, callback, priority);
@@ -2574,7 +2574,7 @@
      *
      * @param tag The tag specified by apply_filters()
      * @param callback The callback function to call when apply_filters() is called
-     * @param priority Priority of filter to apply. Default: 10 (like WordPress)
+     * @param priority Priority of filter to apply. Default: 10 (like ClassicPress)
      */
     wpmUi.add_filter = function(tag, callback, priority) {
         if (undefined === callback) {
@@ -2954,7 +2954,7 @@
          * @private
          */
         function _init() {
-            // Initialize missing Ajax-URL: Use WordPress ajaxurl if possible.
+            // Initialize missing Ajax-URL: Use ClassicPress ajaxurl if possible.
             if (!_ajaxurl && typeof window.ajaxurl === 'string') {
                 _ajaxurl = window.ajaxurl;
             }

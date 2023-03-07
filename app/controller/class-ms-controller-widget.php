@@ -3,7 +3,7 @@
  * Controller for Membership widgets.
  *
  * This is not doing much, since most of the widget logic is handled by
- * WordPress itself. We mainly need to register available widgets.
+ * ClassicPress itself. We mainly need to register available widgets.
  *
  * @since  1.0.0
  *

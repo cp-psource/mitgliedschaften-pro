@@ -1,6 +1,6 @@
 <?php
 /**
- * Code-snippet for WordPress plugin list.
+ * Code-snippet for ClassicPress plugin list.
  * Used in function mslib3()->html->addon_list()
  *
  * @since  1.1.0

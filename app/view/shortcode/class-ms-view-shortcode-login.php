@@ -512,7 +512,7 @@ class MS_View_Shortcode_Login extends MS_View {
 
 	/**
 	 * Returns HTML partial that contains password-reset form.
-	 * Based on WordPress core code from wp-login.php
+	 * Based on ClassicPress core code from wp-login.php
 	 *
 	 * @since  1.0.0
 	 *

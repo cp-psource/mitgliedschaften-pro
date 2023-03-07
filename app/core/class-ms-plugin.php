@@ -34,7 +34,7 @@ class MS_Plugin {
 	private static $modifiers = array();
 
 	/**
-	 * The WordPress internal plugin identifier.
+	 * The ClassicPress internal plugin identifier.
 	 *
 	 * @since  1.0.0
 	 * @var   string
@@ -381,7 +381,7 @@ class MS_Plugin {
 	}
 
 	/**
-	 * Redirect page and request plugin to flush the WordPress rewrite rules
+	 * Redirect page and request plugin to flush the ClassicPress rewrite rules
 	 * on next request.
 	 *
 	 * @since  1.0.0
@@ -408,7 +408,7 @@ class MS_Plugin {
 	}
 
 	/**
-	 * Flush the WordPress rewrite rules.
+	 * Flush the ClassicPress rewrite rules.
 	 *
 	 * @since  1.0.0
 	 */
@@ -433,7 +433,7 @@ class MS_Plugin {
 	 *
 	 * @since  1.0.0
 	 *
-	 * @param array $links WordPress default array of links.
+	 * @param array $links ClassicPress default array of links.
 	 * @return array Array of links with settings page links added.
 	 */
 	public function plugin_settings_link( $links ) {

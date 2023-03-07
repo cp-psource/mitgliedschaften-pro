@@ -2,7 +2,7 @@
 /**
  * Exposes the public API.
  *
- * The simplest way to use the API is via an WordPress action `ms_init` that
+ * The simplest way to use the API is via an ClassicPress action `ms_init` that
  * runs some code as soon as the API becomes available:
  *
  *     // Run some code as early as possible.
@@ -42,7 +42,7 @@
  *
  * ----------------
  *
- * We also add the WordPress filter `ms_active` to check if the plugin is
+ * We also add the ClassicPress filter `ms_active` to check if the plugin is
  * enabled and loaded. As long as this filter returns `false` the API cannot
  * be used:
  *
