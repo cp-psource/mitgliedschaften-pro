@@ -821,7 +821,7 @@ jQuery(document).ready(function() {
                 function(response) {
                     quickedit.find('td').removeClass('wpmui-loading');
 
-                    if (response) {
+                    /*if (response) {
                         if (-1 !== response.indexOf('<tr')) {
                             the_item.remove();
                             the_item = jQuery(response);
@@ -838,6 +838,25 @@ jQuery(document).ready(function() {
                         }
                     } else {
                         quickedit.find('.error').html(ms_data.lang.quickedit_error).show();
+                    }*/
+
+                    if (response) {
+                        if (-1 !== response.indexOf('<tr')) {
+                            the_item.remove();
+                            the_item = jQuery(DOMPurify.sanitize(response));
+                            quickedit.before(the_item).remove();
+                            the_item.hide().fadeIn();
+                    
+                            // Update the "alternate" class
+                            ms_inline_editor.update_alternate(the_item);
+                    
+                            jQuery(document).trigger('ms-inline-editor-updated', [the_item]);
+                        } else {
+                            response = DOMPurify.sanitize(response).replace(/<.[^<>]*?>/g, '');
+                            quickedit.find('.error').text(response).show();
+                        }
+                    } else {
+                        quickedit.find('.error').text(ms_data.lang.quickedit_error).show();
                     }
 
                     if (the_item.prev().hasClass('alternate')) {
