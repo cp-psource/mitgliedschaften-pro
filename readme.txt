@@ -68,6 +68,11 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == ChangeLog ==
 
+= 1.2.6 =
+
+* Fix: Fix: Incomplete multi-character sanitization
+* Fix: Inefficient regular expression
+
 = 1.2.5 =
 
 * Nun ClassicPress
