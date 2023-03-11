@@ -39,15 +39,31 @@ PS Memberships is the successor to our hugely popular Memberships plugin, rewrit
 
 PS Memberships is the most user-friendly membership plugin for ClassicPress Multisite.
 
-[POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/cp-powersource/)
 
 [Projektseite](https://n3rds.work/cp_psource/ps-mitgliedschaften-plugin/)
 [Supportforum](https://n3rds.work/forum/psmitgliedschaften-plugin-supportforum/)
 [GitHub](https://github.com/cp-psource/mitgliedschaften-pro)
 
 
+[POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/cp-powersource/)
 
-== Mehr PSOURCE ==
+== Languages ==
+
+* Deutsch: de_DE
+* English: en_US
+* France: fr_FR
+* Italiono: it_IT
+* Spanish: es_ES
+
+Du kannst uns gerne Deine optimierten .po/.mo Dateien für Deine Muttersprache zukommen lassen. 
+Nutze die Möglichkeit dazu auf GitHub oder sende Deine Dateien an: webmaster@n3rds.work
+
+You are welcome to send us your optimized .po/.mo files for your native language. 
+Use the opportunity to do so on GitHub or send your files to: webmaster@n3rds.work
+
+== CP PSOURCE ==
+
+= DEUTSCH =
 
 = Finde mehr Piestingtal.Source =
 
@@ -55,16 +71,28 @@ Wirf einen Blick in unser [PSOURCE Sortiment](https://n3rds.work/psource_kategor
 
 Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
 
-== Hilf uns ==
+= Unterstütze PSOURCE =
 
 Viele, viele Kaffees konsumieren wir während wir an unseren Plugins und Themes arbeiten.
 Wie wärs? Möchtest Du uns mit einer Kaffee-Spende bei der Arbeit an unseren Plugins unterstützen?
 
-= Unterstütze uns =
-
 Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/) wir Danken Dir!
 
-Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
+
+= ENGLISH =
+
+= Find more Piestingtal.Source =
+
+Take a look at our [PSOURCE range](https://n3rds.work/psource_categories/cp-powersource/) and get even more out of your ClassicPress/ClassicPress!
+
+Keep yourself informed about our Piestingtal.Source with our [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/)!
+
+= Support PSOURCE =
+
+We consume many, many coffees while working on our plugins and themes.
+how about Would you like to support us with a coffee donation while working on our plugins?
+
+Make a [donation by bank transfer or PayPal](https://n3rds.work/spenderaktionen/unterstuetze-unsere-psource-free-werke/) we thank you!
 
 == ChangeLog ==
 
