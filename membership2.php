@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: PS Mitgliedschaften
- * Plugin URI:  https://n3rds.work/cp_psource/ps-mitgliedschaften-plugin/
+ * Plugin URI:  https://cp-psource.github.io/mitgliedschaften-pro/
  * Version:     1.2.5
  * Description: Das leistungsstärkste, benutzerfreundlichste und flexibelste Mitgliedschafts-Plugin für ClassicPress-Seiten.
  * Requires at least: 4.6
  * Tested up to: 5.7
  * Author:      WMS N@W
- * Author URI:  https://n3rds.work
+ * Author URI:  https://github.com/cp-psource/
  * License:     GPL2
  * License URI: http://opensource.org/licenses/GPL-2.0
  * Text Domain: membership2
@@ -18,7 +18,7 @@
 /**
  * Copyright notice
  *
- * @copyright WMS N@W (https://n3rds.work/)
+ * @copyright PSOURCE (https://github.com/cp-psource/)
  *
  * Authors: DerN3rd
  * 

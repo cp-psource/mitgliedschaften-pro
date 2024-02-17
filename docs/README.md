@@ -1,20 +1,20 @@
-# Membership
+# PS Mitgliedschaften Plugin
 
-## Launch a membership site with Membership 2 Pro to easily set-up any membership system you think up.
+## Starte mit PS Mitgliedschaften eine Mitgliedschaftsseite, um ganz einfach jedes Mitgliedschaftssystem einzurichten, das Du Dir vorstellst.
 
-Grow a following with free protected content, build a business with paid access, or run an online magazine with dripped articles and videos.
+Erweitere Deine Fangemeinde mit kostenlosen, geschützten Inhalten, baue ein Geschäft mit kostenpflichtigem Zugang auf oder betreibe ein Online-Magazin mit verteilten Artikeln und Videos.
 
-### Four Flexible Membership Types
+### Vier flexible Mitgliedschaftsarten
 
-Use the included membership types to quickly make your content available to members and hidden to logged-out users, release content in timed intervals, limit access to only a few items, or make content available to only logged-in users who have not yet joined. 
+Nutzen Sie die enthaltenen Mitgliedschaftsarten, um Ihre Inhalte schnell für Mitglieder verfügbar zu machen und für abgemeldete Nutzer auszublenden, Inhalte in bestimmten Zeitabständen freizugeben, den Zugriff auf nur wenige Elemente zu beschränken oder Inhalte nur für angemeldete Nutzer verfügbar zu machen, die noch nicht beigetreten sind .
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/choose-a-membership-0x.jpg)
+![image](images/choose-a-membership-0x.jpg)
 
 ### Make it Members Only
 
 Limit access to pages, posts, categories, videos, audio, images, PDFs, digital downloads, forums and even specific words and links – You control who sees what on your site. 
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/media-protection-1x.jpg)
+![image](images/media-protection-1x.jpg)
 
  
 
@@ -22,13 +22,13 @@ Limit access to pages, posts, categories, videos, audio, images, PDFs, digital d
 
 Use built-in add-ons to extend Membership 2 Pro as your site grows. Activate only the features you need to boost speed and save time.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-1-1x.png)
+![image](assets/addon-1-1x.png)
 
 **Automated Messages**
 
 Extended automated email responses for events.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-2-1x.png)
+![image](assets/addon-2-1x.png)
 
 **Admin Side Protection**
 
