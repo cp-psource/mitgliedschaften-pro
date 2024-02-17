@@ -2,7 +2,6 @@
 /**
  * Plugin Name: PS Mitgliedschaften
  * Plugin URI:  https://n3rds.work/cp_psource/ps-mitgliedschaften-plugin/
- * Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
  * Version:     1.2.5
  * Description: Das leistungsstärkste, benutzerfreundlichste und flexibelste Mitgliedschafts-Plugin für ClassicPress-Seiten.
  * Requires at least: 4.6
@@ -48,13 +47,18 @@
  * @since  1.0.0
  */
 
-require 'psource/psource-plugin-update/psource-plugin-updater.php';
-use Psource\PluginUpdateChecker\v5\PucFactory;
-$MyUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=mitgliedschaften-pro', 
-	__FILE__, 
-	'mitgliedschaften-pro' 
+require 'psource/psource-plugin-update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+ 
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/cp-psource/mitgliedschaften-pro',
+	__FILE__,
+	'mitgliedschaften-pro'
 );
+ 
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
+
 
 function membership2_pro_init_app() {
 	if ( defined( 'MS_PLUGIN' ) ) {

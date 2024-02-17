@@ -1,6 +1,5 @@
 === PS Mitgliedschaften ===
-Contributors: DerN3rd (WMS N@W)
-Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
+Contributors: PSOURCE
 Tags: classicpress-plugin, classicpress, membership, multisite
 Requires at least: 4.9
 Tested up to: 5.6
@@ -41,7 +40,6 @@ PS Memberships is the most user-friendly membership plugin for ClassicPress Mult
 
 
 [Projektseite](https://n3rds.work/cp_psource/ps-mitgliedschaften-plugin/)
-[Supportforum](https://n3rds.work/forum/psmitgliedschaften-plugin-supportforum/)
 [GitHub](https://github.com/cp-psource/mitgliedschaften-pro)
 
 
