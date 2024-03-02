@@ -90,7 +90,7 @@ class MS_View_Membership_Add extends MS_View {
 						'desc' => __( 'Stelle Deine Inhalte nur Gästen (abgemeldeten Benutzern) zur Verfügung.', 'membership2' ),
 					),
 					MS_Model_Membership::TYPE_USER => array(
-						'text' => __( 'Standardmitgliedschaft', 'membership2' ),
+						'text' => __( 'Keine-Mitgliedschaft', 'membership2' ),
 						'desc' => __( 'Der Inhalt steht allen angemeldeten Benutzern zur Verfügung, die noch keiner anderen Mitgliedschaft beigetreten sind.', 'membership2' ),
 					),
 				),

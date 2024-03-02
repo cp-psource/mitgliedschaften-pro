@@ -6,27 +6,25 @@ Erweitere Deine Fangemeinde mit kostenlosen, geschützten Inhalten, baue ein Ges
 
 ### Vier flexible Mitgliedschaftsarten
 
-Nutzen Sie die enthaltenen Mitgliedschaftsarten, um Ihre Inhalte schnell für Mitglieder verfügbar zu machen und für abgemeldete Nutzer auszublenden, Inhalte in bestimmten Zeitabständen freizugeben, den Zugriff auf nur wenige Elemente zu beschränken oder Inhalte nur für angemeldete Nutzer verfügbar zu machen, die noch nicht beigetreten sind .
+Nutze die enthaltenen Mitgliedschaftsarten, um Deine Inhalte schnell für Mitglieder verfügbar zu machen und für abgemeldete Nutzer auszublenden, Inhalte in bestimmten Zeitabständen freizugeben, den Zugriff auf nur wenige Elemente zu beschränken oder Inhalte nur für angemeldete Nutzer verfügbar zu machen, die noch nicht beigetreten sind .
 
 ![image](images/choose-a-membership-0x.jpg)
 
-### Make it Members Only
+### Mache es nur für Mitglieder
 
-Limit access to pages, posts, categories, videos, audio, images, PDFs, digital downloads, forums and even specific words and links – You control who sees what on your site. 
+Beschränke den Zugriff auf Seiten, Beiträge, Kategorien, Videos, Audio, Bilder, PDFs, digitale Downloads, Foren und sogar bestimmte Wörter und Links – Du bestimmst, wer was auf Deiner Webseite sieht.
 
 ![image](images/media-protection-1x.jpg)
 
- 
+## Mehr Optionen und weniger Kopfschmerzen
 
-## More Options and Fewer Headaches
-
-Use built-in add-ons to extend Membership 2 Pro as your site grows. Activate only the features you need to boost speed and save time.
+Verwende integrierte Add-ons, um PS Mitgliedschaften zu erweitern, wenn Deine Webseite wächst. Aktiviere nur die Funktionen, die Du benötigst, um die Geschwindigkeit zu steigern und Zeit zu sparen.
 
 ![image](assets/addon-1-1x.png)
 
-**Automated Messages**
+**Automatisierte Nachrichten**
 
-Extended automated email responses for events.
+Erweiterte automatisierte E-Mail-Antworten für Veranstaltungen.
 
 ![image](assets/addon-2-1x.png)
 

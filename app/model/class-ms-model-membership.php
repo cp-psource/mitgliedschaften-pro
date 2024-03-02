@@ -474,7 +474,7 @@ class MS_Model_Membership extends MS_Model_CustomPostType {
 			self::TYPE_STANDARD => __( 'Standardmitgliedschaft', 'membership2' ),
 			self::TYPE_DRIPPED 	=> __( 'Versetzter Content-Mitgliedschaft', 'membership2' ),
 			self::TYPE_GUEST 	=> __( 'Gastmitgliedschaft', 'membership2' ),
-			self::TYPE_USER 	=> __( 'Standardmitgliedschaft', 'membership2' ),
+			self::TYPE_USER 	=> __( 'Keine-Mitgliedschaft', 'membership2' ),
 			self::TYPE_BASE 	=> __( 'Systemmitgliedschaft', 'membership2' ),
 		);
 
