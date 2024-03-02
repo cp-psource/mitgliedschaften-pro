@@ -1,11 +1,8 @@
 <?php
 /**
  * Abstract Option model.
- *
  * @uses WP Option API to persist data into wp_option table.
- *
  * @since  1.0.0
- *
  * @package Membership2
  * @subpackage Model
  */
@@ -13,46 +10,53 @@ class MS_Model_Option extends MS_Model {
 
 	/**
 	 * Singleton instance.
-	 *
 	 * @since  1.0.0
-	 *
 	 * @staticvar MS_Model_Option
 	 */
 	public static $instance;
 
 	/**
 	 * Settings data for extensions/integrations.
-	 *
 	 * @since  1.0.0
-	 *
 	 * @var array
 	 */
 	protected $custom = array();
 
 	/**
-	 * Save content in wp_option table.
-	 *
-	 * Update WP cache and instance singleton.
-	 *
-	 * @since  1.0.0
-	 */
-	public function save() {
-		$this->before_save();
+     * Get the singleton instance.
+     *
+     * @return MS_Model_Option The singleton instance.
+     */
+    public static function get_instance() {
+        if ( ! isset( self::$instance ) ) {
+            self::$instance = new self();
+        }
 
-		$option_key = $this->option_key();
+        return self::$instance;
+    }
 
-		$settings 	= MS_Factory::serialize_model( $this );
-		MS_Factory::update_option( $option_key, $settings );
+	/**
+     * Save content in wp_option table.
+     * Update WP cache and instance singleton.
+     * @since  1.0.0
+     */
+    public function save() {
+        $this->before_save();
 
-		$this->instance = $this;
-		$this->after_save();
+        $option_key = $this->option_key();
 
-		MS_Helper_Cache::set_cache( $option_key, $this, 'MS_Model_Option' );
-	}
+        $settings   = MS_Factory::serialize_model( $this );
+        MS_Factory::update_option( $option_key, $settings );
+
+        self::$instance = $this;
+
+        $this->after_save();
+
+        MS_Helper_Cache::set_cache( $option_key, $this, 'MS_Model_Option' );
+    }
 
 	/**
 	 * Reads the options from options table
-	 *
 	 * @since  1.0.0
 	 */
 	public function refresh() {
@@ -66,7 +70,6 @@ class MS_Model_Option extends MS_Model {
 
 	/**
 	 * Delete from wp option table
-	 *
 	 * @since  1.0.0
 	 */
 	public function delete() {
@@ -83,10 +86,8 @@ class MS_Model_Option extends MS_Model {
 	/**
 	 * validates and prepares the option key before it is used to read/write
 	 * a value in the database.
-	 *
 	 * @since  1.0.0
 	 * @api Used by MS_Factory
-	 *
 	 * @return string
 	 */
 	public function option_key() {
@@ -103,9 +104,7 @@ class MS_Model_Option extends MS_Model {
 
 	/**
 	 * Set custom setting.
-	 *
 	 * @since  1.0.0
-	 *
 	 * @param string $group_name The custom setting group.
 	 * @param string $field_name The custom setting field.
 	 * @param mixed $value The custom setting value.
@@ -153,7 +152,6 @@ class MS_Model_Option extends MS_Model {
 	 * Get custom setting.
 	 *
 	 * @since  1.0.0
-	 *
 	 * @param string $group_name The custom setting group.
 	 * @param string $field_name Optional. The custom setting field.
 	 * @return mixed $value The custom setting value.
