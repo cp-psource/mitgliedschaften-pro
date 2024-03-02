@@ -94,7 +94,7 @@ jQuery(function() {
 
 				refresh_list( response.items );
 				//popup.close();
-                                jQuery( '.popup-close' ).click();
+                                jQuery( '.popup-close' ).trigger("click");
 			},
 			'json'
 		).complete(function() {
@@ -123,7 +123,7 @@ jQuery(function() {
 
 				refresh_list( response.items );
 				//popup.close();
-                                jQuery( '.popup-close' ).click();
+                                jQuery( '.popup-close' ).trigger("click");
 			},
 			'json'
 		).complete(function() {

@@ -697,7 +697,7 @@ class MS_View_Adminbar extends MS_View {
 		</style>
 		<script>
 		jQuery(function(){
-			jQuery( '.ms-sim-info .toggle-wrap' ).click(function() {
+			jQuery( '.ms-sim-info .toggle-wrap' ).on("click", function() {
 				var el = jQuery( this );
 				el.find( '.dashicons' ).toggleClass( 'dashicons-arrow-up dashicons-arrow-down' );
 				el.closest( '.ms-sim-info' ).toggleClass( 'collapsed' );

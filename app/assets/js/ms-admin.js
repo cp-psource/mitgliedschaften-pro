@@ -737,10 +737,10 @@ jQuery(document).ready(function() {
                 }
             });
 
-            jQuery('a.cancel', template).click(function() {
+            jQuery('a.cancel', template).on("click", function() {
                 return ms_inline_editor.revert();
             });
-            jQuery('a.save', template).click(function() {
+            jQuery('a.save', template).on("click", function() {
                 return ms_inline_editor.save(this);
             });
             jQuery('td', template).keydown(function(e) {
@@ -919,7 +919,7 @@ jQuery(document).ready(function() {
 /* Tooltip component */
 jQuery(function init_tooltip() {
     // Hide all tooltips when user clicks anywhere outside a tooltip element.
-    jQuery(document).click(function() {
+    jQuery(document).on("click", function() {
         function hide_tooltip() {
             var el = jQuery(this),
                 stamp = el.attr('timestamp'),
@@ -936,7 +936,7 @@ jQuery(function init_tooltip() {
     });
 
     // Hide single tooltip when Close-Button is clicked.
-    jQuery('.wpmui-tooltip-button').click(function() {
+    jQuery('.wpmui-tooltip-button').on("click", function() {
         var el = jQuery(this),
             parent = el.parents('.wpmui-tooltip'),
             stamp = jQuery(parent).attr('timestamp'),
@@ -949,12 +949,12 @@ jQuery(function init_tooltip() {
     });
 
     // Don't propagate click events inside the tooltip to the document.
-    jQuery('.wpmui-tooltip').click(function(e) {
+    jQuery('.wpmui-tooltip').on("click", function(e) {
         e.stopPropagation();
     });
 
     // Toggle a tooltip
-    jQuery('.wpmui-tooltip-info').click(function(event) {
+    jQuery('.wpmui-tooltip-info').on("click", function(event) {
         var parent, stamp, sibling, newpos, tooltip,
             el = jQuery(this);
 
@@ -1016,7 +1016,7 @@ window.ms_init.controller_adminbar = function init() {
         jQuery('#wpadminbar #view-site-as').submit();
     }
 
-    jQuery('#wp-admin-bar-membership-simulate').find('a').click(function(e) {
+    jQuery('#wp-admin-bar-membership-simulate').find('a').on("click", function(e) {
         jQuery('#wp-admin-bar-membership-simulate')
             .removeClass('hover')
             .find('> div')
@@ -1636,7 +1636,7 @@ window.ms_init.view_membership_add = function init() {
     });
 
     // Lock the options then guest membership is selected.
-    jQuery('input[name="type"]').click(function() {
+    jQuery('input[name="type"]').on("click", function() {
         var types = jQuery('input[name="type"]'),
             current = types.filter(':checked'),
             cur_type = current.val();
@@ -1664,7 +1664,7 @@ window.ms_init.view_membership_add = function init() {
     }).filter(':checked').trigger('click');
 
     // Cancel the wizard.
-    jQuery('#cancel').click(function() {
+    jQuery('#cancel').on("click", function() {
         var me = jQuery(this);
 
         // Simply reload the page after the setting has been changed.
@@ -1782,7 +1782,7 @@ window.ms_init.metabox = function init() {
         box_access.hide();
     }
 
-    jQuery('.dripped').click(function() {
+    jQuery('.dripped').on("click", function() {
         var tooltip = jQuery(this).children('.tooltip');
         tooltip.toggle(300);
     });
@@ -1792,7 +1792,7 @@ window.ms_init.metabox = function init() {
         jQuery('#ms-metabox-wrapper').replaceWith(data.response);
         window.ms_init.metabox();
 
-        jQuery('.wpmui-radio-slider').click(function() {
+        jQuery('.wpmui-radio-slider').on("click", function() {
             window.ms_functions.radio_slider_ajax_update(this);
         });
 
@@ -2560,7 +2560,7 @@ window.ms_init.view_settings_import = function init() {
 
         a.href = window.URL.createObjectURL(blob);
         a.download = filename;
-        a.click();
+        a.trigger("click");
     }
 
     /**
