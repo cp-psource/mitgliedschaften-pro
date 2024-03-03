@@ -1,6 +1,6 @@
-/*! Membership 2 Pro - v1.1.8
+/*! PS Mitgliedschaften - v1.1.8
  * https://n3rds.work/docs/ps-mitgliedschaften-plugin-handbuch/
- * Copyright (c) 2019-2021; * Licensed GPLv2+ */
+ * Copyright (c) 2019-2024; * Licensed GPLv2+ */
 /*global window:false */
 /*global document:false */
 /*global ms_data:false */
@@ -725,13 +725,13 @@ jQuery(document).ready(function() {
             template = jQuery('.ms-wrap #inline-edit');
 
             /*
-             * Remove the form-template from the DOM so it does not mess with
-             * the containing form...
-             */
+            * Remove the form-template from the DOM so it does not mess with
+            * the containing form...
+            */
             template.detach();
 
             // prepare the edit rows
-            template.keyup(function(e) {
+            template.on('keyup', function(e) {
                 if (e.which === 27) {
                     return ms_inline_editor.revert();
                 }
@@ -743,7 +743,7 @@ jQuery(document).ready(function() {
             jQuery('a.save', template).on("click", function() {
                 return ms_inline_editor.save(this);
             });
-            jQuery('td', template).keydown(function(e) {
+            jQuery('td', template).on('keydown', function(e) {
                 if (e.which === 13) {
                     return ms_inline_editor.save(this);
                 }
@@ -1030,7 +1030,7 @@ window.ms_init.controller_adminbar = function init() {
         .parents('#wpadminbar')
         .addClass('simulation-mode');
 
-    jQuery('#wpadminbar #view-as-selector').change(change_membership);
+    jQuery('#wpadminbar #view-as-selector').on('change', change_membership);
 
 };
 /*global window:false */
