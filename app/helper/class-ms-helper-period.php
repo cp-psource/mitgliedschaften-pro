@@ -164,32 +164,40 @@ class MS_Helper_Period extends MS_Helper {
 	public static function is_after( $the_date, $before_1 ) {
 		$result = true;
 
-		if ( ! is_numeric( $the_date ) ) {
-			$the_date = strtotime( $the_date );
-		}
-
-		if ( empty( $the_date ) ) {
+		// Check if $the_date is null or empty string
+		if ( $the_date === null || $the_date === '' ) {
 			// No valid date specified. Fail.
 			$result = false;
 		} else {
-			// Valid date specified, compare with other params.
-			$dates = func_get_args();
+			// Convert $the_date to timestamp if it's not numeric
+			if ( ! is_numeric( $the_date ) ) {
+				$the_date = strtotime( $the_date );
+			}
 
-			// Remove the_date from the param list
-			array_shift( $dates );
+			// If $the_date is still not a valid timestamp, fail
+			if ( empty( $the_date ) || $the_date === false ) {
+				$result = false;
+			} else {
+				// Valid date specified, compare with other params.
+				$dates = func_get_args();
 
-			foreach ( $dates as $comp_date ) {
-				if ( ! is_numeric( $comp_date ) ) {
-					$comp_date = strtotime( $comp_date );
-				}
+				// Remove the_date from the param list
+				array_shift( $dates );
 
-				// The date param is invalid, skip comparison.
-				if ( empty( $comp_date ) ) { continue; }
+				foreach ( $dates as $comp_date ) {
+					// Convert $comp_date to timestamp if it's not numeric
+					if ( ! is_numeric( $comp_date ) ) {
+						$comp_date = strtotime( $comp_date );
+					}
 
-				if ( $comp_date > $the_date ) {
-					// Comparison date is bigger (=after) the_date. Fail.
-					$result = false;
-					break;
+					// The date param is invalid, skip comparison.
+					if ( empty( $comp_date ) || $comp_date === false ) { continue; }
+
+					if ( $comp_date > $the_date ) {
+						// Comparison date is bigger (=after) the_date. Fail.
+						$result = false;
+						break;
+					}
 				}
 			}
 		}
