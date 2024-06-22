@@ -71,29 +71,29 @@ class MsTheLib_Ui extends MsTheLib {
 	public function add( $module = 'core', $onpage = 'all' ) {
 		switch ( $module ) {
 			case 'core':
-				$this->css( $this->_css_url( 'wpmu-ui.3.min.css' ), $onpage );
-				$this->js( $this->_js_url( 'wpmu-ui.3.min.js' ), $onpage );
+				$this->css( $this->_css_url( 'wpmu-ui.3.css' ), $onpage );
+				$this->js( $this->_js_url( 'wpmu-ui.3.js' ), $onpage );
 				break;
 
 			case 'animate':
 			case 'animation':
-				$this->css( $this->_css_url( 'animate.3.min.css' ), $onpage );
+				$this->css( $this->_css_url( 'animate.3.css' ), $onpage );
 				break;
 
 			case 'select':
-				$this->css( $this->_css_url( 'select2.3.min.css' ), $onpage );
-				$this->js( $this->_js_url( 'select2.3.min.js' ), $onpage );
+				$this->css( $this->_css_url( 'select2.3.css' ), $onpage );
+				$this->js( $this->_js_url( 'select2.3.js' ), $onpage );
 				break;
 
 			case 'vnav':
-				$this->css( $this->_css_url( 'wpmu-vnav.3.min.css' ), $onpage );
-				$this->js( $this->_js_url( 'wpmu-vnav.3.min.js' ), $onpage );
+				$this->css( $this->_css_url( 'wpmu-vnav.3.css' ), $onpage );
+				$this->js( $this->_js_url( 'wpmu-vnav.3.js' ), $onpage );
 				break;
 
 			case 'html-element':
 			case 'html_element':
 			case 'html':
-				$this->css( $this->_css_url( 'wpmu-html.3.min.css' ), $onpage );
+				$this->css( $this->_css_url( 'wpmu-html.3.css' ), $onpage );
 				break;
 
 			case 'media':
@@ -110,7 +110,7 @@ class MsTheLib_Ui extends MsTheLib {
 				$this->js( 'jquery-ui-core', $onpage );
 				$this->js( 'jquery-ui-datepicker', $onpage );
 				$this->js( 'jquery-ui-draggable', $onpage );
-				$this->css( $this->_css_url( 'jquery-ui.wpmui.3.min.css' ), $onpage );
+				$this->css( $this->_css_url( 'jquery-ui.wpmui.3.css' ), $onpage );
 				break;
 
 			default:
