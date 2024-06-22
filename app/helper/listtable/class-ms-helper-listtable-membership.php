@@ -6,6 +6,9 @@
  */
 class MS_Helper_ListTable_Membership extends MS_Helper_ListTable {
 
+	public $_factory_id;
+	public $_column_headers;
+
 	protected $id = 'membership';
 
 	public function __construct(){

@@ -1659,7 +1659,7 @@ window.ms_init.view_membership_add = function init() {
             el_public.removeClass('disabled ms-locked');
             el_paid.removeClass('disabled ms-locked');
             el_name.removeClass('disabled ms-locked');
-            inp_name.val('').focus();
+            inp_name.val('').trigger('focus');
         }
     }).filter(':checked').trigger('click');
 
@@ -1763,7 +1763,7 @@ window.ms_init.bulk_delete_membership = function() {
         return false;
     }
 
-    jQuery('.bulk_delete_memberships_button').click(confirm_bulk_delete);
+    jQuery('.bulk_delete_memberships_button').on('click', confirm_bulk_delete);
 
 };
 /*global window:false */
@@ -1983,11 +1983,11 @@ window.ms_init.view_membership_payment = function init() {
     }
 
     // Show the correct payment options
-    jQuery('#payment_type').change(payment_type);
+    jQuery('#payment_type').on('change', payment_type);
     jQuery('#payment_type').each(payment_type);
 
     // Update currency symbols in payment descriptions.
-    jQuery('#currency').change(show_currency);
+    jQuery('#currency').on('change', show_currency);
 
     jQuery('.wpmui-slider-trial_period_enabled').on('ms-radio-slider-updated', toggle_trial);
     jQuery(document).on('ms-ajax-updated', '#enable_trial_addon', reload_page);
@@ -3035,6 +3035,6 @@ window.ms_init.view_settings_setup = function init() {
     // Reload the page when Wizard mode is activated.
     jQuery(document).on('ms-ajax-updated', '#create_menu', menu_created);
 
-    btn_site_edit.click(show_site_form);
-    btn_site_cancel.click(hide_site_form);
+    btn_site_edit.on('click', show_site_form);
+    btn_site_cancel.on('click', hide_site_form);
 };
