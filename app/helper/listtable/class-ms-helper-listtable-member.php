@@ -9,6 +9,9 @@
  */
 class MS_Helper_ListTable_Member extends MS_Helper_ListTable {
 
+	public $_factory_id;
+	public $_column_headers;
+
 	/**
 	 * A list of all memberships is generated in __construct() for performance.
 	 *

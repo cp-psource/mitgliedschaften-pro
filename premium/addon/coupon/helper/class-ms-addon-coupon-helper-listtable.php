@@ -6,6 +6,9 @@
  */
 class MS_Addon_Coupon_Helper_Listtable extends MS_Helper_ListTable {
 
+	public $_factory_id;
+	public $_column_headers;
+
 	protected $id = 'coupon';
 
 	public function __construct(){

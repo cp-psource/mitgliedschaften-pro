@@ -436,7 +436,7 @@ class MS_Addon_Coupon extends MS_Addon {
 
 			wp_enqueue_script(
 				'ms-view-coupon-edit',
-				$plugin_url . '/app/addon/coupon/assets/js/edit.js',
+				$plugin_url . '/premium/addon/coupon/assets/js/edit.js',
 				array( 'jquery' )
 			);
 		}

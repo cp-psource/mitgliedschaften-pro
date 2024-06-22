@@ -71,10 +71,10 @@ class MS_Helper_Html extends MS_Helper {
 	 */
 	public static function settings_header( $args = null ) {
 		$defaults = array(
-			'title' 			=> '',
-			'title_icon_class' 	=> '',
-			'desc' 				=> '',
-			'bread_crumbs' 		=> null,
+			'title'             => '',
+			'title_icon_class'  => '',
+			'desc'              => '',
+			'bread_crumbs'      => null,
 		);
 		$args = wp_parse_args( $args, $defaults );
 		$args = apply_filters( 'ms_helper_html_settings_header_args', $args );
@@ -95,7 +95,7 @@ class MS_Helper_Html extends MS_Helper {
 		<div class="ms-settings-desc-wrapper">
 			<?php foreach ( $desc as $description ) : ?>
 				<div class="ms-settings-desc ms-description">
-					<?php printf( $description ); ?>
+					<?php if ( $description !== null ) printf( '%s', $description ); ?>
 				</div>
 			<?php endforeach; ?>
 		</div>

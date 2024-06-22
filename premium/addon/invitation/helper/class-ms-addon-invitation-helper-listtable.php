@@ -6,6 +6,9 @@
  */
 class MS_Addon_Invitation_Helper_Listtable extends MS_Helper_ListTable {
 
+	public $_factory_id;
+	public $_column_headers;
+
 	protected $id = 'invitation';
 
 	public function __construct() {

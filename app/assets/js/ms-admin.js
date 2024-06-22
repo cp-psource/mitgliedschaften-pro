@@ -1047,7 +1047,7 @@ window.ms_init.view_help = function init() {
         details.toggle();
     }
 
-    jQuery('.ms-help-toggle').click(toggle_section);
+    jQuery('.ms-help-toggle').on('click', toggle_section);
 };
 
 /*global window:false */
@@ -1560,15 +1560,15 @@ window.ms_init.view_member_editor = function init() {
         }
     };
 
-    txt_username.change(function() {
+    txt_username.on('change', function() {
         validate_field('username', txt_username);
     });
 
-    txt_email.change(function() {
+    txt_email.on('change', function() {
         validate_field('email', txt_email);
     });
 
-    sel_user.change(validate_buttons);
+    sel_user.on('change', validate_buttons);
 
     chosen_options.minimumInputLength = 3;
     chosen_options.multiple = false;

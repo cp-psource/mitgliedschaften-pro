@@ -6,6 +6,8 @@
  */
 class MS_Rule_MenuItem_ListTable extends MS_Helper_ListTable_Rule {
 
+	public $_column_headers;
+
 	protected $id = MS_Rule_MenuItem::RULE_ID;
 
 	/**

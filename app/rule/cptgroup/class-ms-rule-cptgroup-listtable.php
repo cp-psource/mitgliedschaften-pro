@@ -6,6 +6,8 @@
  */
 class MS_Rule_CptGroup_ListTable extends MS_Helper_ListTable_Rule {
 
+	public $_column_headers;
+
 	protected $id = MS_Rule_CptGroup::RULE_ID;
 
 	public function __construct( $model ) {

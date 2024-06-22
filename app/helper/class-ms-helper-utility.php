@@ -265,9 +265,9 @@ class MS_Helper_Utility extends MS_Helper {
 			$b = $x;
 		}
 
-		$r = str_pad( dechex( ( $r + $m ) * 255 ), 2, '0', STR_PAD_LEFT );
-		$g = str_pad( dechex( ( $g + $m ) * 255 ), 2, '0', STR_PAD_LEFT );
-		$b = str_pad( dechex( ( $b + $m ) * 255 ), 2, '0', STR_PAD_LEFT );
+		$r = str_pad( dechex( intval( ( $r + $m ) * 255 ) ), 2, '0', STR_PAD_LEFT );
+		$g = str_pad( dechex( intval( ( $g + $m ) * 255 ) ), 2, '0', STR_PAD_LEFT );
+		$b = str_pad( dechex( intval( ( $b + $m ) * 255 ) ), 2, '0', STR_PAD_LEFT );
 
 		return '#' . $r . $g . $b;
 	}
