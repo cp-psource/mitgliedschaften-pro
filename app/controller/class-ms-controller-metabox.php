@@ -45,7 +45,7 @@ class MS_Controller_Metabox extends MS_Controller {
 	 *
 	 * @var string
 	 */
-	private $metabox_title;
+	private $metabox_title = 'Mitgliedschaft Zugriff';
 
 	/**
 	 * Context for showing the metabox.
@@ -75,7 +75,7 @@ class MS_Controller_Metabox extends MS_Controller {
 	public function __construct() {
 		parent::__construct();
 
-		$this->metabox_title = __( 'Mitgliedschaft Zugriff', 'membership2' );
+
 
 		$extra = array();
 
@@ -116,6 +116,11 @@ class MS_Controller_Metabox extends MS_Controller {
 			'the_editor_content',
 			'show_default_content'
 		);
+
+		// Zusatz-Logik
+		if ( ! MS_Plugin::is_enabled() ) {
+			return $this;
+		}
 	}
 
 	/**
