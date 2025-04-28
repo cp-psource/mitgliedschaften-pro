@@ -103,7 +103,7 @@ class MS_Factory {
 	 */
 	public static function load( $class, $model_id = 0, $context = null ) {
 		$model 		= null;
-		$class 		= trim( $class );
+		$class = trim( (string) $class );
 		$model_id 	= intval( $model_id );
 
 		$key = strtolower( $class . '-' . $model_id );
@@ -375,6 +375,9 @@ class MS_Factory {
 	 * @return MS_Model_Member The retrieved object.
 	 */
 	protected static function load_from_wp_user( $model, $user_id, $name = null ) {
+		if ( empty( $user_id ) ) {
+			return $model;
+		}
 		$class = get_class( $model );
 		$cache = MS_Helper_Cache::get_cache( $user_id, $class );
 

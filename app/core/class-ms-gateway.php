@@ -549,7 +549,7 @@ class MS_Gateway extends MS_Model_Option {
 				case 'upgrade_button_url':
 				case 'cancel_button_url':
 				case 'mode':
-					$value = trim( $this->$property );
+					$value = trim( (string) ( $this->$property ?? '' ) );
 					break;
 
 				default:
