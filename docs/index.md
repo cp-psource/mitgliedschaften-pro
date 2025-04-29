@@ -152,57 +152,57 @@ Schütze Inhalte mit Shortcodes.
 
 **Taxamo**
 
-Activate to comply with EU VAT regulations.
+Aktiviere diese Option, um die EU-Mehrwertsteuervorschriften einzuhalten.
 
 ![image](assets/icons/addon-21-1x.png)
 
-**Trial Period**
+**Testzeitraum**
 
-Set free trial offers for membership.
+Lege kostenlose Testangebote für die Mitgliedschaft fest.
 
 ![image](assets/icons/addon-22-1x.png)
 
-**URL Protection**
+**URL-Schutz**
 
-Protect any specific page on your site.
+Schütze jede beliebige Seite Deiner Webseite.
 
 ![image](assets/icons/addon-23-1x.png)
 
-**WPML Integration**
+**WPML-Integration**
 
-Use WPML to translate plugin messages.
+Nutze WPML, um Plugin-Nachrichten zu übersetzen.
 
 ![image](assets/icons/addon-24-1x.png)
 
 **WP reCaptcha**
 
-Enable WP reCaptcha integration.
+Aktiviere die WP reCaptcha-Integration.
 
    
 
-### Four Reliable Payment Options
+### Vier zuverlässige Zahlungsoptionen
 
-Protect your content behind a membership login and offer automated processing. Choose from four payment options in 25 currencies. Get paid with PayPal, Stripe, Authorize.net, or good old fashioned manual payments.
+Schütze Deinw Inhalte mit einem Mitglieder-Login und profitiere von einer automatisierten Abwicklung. Wähle aus vier Zahlungsoptionen in 25 Währungen. Bezahle mit PayPal, Stripe, Authorize.net oder ganz einfach per manueller Zahlung.
 
 ![money-735x470](assets/images/money-735x4701-583x373.jpg)
 
-Membership 2 Pro comes packaged with everything you need to start taking payments out of the box – no expensive extensions.
+PS Mitgliedschaften enthält alles, was Du brauchst, um sofort mit der Zahlungsabwicklung zu beginnen – keine teuren Erweiterungen.
 
  
 
-### Manage More Users
+### Mehr Nutzer verwalten
 
-Quickly find and add members from the dashboard. View their membership type, when it expires and any pending payments. Or visit the overview screen to see recent news, stats, new members sign ups, and a list of content available to logged in members.
+Finde und füge Mitglieder schnell über das Dashboard hinzu. Sehe Dir die Art der Mitgliedschaft, deren Ablaufdatum und ausstehende Zahlungen an. Oder besuche die Übersicht, um aktuelle Nachrichten, Statistiken, Neuanmeldungen und eine Liste der für angemeldete Mitglieder verfügbaren Inhalte anzuzeigen.
 
 ![image](assets/images/add-member-1x-3.jpg)
 
- Membership 2 Pro makes it easy to manage your users.
+ Mit PS Mitgliedschaften kannst Du Deine Benutzer ganz einfach verwalten.
 
  
 
 ![m2-wizard-735x470](assets/images/m2-wizard-735x470-583x373.jpg)
 
- We’ve created an experience that makes setting up a membership site simple and intuitive, so you can start protecting your content even faster.
+ Wir haben eine Erfahrung geschaffen, die das Einrichten einer Mitgliederseite einfach und intuitiv macht, sodass Du noch schneller mit dem Schutz Deiner Inhalte beginnen kannst.
 
 ### Smart Setup Wizard
 
