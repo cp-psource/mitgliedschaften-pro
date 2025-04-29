@@ -327,37 +327,37 @@ Wenn keine Add-ons aktiviert sind, kannst Du mit PS Mitgliedschaften Seiten, ben
 
 ![M2 Menu Protection](assets/images/M2_MenuProtection-700x838.png)
 
- M2 Menu Protection
+ PS Mitgliedschaften Menüschutz
 
-  You'll see the default mode is for everyone to be able to see everything. If you hover over any content item's current access, you'll see a "modify access link." Click this to restrict this content item to only members of the membership(s) you assign. A colorful pop up will appear with each of your memberships listed. Click the memberships you want, and move through the content items, and tabs, one by one until you're satisfied with your settings.
+Standardmäßig ist jeder Zugriff auf alle Inhalte möglich. Wenn Du mit der Maus über den aktuellen Zugriff auf ein Inhaltselement fährst, wird ein Link zum Ändern des Zugriffs angezeigt. Klicke darauf, um den Zugriff auf dieses Inhaltselement auf die von Dir zugewiesenen Mitgliedschaften zu beschränken. Ein farbiges Popup-Fenster mit allen Deinen Mitgliedschaften wird angezeigt. Klicke auf die gewünschten Mitgliedschaften und navigiere nacheinander durch die Inhaltselemente und Registerkarten, bis Du mit Deinen Einstellungen zufrieden bist.
 
-##### Step Five: Billing, Subscriptions, and Payment, Oh My!
+##### Schritt 5: Abrechnung, Abonnements und Zahlung – oh je!
 
-M2 comes packed with several payment gateway options. Authorize.net Manual payments PayPal Single PayPal Standard Stripe Single Stripe Subscriptions  
+PS Mitgliedschaften bietet verschiedene Zahlungsoptionen: Authorize.net, Manuelle Zahlungen, PayPal Single, PayPal Standard, Stripe Single, Stripe Abonnements  
 
-![M2 Payment Gateways](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_PaymentGateways.png)
+![M2 Payment Gateways](assets/images/M2_PaymentGateways.png)
 
-  You can choose whichever gateway or combination of gateways meets the needs of your an your members. You can set up your supported gateways via **Membership2 > Settings > Payments**. When payment gateways are set up, go back to **Membership2 > Memberships**, and edit each paid membership to include the gateway, the cost, and the duration of the membership.  
+  Du kannst das Gateway oder die Gateway-Kombination wählen, die den Anforderungen Deiner Mitglieder entspricht. Du kannst die unterstützten Gateways unter **Mitgliedschaften > Einstellungen > Zahlungen** einrichten. Sobald die Zahlungsgateways eingerichtet sind, gehe zurück zu **Mitgliedschaften > Mitgliedschaften** und bearbeite jede bezahlte Mitgliedschaft, um das Gateway, die Kosten und die Dauer der Mitgliedschaft anzugeben.  
 
-![Hover to see the Payment Options link.](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_MembershipPaymentSettings.png)
+![Hover to see the Payment Options link.](assets/images/M2_MembershipPaymentSettings.png)
 
- Hover to see the Payment Options link.
+ Bewege den Mauszeiger, um den Link „Zahlungsoptionen“ anzuzeigen.
 
    
 
-![M2 Subscription Payment Options](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_IndividualMembershipPaymentSettings.png)
+![M2 Subscription Payment Options](assets/images/M2_IndividualMembershipPaymentSettings.png)
 
- M2 Subscription Payment Options
+ Zahlungsoptionen für PS Mitgliedschaften-Abonnements
 
-  If you're planning on accepting recurring subscription payments, you'll need to use either PayPal Standard or Stripe Subscriptions to manage the payments. Now that your memberships, content protection, and payment information are all in place, all that's left is adding a few more personal details and checking your levels to ensure everything is working as expected.
+Wenn Du wiederkehrende Abonnementzahlungen akzeptieren möchtest, benötigst Du entweder PayPal Standard oder Stripe Subscriptions zur Zahlungsabwicklung. Nachdem Deine Mitgliedschaften, der Inhaltsschutz und die Zahlungsinformationen eingerichtet sind, musst Du nur noch ein paar persönliche Daten hinzufügen und Deine Levels überprüfen, um sicherzustellen, dass alles wie erwartet funktioniert.
 
-##### Step Six: Final Steps & Pulling it All Together
+##### Schritt 6: Letzte Schritte & Zusammenführung
 
-You'll notice there are still a few more settings in M2 you can adjust. Let's take a quick look. Protected Content Messages - You can change the text (and even add images and fancy styling!) when a user is trying to view content they don't have access to. You'll find these messages in **Membership2 > Settings > Protection Messages**. M2 also comes with a very handy "Membership Simulator" tool that allows you to view your site as if you were a member of any (or none) of your Memberships. Before you call it a day, take a few minutes and run through each of your Memberships to make sure they see what you want them to see. To access the Simulator, click the **Test Memberships** button in the toolbar in your admin or on the frontend of your site. You'll then see the Simulator window in the top-right corner on every page of your site.  
+Du wirst feststellen, dass Du in PS Mitgliedschaften noch einige weitere Einstellungen vornehmen kannst. Werfen wir einen kurzen Blick darauf. Nachrichten zu geschützten Inhalten – Du kannst den Text ändern (und sogar Bilder und ansprechende Designs hinzufügen!), wenn ein Nutzer versucht, Inhalte anzuzeigen, auf die er keinen Zugriff hat. Du findest diese Nachrichten unter **Mitgliedschaften > Einstellungen > Schutznachrichten**. PS Mitgliedschaften bietet außerdem einen praktischen „Mitgliedschaftssimulator“, mit dem Du Deine Webseite so anzeigen kannst, als wärst Du Mitglied einer (oder keiner) Deiner Mitgliedschaften. Bevor Du Feierabend machst, nimm Dir noch ein paar Minuten Zeit und überprüfe Deine Mitgliedschaften, um sicherzustellen, dass Du das siehst, was Du ihnen zeigen möchtest. Um auf den Simulator zuzugreifen, klicke in der Symbolleiste Deines Adminbereichs oder im Frontend Deiner Webseite auf die Schaltfläche **Mitgliedschaften testen**. Das Simulatorfenster wird dann oben rechts auf jeder Seite Deiner Webseite angezeigt.
 
-![M2 Membership Simulator](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-membership-simulator.png)
+![M2 Membership Simulator](assets/images/m2-1000-membership-simulator.png)
 
-  Reward yourself with a pat on the back, you're getting there!
+  Belohne Dich mit einem Schulterklopfen, Du schaffst das!
 
 ### Membership2 Add-Ons
 
