@@ -266,7 +266,7 @@ Willkommen bei PS Mitgliedschaften! Die neue, verbesserte Version unserer Plugin
 
 ## Erste Schritte
 
-### Erstellen einer Mitgliederseite mit M2
+### Erstellen einer Mitgliederseite mit PS Mitgliedschaften
 
 Wenn Du bereits Mitgliedschaften oder geschützte Inhalte nutzt, ist Dir PS Mitgliedschaften bestens vertraut. Mit PS Mitgliedschaften kannst Du bis ins kleinste Detail steuern, welche Inhalte welchen Mitgliedern angezeigt werden. Ob kostenlose oder kostenpflichtige Mitgliedschaft – Du kannst Inhalte hinter einer Paywall schützen oder einen privaten Bereich für Deine kostenlosen Mitglieder einrichten. Beginnen wir jetzt mit der Erstellung Deiner Webseite.
 
@@ -405,83 +405,87 @@ Die gewählte Option bestimmt die zusätzlichen Einstellungen, die unter **Mitgl
 
 ![M2 Category Protection](assets/images/M2_CategoryProtection.png)
 
- M2 Category Protection
+ PS Mitgliedschaften Schutz der Kategorie
 
-  _Coupon_ - Offer coupons for memberships.  
+  _Coupon_ – Biete Gutscheine für Mitgliedschaften an.
 
-![M2 Add New Coupon Settings](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_AddCoupon.png)
+![M2 Add New Coupon Settings](assets/images/M2_AddCoupon.png)
 
- M2 Add New Coupon Settings
+ PS Mitgliedschaften: Neue Gutscheineinstellungen hinzufügen
 
-    _Individual Custom Posts_ - If you'd like to control access to custom posts on a post-by-post basis, this add on will help. When enabled, the _Custom Post Types_ tab under **Membership 2 > Protection Rules** will be replaced with _Custom post Type Items_ where you can select the specific items you want to protect for each membership.  
+_Individuelle benutzerdefinierte Beiträge_ – Wenn Du den Zugriff auf benutzerdefinierte Beiträge für jeden Beitrag einzeln steuern möchtest, ist dieses Add-on hilfreich. Wenn aktiviert, wird der Reiter _Benutzerdefinierte Beitragstypen_ unter **Mitgliedschaften > Schutzregeln** durch _Elemente für benutzerdefinierte Beitragstypen_ ersetzt. Hier kannst Du die Elemente auswählen, die Du für jede Mitgliedschaft schützen möchtest.
 
-![M2 Custom Post Type Items Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-cpt-items-protection.png)
+![M2 Custom Post Type Items Protection](assets/images/m2-1000-cpt-items-protection.png)
 
- M2 Custom Post Type Items Protection
+ PS Mitgliedschaften Schutz für benutzerdefinierte Beitragstypen
 
-  _Individual Posts_ - Like the add on above, but for standard WordPress blog posts. When enaled, this Add-On will add a new tab under **Membership 2 > Protection Rules** called _Posts_ where you can protect individual posts.  
+_Einzelne Beiträge_ – Wie das obige Add-on, jedoch für Standard-WordPress-Blogbeiträge. Bei Aktivierung fügt dieses Add-on unter **Mitgliedschaften > Schutzregeln** einen neuen Tab mit dem Namen _Beiträge_ hinzu, in dem Du einzelne Beiträge schützen kannst.
 
-![M2 Post Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-post-protection.png)
+![M2 Post Protection](assets/images/m2-1000-post-protection.png)
 
- M2 Post Protection
+ PS Mitgliedschaften Post Schutz
 
-  _Mail Chimp Integration_ - If you're a MailChimp user, this add on allows you to automatically optin your users to your MailChimp lists. There are 3 options available under the MailChimp tab in Membership2 > Settings where you can select which lists to use for _Registered Users_ with no membership, _Members_ and _Deactivated Members_.  
+MailChimp-Integration – Wenn Du MailChimp nutzt, kannst Du mit diesem Add-on Deine Nutzer automatisch in Deine MailChimp-Listen aufnehmen. Unter **„Mitgliedschaften“ > „Einstellungen“** im Reiter „MailChimp“ stehen Dir drei Optionen zur Verfügung. Dort kannst Du auswählen, welche Listen für registrierte Nutzer ohne Mitgliedschaft, Mitglieder und deaktivierte Mitglieder verwendet werden sollen.  
 
-![M2 MailChimp Integration](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-mailchimp-integration.png)
+![M2 MailChimp Integration](assets/images/m2-1000-mailchimp-integration.png)
 
- M2 MailChimp Integration
+ PS Mitgliedschaften MailChimp-Integration
 
-  _Media Protection_ - Like Advanced Menu Protection, this add on has three options to customize how your media is protected.  
+_Medienschutz_ – Wie der erweiterte Menüschutz bietet dieses Add-on drei Optionen zur individuellen Anpassung des Medienschutzes. 
 
-![M2 Media Protection Options](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_MediaProtectionOptions.png)
+![M2 Media Protection Options](assets/images/M2_MediaProtectionOptions.png)
 
- M2 Media Protection Options
+ PS Mitgliedschaften Medienschutzoptionen
 
-  _Member Capabilities_ - This add on will allow you to grant permissions/access for individual members, outside of their membership level.  
+_Mitgliederberechtigungen_ – Mit diesem Add-on kannst Du einzelnen Mitgliedern Berechtigungen/Zugriffe auch außerhalb ihrer Mitgliedschaftsstufe erteilen. 
 
-![M2 Advanced Capabilities](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_Capabilities.png)
+![M2 Advanced Capabilities](assets/images/M2_Capabilities.png)
 
- M2 Advanced Capabilities
+ PS Mitgliedschaften Erweiterte Funktionen
 
-  _Multiple Memberships_ - If you need users to have more than one simultaneous membership on your site, this add on will allow that functionality. This Add-On doesn't create any new settings for you to worry about though. **Important note:** Members who are in multiple membership levels will default to the permissions of the most permissive level they belong to, if there's a conflict. For example, let's say you have a craft-based site where members can join any memberships they want, and each membership is based on a craft. If the Knitters have access to all custom post types, but Stitchers do not, and Bev is a member of both Knitters and Stitchers, Bev will have access to all custom post types. _Protect Special Pages_ - Special page protection covers archives, 404 Pages, and search result pages, to provide truly wall-to-wall protection for your site.  
+_Mehrere Mitgliedschaften_ – Wenn Nutzer mehrere Mitgliedschaften gleichzeitig auf Deiner Webseite haben müssen, ermöglicht dieses Add-on dies. Es entstehen jedoch keine neuen Einstellungen. **Wichtiger Hinweis:** Mitglieder mit mehreren Mitgliedschaftsstufen erhalten im Konfliktfall standardmäßig die Berechtigungen der jeweils höchsten Stufe. Nehmen wir beispielsweise an, Du betreibst eine Webseite, die sich auf das Thema Handwerk konzentriert. Dort können Mitglieder beliebige Mitgliedschaften abschließen, wobei jede Mitgliedschaft auf einem Handwerk basiert. Wenn die Stricker Zugriff auf alle benutzerdefinierten Beitragstypen haben, die Stitcher jedoch nicht, und Bev sowohl bei den Strickern als auch bei den Stitchern Mitglied ist, hat Bev Zugriff auf alle benutzerdefinierten Beitragstypen. 
 
-![M2 Special Pages Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-special-pages-protection.png)
+  PS Mitgliedschaften Spezial Seiten schützen
 
- M2 Special Pages Protection
+_Spezialseiten schützen_ – Der Spezialseitenschutz umfasst Archive, 404-Fehlerseiten und Suchergebnisseiten und bietet so umfassenden Schutz für Deine Website.
 
-  _Redirect Control_ - If you want to control where users are redirected after logging in or logging out, this add on will be a big help. A future update will include the ability to set custom redirects based on memberships.  
+![M2 Special Pages Protection](assets/images/m2-1000-special-pages-protection.png)
 
-![M2 Redirect Settings](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-redirect-settings.png)
+ PS Mitgliedschaften Spezialseiten-Schutz
 
- M2 Redirect Settings
+_Weiterleitungssteuerung_ – Wenn Du steuern möchtest, wohin Benutzer nach dem An- und Abmelden weitergeleitet werden, ist dieses Add-on eine große Hilfe. Ein zukünftiges Update ermöglicht möglicherweise die Einrichtung benutzerdefinierter Weiterleitungen basierend auf Mitgliedschaften. 
 
-  _Shortcode Protection_ - This Add-On will enable you to protect the content that is output by shortcodes from WordPress, or even other plugins. Booya!  
+![M2 Redirect Settings](assets/images/m2-1000-redirect-settings.png)
 
-![M2 Shortcode Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-shortcode-protection.png)
+ PS Mitgliedschaften Weiterleitungseinstellungen
 
- M2 Shortcode Protection
+_Shortcode-Schutz_ – Mit diesem Add-on kannst Du Inhalte schützen, die über Shortcodes von WordPress oder anderen Plugins ausgegeben werden. Super! 
 
-  _Taxamo_ - EU VAT regulations apply to you? We've got your back. This Add-On will add a new tab to Membership2 > Settings where you can set up your Taxamo stuff.  
+![M2 Shortcode Protection](assets/images/m2-1000-shortcode-protection.png)
 
-![M2 Taxamo Settings](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-taxamo-settings.png)
+ PS Mitgliedschaften Shortcode-Schutz
 
- M2 Taxamo Settings
+_Taxamo_ – Gelten die EU-Mehrwertsteuervorschriften für Dich? Wir unterstützen Dich. Dieses Add-on fügt einen neuen Tab unter „Mitgliedschaften > Einstellungen“ hinzu, in dem Du Deine Taxamo-Einstellungen einrichten kannst. 
 
-  _Trial Period_ - If you'd like to give potential paying members a free taste of how great a membership on your site can be, activate the Trial Period add on. A new option will become available in the Payment settings for each paid membership you have.  
+![M2 Taxamo Settings](assets/images/m2-1000-taxamo-settings.png)
 
-![M2 Trial Period](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-trial-period.png)
+ PS Mitgliedschaften Taxamo-Einstellungen
 
- M2 Trial Period
+_Testphase_ – Wenn Du potenziellen zahlenden Mitgliedern einen kostenlosen Vorgeschmack auf die Vorteile einer Mitgliedschaft auf Deiner Webseite geben möchtest, aktiviere die Testphase. Für jede kostenpflichtige Mitgliedschaft steht Dir in den Zahlungseinstellungen eine neue Option zur Verfügung. 
 
-  _URL Protection_ - When none of the other add ons will do, URL protection will allow you to protect content by the page URL. URL protection includes regular expression support, so you can drill down into specific content as much as you need. Be careful with this one though; any rules you add here will override all other rules.  
+![M2 Trial Period](assets/images/m2-1000-trial-period.png)
 
-![M2 URL Restrictions](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-url-restrictions.png)
+ PS Mitgliedschaften Testzeitraum
 
- M2 URL Restrictions
+_URL-Schutz_ – Wenn keines der anderen Add-ons ausreicht, kannst Du mit dem URL-Schutz Inhalte über die Seiten-URL schützen. Der URL-Schutz unterstützt reguläre Ausdrücke, sodass Du bestimmte Inhalte beliebig detailliert analysieren kannst. Beachte jedoch, dass hier hinzugefügte Regeln alle anderen Regeln außer Kraft setzen.
 
-### Known Issues
+![M2 URL Restrictions](assets/images/m2-1000-url-restrictions.png)
 
-Cache plugins can often interfere with plugin functionality. If your users are not being assigned memberships after successfully paying and logging into your site, check if you have object cache enabled in your cache plugin. If so, add the following to the non-persistent fields/groups `MS_Model_Membership MS_Model_Member MS_Model_Communication_Invoice`
+ PS Mitgliedschaften-URL-Einschränkungen
+
+### Bekannte Probleme
+
+Cache-Plugins können die Funktionalität des Plugins beeinträchtigen. Wenn Deinen Nutzern nach erfolgreicher Zahlung und Anmeldung auf Deiner Webseite keine Mitgliedschaften zugewiesen werden, prüfe ob der Objekt-Cache in Deinem Cache-Plugin aktiviert ist. Füge in diesem Fall Folgendes zu den nicht persistenten Feldern/Gruppen hinzu: `MS_Model_Membership MS_Model_Member MS_Model_Communication_Invoice`
 
 <footer class="psource-footer">
   <p>
