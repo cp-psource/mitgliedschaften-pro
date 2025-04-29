@@ -1,4 +1,18 @@
-# PS Mitgliedschaften Plugin
+---
+title: PS Mitgliedschaften Plugin
+---
+
+<link rel="stylesheet" href="assets/style.css">
+
+<h2 align="center" style="color:#38c2bb;">📚 Inhaltsverzeichnis</h2>
+
+<div class="menu">
+  <a href="#features" style="color:#38c2bb;">🚀 Features</a> •
+  <a href="#schnelleinstieg" style="color:#38c2bb;">📖 Schnelleinstieg</a> •
+  <a href="https://github.com/cp-psource/mitgliedschaften-pro/discussions" style="color:#38c2bb;">💬 Forum</a> •
+  <a href="https://github.com/cp-psource/mitgliedschaften-pro/releases" style="color:#38c2bb;">📝 Download</a>
+</div>
+
 
 ## Starte mit PS Mitgliedschaften eine Mitgliedschaftsseite, um ganz einfach jedes Mitgliedschaftssystem einzurichten, das Du Dir vorstellst.
 
@@ -8,43 +22,43 @@ Erweitere Deine Fangemeinde mit kostenlosen, geschützten Inhalten, baue ein Ges
 
 Nutze die enthaltenen Mitgliedschaftsarten, um Deine Inhalte schnell für Mitglieder verfügbar zu machen und für abgemeldete Nutzer auszublenden, Inhalte in bestimmten Zeitabständen freizugeben, den Zugriff auf nur wenige Elemente zu beschränken oder Inhalte nur für angemeldete Nutzer verfügbar zu machen, die noch nicht beigetreten sind .
 
-![image](images/choose-a-membership-0x.jpg)
+![image](assets/images/choose-a-membership-0x.jpg)
 
 ### Mache es nur für Mitglieder
 
 Beschränke den Zugriff auf Seiten, Beiträge, Kategorien, Videos, Audio, Bilder, PDFs, digitale Downloads, Foren und sogar bestimmte Wörter und Links – Du bestimmst, wer was auf Deiner Webseite sieht.
 
-![image](images/media-protection-1x.jpg)
+![image](assets/images/media-protection-1x.jpg)
 
 ## Mehr Optionen und weniger Kopfschmerzen
 
 Verwende integrierte Add-ons, um PS Mitgliedschaften zu erweitern, wenn Deine Webseite wächst. Aktiviere nur die Funktionen, die Du benötigst, um die Geschwindigkeit zu steigern und Zeit zu sparen.
 
-![image](assets/addon-1-1x.png)
+![image](assets/icons/addon-1-1x.png)
 
 **Automatisierte Nachrichten**
 
 Erweiterte automatisierte E-Mail-Antworten für Veranstaltungen.
 
-![image](assets/addon-2-1x.png)
+![image](assets/icons/addon-2-1x.png)
 
 **Admin Side Protection**
 
 Control access to items in the WordPress dashboard.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-3-1x.png)
+![image](assets/icons/addon-3-1x.png)
 
 **Menu Protection**
 
 Add, protect and replace menus for visitors and members.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-4-1x.png)
+![image](assets/icons/addon-4-1x.png)
 
 **bbPress Integration**
 
 Use Membership 2 Pro to extend bbPress features.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-5-1x.png)
+![image](assets/icons/addon-5-1x.png)
 
 **BuddyPress Integration**
 
@@ -486,3 +500,10 @@ The option you select will determine the additional settings that will become av
 ### Known Issues
 
 Cache plugins can often interfere with plugin functionality. If your users are not being assigned memberships after successfully paying and logging into your site, check if you have object cache enabled in your cache plugin. If so, add the following to the non-persistent fields/groups `MS_Model_Membership MS_Model_Member MS_Model_Communication_Invoice`
+
+<footer class="psource-footer">
+  <p>
+    ❤️ Entwickelt mit Liebe von <a href="https://github.com/cp-psource" target="_blank">PSOURCE</a><br>
+    © 2025 – Alle Rechte vorbehalten
+  </p>
+</footer>
