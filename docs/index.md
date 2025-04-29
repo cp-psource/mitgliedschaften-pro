@@ -177,7 +177,6 @@ Nutze WPML, um Plugin-Nachrichten zu übersetzen.
 **WP reCaptcha**
 
 Aktiviere die WP reCaptcha-Integration.
-
    
 
 ### Vier zuverlässige Zahlungsoptionen
@@ -187,7 +186,6 @@ Schütze Deinw Inhalte mit einem Mitglieder-Login und profitiere von einer autom
 ![money-735x470](assets/images/money-735x4701-583x373.jpg)
 
 PS Mitgliedschaften enthält alles, was Du brauchst, um sofort mit der Zahlungsabwicklung zu beginnen – keine teuren Erweiterungen.
-
  
 
 ### Mehr Nutzer verwalten
@@ -197,38 +195,35 @@ Finde und füge Mitglieder schnell über das Dashboard hinzu. Sehe Dir die Art d
 ![image](assets/images/add-member-1x-3.jpg)
 
  Mit PS Mitgliedschaften kannst Du Deine Benutzer ganz einfach verwalten.
-
  
 
 ![m2-wizard-735x470](assets/images/m2-wizard-735x470-583x373.jpg)
 
  Wir haben eine Erfahrung geschaffen, die das Einrichten einer Mitgliederseite einfach und intuitiv macht, sodass Du noch schneller mit dem Schutz Deiner Inhalte beginnen kannst.
 
-### Smart Setup Wizard
+### Intelligenter Einrichtungsassistent
 
-There’s no guesswork with Membership 2 Pro. Our setup wizard will guide you through configuring your membership site. It even includes simulation mode to quickly verify everything is working before pushing your site live.
-
+Mit PS Mitgliedschaften gibt es kein Rätselraten mehr. Unser Einrichtungsassistent führt Sie durch die Konfiguration Deiner Mitgliederseite. Er bietet sogar einen Simulationsmodus, mit dem Du schnell überprüfen kannst, ob alles funktioniert, bevor Du Deine Seite live schaltest.
  
 
-![network-wide-control-735x470](https://premium.wpmudev.org/wp-content/uploads/2015/05/network-wide-control-735x470-583x373.jpg)
+![network-wide-control-735x470](assets/images/network-wide-control-735x470-583x373.jpg)
 
- Configure Membership2 Pro across your entire network from one place.
+ Konfiguriere PS Mitgliedschaften von einem Ort aus für Dein gesamtes Netzwerk.
 
-### True Multisite Protection
 
-Membership 2 Pro includes special controls for Multisite network administrators. Now you can configure content protection from one location – even on large networks. It's WordPress SuperPowers for your network.
+### Echter Multisite-Schutz
 
-  
+PS Mitgliedschaften bietet spezielle Funktionen für Multisite-Netzwerkadministratoren. Konfiguriere den Inhaltsschutz zentral – selbst in großen Netzwerken. Das sind WordPress-Superkräfte für Dein Netzwerk.
 
-### Automatically Create New Pages
 
-Membership 2 Pro automatically creates the pages you need and lets you choose which pages to include. Pages created by the plugin are marked so you can quickly spot and manage them from your page list.
+### Automatisches Erstellen neuer Seiten
 
-![page-creation-735x470](https://premium.wpmudev.org/wp-content/uploads/2015/05/page-creation-735x470-583x373.jpg)
+PS Mitgliedschaften erstellt automatisch die benötigten Seiten und lässt Dich auswählen, welche Seiten einbezogen werden sollen. Die vom Plugin erstellten Seiten sind markiert, sodass Du sie in Deiner Seitenliste schnell finden und verwalten kannst.
 
- Pages labels make it easy to manage pages created automatically by Membership 2 Pro.
+![page-creation-735x470](assets/images/page-creation-735x470-583x373.jpg)
 
- 
+ Seitenbeschriftungen erleichtern die Verwaltung von Seiten, die automatisch von PS Mitgliedschaften erstellt wurden.
+
 
 ### Protection Messages
 
