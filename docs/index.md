@@ -42,137 +42,137 @@ Erweiterte automatisierte E-Mail-Antworten für Veranstaltungen.
 
 ![image](assets/icons/addon-2-1x.png)
 
-**Admin Side Protection**
+**Admin-seitiger Schutz**
 
-Control access to items in the WordPress dashboard.
+Kontrolliere den Zugriff auf Elemente im WordPress-Dashboard.
 
 ![image](assets/icons/addon-3-1x.png)
 
-**Menu Protection**
+**Menüschutz**
 
-Add, protect and replace menus for visitors and members.
+Menüs für Besucher und Mitglieder hinzufügen, schützen und ersetzen.
 
 ![image](assets/icons/addon-4-1x.png)
 
-**bbPress Integration**
+**bbPress-Integration**
 
-Use Membership 2 Pro to extend bbPress features.
+Nutze Mitgliedschaften, um die bbPress-Funktionen zu erweitern.
 
 ![image](assets/icons/addon-5-1x.png)
 
-**BuddyPress Integration**
+**BuddyPress-Integration**
 
-Create and exclusive social network with BuddyPress.
+Erstelle mit BuddyPress ein exklusives soziales Netzwerk.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-6-1x.png)
+![image](assets/icons/addon-6-1x.png)
 
-**Category Protection**
+**Kategorieschutz**
 
-Use categories to protect a group of posts.
+Verwende Kategorien, um eine Gruppe von Beiträgen zu schützen.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-7-1x.png)
+![image](assets/icons/addon-7-1x.png)
 
-**Membership Coupons**
+**Mitgliedsgutscheine**
 
-Create coupons and discounts to grow your business.
+Erstelle Gutscheine und Rabatte, um Dein Geschäft auszubauen.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-8-1x.png)
+![image](assets/icons/addon-8-1x.png)
 
-**Post Protection**
+**Beitragsschutz**
 
-Protect both posts and custom post types.
+Schütze sowohl Beiträge als auch benutzerdefinierte Beitragstypen.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-9-1x.png)
+![image](assets/icons/addon-9-1x.png)
 
-**Invitation Codes**
+**Einladungscodes**
 
-Users need an invitation code to subscribe.
+Nutzer benötigen einen Einladungscode, um sich anzumelden.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-10-1x.png)
+![image](assets/icons/addon-10-1x.png)
 
-**Media Protection**
+**Medienschutz**
 
-Protect your images and other Media Library content.
+Schütze Bilder und andere Inhalte Deiner Medienbibliothek.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-11-1x.png)
+![image](assets/icons/addon-11-1x.png)
 
-**Member Capabilities**
+**Mitgliederfunktionen**
 
-Manage user-capabilities based on membership level.
+Verwalte die Benutzerfunktionen basierend auf der Mitgliedschaftsstufe.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-12-1x.png)
+![image](assets/icons/addon-12-1x.png)
 
-**Custom Attributes**
+**Benutzerdefinierte Attribute**
 
-Add custom attributes you can use in shortcodes and code.
+Füge benutzerdefinierte Attribute hinzu, die Du in Shortcodes und Code verwenden kannst.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-13-1x.png)
+![image](assets/icons/addon-13-1x.png)
 
-**Multiple Memberships**
+**Mehrfachmitgliedschaften**
 
-Subscribe to more than one membership at a time.
+Du kannst mehrere Mitgliedschaften gleichzeitig abschließen.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-14-1x.png)
+![image](assets/icons/addon-14-1x.png)
 
-**Pro-Rating**
+**Anteiliger Betrag**
 
-Pro-rate payments when switching memberships.
+Anteiliger Betrag bei Mitgliedschaftswechsel.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-15-1x.png)
+![image](assets/icons/addon-15-1x.png)
 
-**Profile Fields**
+**Profilfelder**
 
-Customize fields for profile and registration form.
+Passe die Felder für Dein Profil und das Registrierungsformular an.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-16-1x.png)
+![image](assets/icons/addon-16-1x.png)
 
-**Protect Special Pages**
+**Spezialseiten schützen**
 
-Protection special pages such as search results.
+Schütze Spezialseiten wie Suchergebnisse.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-17-1x.png)
+![image](assets/icons/addon-17-1x.png)
 
-**Redirect Control**
+**Weiterleitungssteuerung**
 
-Define URL after logged-in or logged-out.
+URL nach An- und Abmeldung festlegen.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-18-1x.png)
+![image](assets/icons/addon-18-1x.png)
 
-**Search Index**
+**Suchindex**
 
-Allow search engines to index protected content.
+Suchmaschinen erlauben, geschützte Inhalte zu indexieren.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-19-1x.png)
+![image](assets/icons/addon-19-1x.png)
 
 **Shortcodes**
 
-Protect content using Shortcodes.
+Schütze Inhalte mit Shortcodes.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-20-1x.png)
+![image](assets/icons/addon-20-1x.png)
 
 **Taxamo**
 
 Activate to comply with EU VAT regulations.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-21-1x.png)
+![image](assets/icons/addon-21-1x.png)
 
 **Trial Period**
 
 Set free trial offers for membership.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-22-1x.png)
+![image](assets/icons/addon-22-1x.png)
 
 **URL Protection**
 
 Protect any specific page on your site.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-23-1x.png)
+![image](assets/icons/addon-23-1x.png)
 
 **WPML Integration**
 
 Use WPML to translate plugin messages.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/addon-24-1x.png)
+![image](assets/icons/addon-24-1x.png)
 
 **WP reCaptcha**
 
@@ -184,7 +184,7 @@ Enable WP reCaptcha integration.
 
 Protect your content behind a membership login and offer automated processing. Choose from four payment options in 25 currencies. Get paid with PayPal, Stripe, Authorize.net, or good old fashioned manual payments.
 
-![money-735x470](https://premium.wpmudev.org/wp-content/uploads/2015/05/money-735x4701-583x373.jpg)
+![money-735x470](assets/images/money-735x4701-583x373.jpg)
 
 Membership 2 Pro comes packaged with everything you need to start taking payments out of the box – no expensive extensions.
 
@@ -194,13 +194,13 @@ Membership 2 Pro comes packaged with everything you need to start taking payme
 
 Quickly find and add members from the dashboard. View their membership type, when it expires and any pending payments. Or visit the overview screen to see recent news, stats, new members sign ups, and a list of content available to logged in members.
 
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/add-member-1x-3.jpg)
+![image](assets/images/add-member-1x-3.jpg)
 
  Membership 2 Pro makes it easy to manage your users.
 
  
 
-![m2-wizard-735x470](https://premium.wpmudev.org/wp-content/uploads/2015/05/m2-wizard-735x470-583x373.jpg)
+![m2-wizard-735x470](assets/images/m2-wizard-735x470-583x373.jpg)
 
  We’ve created an experience that makes setting up a membership site simple and intuitive, so you can start protecting your content even faster.
 
