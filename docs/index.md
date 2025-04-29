@@ -225,120 +225,107 @@ PS Mitgliedschaften erstellt automatisch die benötigten Seiten und lässt Dich 
  Seitenbeschriftungen erleichtern die Verwaltung von Seiten, die automatisch von PS Mitgliedschaften erstellt wurden.
 
 
-### Protection Messages
+### Schutzmeldungen
 
-Encourage visitors to your site to sign up for exclusive access to members-only content. Display a carefully crafted message to logged out users, along with details or how they can join your site.
+Ermutige Besucher Deiner Webseite, sich für exklusiven Zugriff auf Mitgliederinhalte anzumelden. Zeige abgemeldeten Benutzern eine sorgfältig gestaltete Nachricht mit Details und Informationen zum Beitritt zu Deiner Webseite an.
 
-![messages-735x470](https://premium.wpmudev.org/wp-content/uploads/2015/05/messages-735x470-583x373.jpg)
+![messages-735x470](assets/images/messages-735x470-583x373.jpg)
 
- Create custom paywall messages.
-
- 
-
-![automated-messages-735x470](https://premium.wpmudev.org/wp-content/uploads/2015/05/automated-messages-735x470-583x373.jpg)
-
- Built-in admin email system.
-
-### Automated Email Messages
-
-Email new members automatically when they sign up to your site. Thank them for taking the time to join as a free member and even offer them a coupon for discounted membership.
+ Erstelle benutzerdefinierte Paywall-Nachrichten.
 
  
 
-![toggle-protected-content-735x470](https://premium.wpmudev.org/wp-content/uploads/2015/05/toggle-protected-content-735x470-583x373.jpg)
+![automated-messages-735x470](assets/images/automated-messages-735x470-583x373.jpg)
 
- Toggle content protection across your site for simple powerful control.
+ Integriertes Admin-E-Mail-System.
 
-### Control Site-Wide Content Protection
+### Automatisierte E-Mail-Nachrichten
 
-Easily toggle whether you want content protection turned on or off, either from the easy-to-spot notification in the admin bar or directly in the Membership 2 Pro settings.
-
-### Pro Results – Simple Shortcode Integrations
-
-Use shortcodes to do everything from simply displaying a membership type to protecting specific content from users on certain membership levels.
-
-### Take Advantage of Membership 2 Pro Integrations
-
-Membership 2 Pro includes built-in advanced membership feature protection for Affiliates, Custom Sidebars Pro, Events+, PopUp Pro and Appointments+. Plus, the Membership 2 Pro API makes it easy to integrate your favorite plugins and extend your membership site.
-
-Welcome to M2! It's the new, improved version of our Membership and Protected Content plugins, and it's the best version yet.
-
-### To Install:
-
-Installing M2 will depend on where you're starting from, so this part of this guide is divided into three sections; Upgrading from Protected Content, Upgrading from Membership, and First-time install. Read the section that pertains to you before you jump in.
-
-##### Upgrading from Protected Content
-
-Upgrading to M2 from Protected Content is the simplest option. M2 will show in your admin as an available update for Protected Content, which means it will quietly replace Protected Content when the upgrade is complete. Congrats! You're done!
-
-##### Upgrading from Membership
-
-Important Note: You **must** upgrade from your WPMU DEV Dashboard, rather than via FTP or Plugins > Add New > Upload in order to import your Membership settings to M2. 1: Make sure the latest version of the [WPMU DEV Dashboard](https://premium.wpmudev.org/project/dashboard/ "The Dashboard") is installed. 2: Make sure latest version of the old Membership plugin is installed (3.5.3.3). 3: You'll see a button to unlock the update under **Membership2 > Settings** and/or **WPMU DEV > Updates**. 4: If you don't, you can click the link in your WPMU DEV Dashboard to force it to check for updates and repeat step 3. Once M2 is active, go to Membership2 > Settings > Import tool. You'll see two radio buttons, one to import via file, one to import WPMU DEV Membership settings. You'll chose the second button, then Preview Import. Once you're satisfied with how things will import, hit import. M2 will import membership levels, subscription information/data, and member data from Membership. However, M2 will not import shortcodes or content protection settings. So after upgrading, you will need to add in all your content protection settings for each membership level, and find and replace any Membership-generated shortcodes with M2 shortcodes. Tip: use a handy plugin like [_Better Search Replace_](https://wordpress.org/plugins/better-search-replace//) to make that more of a cheer than a chore. _Important:_ In some cases, WordPress cannot replace the plugin files automatically and will display an error during update. When this happens, please deactivate and delete the old Membership plugin before installing Membership 2 Pro. Congrats! After this, you're done too!
-
-##### First-time install
-
-If you've never used Protected Content or Membership before, you'll install the plugin just as you would any other. You can visit the [Installing Plugins](https://wpmudev.com/docs/using-wordpress/installing-wordpress-plugins/) section in our comprehensive [WordPress and WordPress Multisite Manual](https://premium.wpmudev.org/wpmu-manual/) if you are new to WordPress. Congrats! You're ready to set up M2.
-
-### Creating a Membership Site with M2
-
-If you've already used Membership or Protected Content, using M2 is going to be very familiar to you. M2 allows you to control, down to the tiniest detail, what content you show to which members. With free and paid membership options, you can choose to protect content behind a paywall, or just create a private space for your free members. Let's start building your site now.
-
-##### Step One: Make a Plan
-
-Creating a content protection plan is your first step. Jot down a diagram or outline of how you want your site to work. What membership levels do you want? What content do you want users on each membership to see or not see? Do you want your content to be always protected on some memberships, yet made accessible on others over time or on specific dates? If you'll charge for access, how much will it cost and how will you accept payments? Yep, M2 can handle all that & more!  
-
-![image](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-make-plan-1x.png)
-
- Start with a plan for your content protection.
-
-    If you have installed M2 or upgraded to it on a multisite network, part of your plan should be to decide whether you want your content protection rules to apply site-by-site, or if you want to leverage the network-wide protection features of M2. If content should be protected site-by-site, simply activate the plugin on the site where you want your content protected and continue with the setup as detailed in the rest of this guide. But, if you want to create content protection rules network-wide, you'll need to first add the following constant to your wp-config.php file: `define( 'MS_PROTECT_NETWORK', true );` You can then set up protection rules from your network admin for every site in your network. Woot! **Important note:** the above constant will only work if added to wp-config.php _before_ you start creating your memberships. Any existing memberships on any site in your network will _not_ be recognized by the network settings. A future release of M2 will allow for pre-existing memberships to also function network-wide. When you've got a rough sketch of your plan, it's time to start building your content protection.
-
-##### Step Two: Create Memberships
-
-If you are not redirected immediately to the **Setup** page after installing the plugin, click the **Setup** menu item in the **Membership2** menu.  
-
-![Membership2 Setup](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1011-setup.png)
-
-  Memberships are the heart of M2, and you'll use the memberships you create to complete each additional step in the set up process. To start, we give you a default "System Membership." All current members will be in this Membership until they choose or they are moved to a different plan. With M2, you can create four different types of Membership.  
-
-![M2 Memberships Create New](https://premium.wpmudev.org/wp-content/uploads/2014/06/m2-1000-memberships-create-new1.png)
-
-  _1\. Standard Membership:_ Most typical memberships will be Standard. Standard memberships can be free or paid. You can create as many standard memberships as you'd like. If you want to created a tiered system, such as Bronze, Silver, and Gold plans, you'll create a standard membership for each tier you want to offer. _2\. Guest Membership:_ A guest membership sets rules for non-logged in visitors to your site. If you'd like visitors to have unique access rules, you'll need a Guest Membership. You'll only be allowed to create one guest membership which will apply to all guests. _3\. Dripped Membership:_ This membership is used when you have content you want to grant access to one piece/group at a time. The settings for this membership will allow you to set dates or time spans for when content is to be revealed or hidden. _4\. Default Membership:_ This is similar to the System Membership that is added by default. It's a membership for any registered/logged in user that is not currently the member of any other membership plan. Like the guest membership, there can only be one default membership on your site. Creating a new membership is very simple. 1\. Go to **Membership2 > Memberships** 2\. Click "Create New Membership" 3\. Choose the type of membership from the grid of four. 4\. Name your membership. 5\. Save. Create each of the memberships you'll need (you can add/edit/remove them later, as well) and we'll move on to the next step. Don't worry about setting up billing or payment gateways at this time, we'll add those later on.
-
-##### Step Three: M2 Pages
-
-Next up, a quick and easy step; setting up the necessary pages M2 will need. Go to **Membership2 > Settings > General**  
-
-![M2 Protect Content Settings](https://premium.wpmudev.org/wp-content/uploads/2014/06/m2-1000-protect-content-settings.png)
+Sende neuen Mitgliedern automatisch eine E-Mail, sobald sie sich auf Deiner Webseite anmelden. Bedanke Dich für die kostenlose Mitgliedschaft und biete ihnen einen Gutschein für eine ermäßigte Mitgliedschaft an.
 
  
 
-1.  Make sure you have a Memberships, Register, Account, Protected Content, and Registration Complete page set up for M2.
-2.  Decide which items you want to appear in your main navigation menu.
-3.  Decide whether you want the black admin bar that will usually show on the top of each page on your site (the one that says "Howdy, you") to show for members. You'll likely want to wait until you've finished getting everything set up before clicking the Content Protection toggle though.
+![toggle-protected-content-735x470](assets/images/toggle-protected-content-735x470-583x373.jpg)
 
-**Important notes:**
+ Aktiviere oder deaktiviere den Inhaltsschutz auf Deiner gesamten Seite, um eine einfache und leistungsstarke Kontrolle zu erhalten.
 
-*   If you're using a plugin to create a custom registration page, like BuddyPress, Pie Register, or Gravity Forms, be sure to select THAT registration page here, rather than the default one created by the Membership2 plugin.
-*   If you are using another plugin for registration, be sure to add the following code to your theme's _functions.php_ file so the Membership2 plugin knows about it (this is not required for BuddyPress, but it won't interfere if you add it anyway): `add_filter('ms_frontend_handle_registration', '__return_false');`
+### Kontrolliere den Inhaltsschutz Deiner gesamten Webseite
 
-##### Step Four: Content Protection
+Schalte den Inhaltsschutz ganz einfach ein oder aus – entweder über die übersichtliche Benachrichtigung in der Admin-Leiste oder direkt in den Einstellungen von PS Mitgliedschaften.
 
-**Membership 2 > Protection Rules** is your home base for choosing who sees what content, all in one beautiful and easy to use page. You'll see your content protection options in a vertical list of tabs. Clicking any of these tabs will allow you to set content protection for that particular content type.  
+### Pro-Ergebnisse – Einfache Shortcode-Integrationen
 
-![M2 Page Protection Settings](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_PageProtection.png)
+Nutze Shortcodes für alles, von der einfachen Anzeige der Mitgliedschaftsart bis zum Schutz bestimmter Inhalte vor Nutzern bestimmter Mitgliedschaftsstufen.
 
- M2 Page Protection Settings
+### Nutze die Vorteile der PS Mitgliedschaften-Integrationen
+
+PS Mitgliedschaften bietet integrierten erweiterten Schutz für Mitgliedschaftsfunktionen für Affiliates, Custom Sidebars Pro, Events+, PopUp Pro und Appointments+. Darüber hinaus erleichtert die PS Mitgliedschaften API die Integration Deiner bevorzugten Plugins und erweitert Deine Mitgliederseite.
+
+Willkommen bei PS Mitgliedschaften! Die neue, verbesserte Version unserer Plugins für Mitgliedschaft und geschützte Inhalte ist die bisher beste Version.
+
+
+## Erste Schritte
+
+### Erstellen einer Mitgliederseite mit M2
+
+Wenn Du bereits Mitgliedschaften oder geschützte Inhalte nutzt, ist Dir PS Mitgliedschaften bestens vertraut. Mit PS Mitgliedschaften kannst Du bis ins kleinste Detail steuern, welche Inhalte welchen Mitgliedern angezeigt werden. Ob kostenlose oder kostenpflichtige Mitgliedschaft – Du kannst Inhalte hinter einer Paywall schützen oder einen privaten Bereich für Deine kostenlosen Mitglieder einrichten. Beginnen wir jetzt mit der Erstellung Deiner Webseite.
+
+##### Schritt 1: Plan erstellen
+
+Der erste Schritt besteht darin, einen Plan zum Schutz von Inhalten zu erstellen. Erstelle ein Diagramm oder eine Skizze, wie Deine Webseite funktionieren soll. Welche Mitgliedschaftsstufen wünschst Du? Welche Inhalte sollen die Nutzer der einzelnen Mitgliedschaften sehen und welche nicht? Sollen Dein Inhalte bei einigen Mitgliedschaften dauerhaft geschützt sein, bei anderen jedoch erst nach und nach oder zu bestimmten Terminen zugänglich sein? Wenn Du für den Zugriff Gebühren erhebst, wie viel kostet dieser und wie akzeptierst Du Zahlungen? PS Mitgliedschaften kann all das und noch mehr!
+
+![image](assets/images/m2-make-plan-1x.png)
+
+ Beginne mit einem Plan zum Schutz Deiner Inhalte.
+
+Wenn Du PS Mitgliedschaften in einem Netzwerk mit mehreren Standorten installiert oder darauf aktualisiert hast, solltest Du Dich bei Deiner Planung unter anderem entscheiden, ob Deine Inhaltsschutzregeln für jede Seite einzeln gelten sollen oder ob Du die netzwerkweiten Schutzfunktionen von PS Mitgliedschaften nutzen möchtest. Wenn Inhalte für jede Seite einzeln geschützt werden sollen, aktiviere einfach das Plugin auf der Seite, auf der Deine Inhalte geschützt werden sollen, und fahre mit der Einrichtung fort, wie im Rest dieser Anleitung beschrieben. Wenn Du jedoch netzwerkweite Inhaltsschutzregeln erstellen möchtest, musst Du zuerst die folgende Konstante zu Deiner Datei wp-config.php hinzufügen: „define( ‚MS_PROTECT_NETWORK‘, true );“ Anschließend kannst Du von Deinem Netzwerkadministrator aus Schutzregeln für jede Seite in Deinem Netzwerk einrichten. Juhu! **Wichtiger Hinweis:** Die obige Konstante funktioniert nur, wenn sie zu wp-config.php hinzugefügt wird, _bevor_ Du mit der Erstellung Deiner Mitgliedschaften beginnst. Bestehende Mitgliedschaften auf einer Seite in Deinem Netzwerk werden von den Netzwerkeinstellungen _nicht_ erkannt. Eine zukünftige Version von PS Mitgliedschaften ermöglicht es vielleicht, dass bestehende Mitgliedschaften auch netzwerkweit funktionieren. Sobald Du eine grobe Skizze Deines Plans hast, kannst Du mit dem Aufbau Deines Inhaltsschutzes beginnen.
+
+##### Schritt 2: Mitgliedschaften erstellen
+
+Wenn Du nach der Installation des Plugins nicht sofort zur Einrichtungsseite weitergeleitet wirst, klicke im Menü „Mitgliedschaften“ auf den Menüpunkt „Einrichtung“.  
+
+![Membership2 Setup](assets/images/m2-1011-setup.png)
+
+  Mitgliedschaften sind das Herzstück von PS Mitgliedschaften. Mit den von Dir erstellten Mitgliedschaften kannst Du jeden weiteren Schritt im Einrichtungsprozess abschließen. Zu Beginn erhältst Du standardmäßig eine „Systemmitgliedschaft“. Alle aktuellen Mitglieder behalten diese Mitgliedschaft, bis sie sich entscheiden oder in einen anderen Plan wechseln. Mit PS Mitgliedschaften kannst Du vier verschiedene Mitgliedschaftsarten erstellen.  
+
+![M2 Memberships Create New](assets/images/m2-1000-memberships-create-new1.png)
+
+  _1\. Standardmitgliedschaft:_ Die meisten Standardmitgliedschaften sind Standardmitgliedschaften. Standardmitgliedschaften können kostenlos oder kostenpflichtig sein. Du kannst beliebig viele Standardmitgliedschaften erstellen. Wenn Du ein abgestuftes System wie Bronze, Silber und Gold anbieten möchtest, erstelle für jede Stufe eine Standardmitgliedschaft. _2\. Gastmitgliedschaft:_ Eine Gastmitgliedschaft legt Regeln für nicht angemeldete Besucher Deiner Webseite fest. Wenn Du Deinen Besuchern individuelle Zugriffsregeln gewähren möchtest, benötigst Du eine Gastmitgliedschaft. Du kannst nur eine Gastmitgliedschaft erstellen, die für alle Gäste gilt. _3\. Dripped-Mitgliedschaft:_ Diese Mitgliedschaft wird verwendet, wenn Du Inhalte hast, auf die jeweils nur ein Teil/eine Gruppe Zugriff haben soll. In den Einstellungen dieser Mitgliedschaft kannst Du Daten oder Zeitspannen festlegen, in denen Inhalte angezeigt oder ausgeblendet werden sollen. _4\. Standardmitgliedschaft:_ Diese Mitgliedschaft ähnelt der standardmäßig hinzugefügten Systemmitgliedschaft. Sie ist für alle registrierten/angemeldeten Benutzer gedacht, die derzeit keinem anderen Mitgliedschaftsplan angehören. Wie bei der Gastmitgliedschaft kann es auf Deiner Webseite nur eine Standardmitgliedschaft geben. Das Anlegen einer neuen Mitgliedschaft ist ganz einfach. 1. Gehe zu **Mitgliedschaften > Mitgliedschaften**. 2. Klicke auf „Neue Mitgliedschaft erstellen“. 3. Wähle die gewünschte Mitgliedschaftsart aus der Liste mit vier Optionen. 4. Benenne Deine Mitgliedschaft. 5. Speicher Deine Mitgliedschaft. Erstelle alle benötigten Mitgliedschaften (Du kannst sie auch später hinzufügen, bearbeiten oder entfernen), und wir fahren mit dem nächsten Schritt fort. Kümmer Dich jetzt noch nicht um die Einrichtung von Abrechnungs- oder Zahlungsgateways, diese fügen wir später hinzu.
+
+##### Schritt 3: PS-Mitgliedschaftsseiten
+
+Als Nächstes geht es schnell und einfach: Richte die für PS Mitgliedschaften benötigten Seiten ein. Gehe dazu zu **Mitgliedschaften > Einstellungen > Allgemeines**
+
+![M2 Protect Content Settings](assets/images/m2-1000-protect-content-settings.png)
+
+ 
+
+1. Stelle sicher, dass Du für PS Mitgliedschaften die Seiten „Mitgliedschaften“, „Registrieren“, „Konto“, „Geschützte Inhalte“ und „Registrierung abgeschlossen“ eingerichtet hast.
+2. Lege fest, welche Elemente in Deinem Hauptnavigationsmenü angezeigt werden sollen.
+3. Lege fest, ob die schwarze Admin-Leiste, die normalerweise oben auf jeder Seite Deiner Webseite angezeigt wird (mit der Aufschrift „Howdy, you“), auch für Mitglieder angezeigt werden soll. Warte jedoch am besten, bis Du alle Einstellungen vorgenommen hast, bevor Du den Inhaltsschutz aktivierst.
+
+**Wichtige Hinweise:**
+
+* Wenn Du ein Plugin wie BuddyPress, Pie Register oder Gravity Forms verwenden, um eine benutzerdefinierte Registrierungsseite zu erstellen, wähle hier unbedingt DIESE Registrierungsseite aus und nicht die Standardseite des PS Mitgliedschaften-Plugins.
+* Wenn Du ein anderes Plugin für die Registrierung verwendest, füge den folgenden Code in die Datei _functions.php_ Deines Themes ein, damit das PS Mitgliedschaften-Plugin davon Kenntnis hat (dies ist für BuddyPress nicht erforderlich, stört aber nicht, wenn Du ihn trotzdem hinzufügst): `add_filter('ms_frontend_handle_registration', '__return_false');`
+
+##### Schritt 4: Inhaltsschutz
+
+**Mitgliedschaften > Schutzregeln** ist Deine zentrale Anlaufstelle, um festzulegen, wer welche Inhalte sehen darf – alles auf einer übersichtlichen und benutzerfreundlichen Seite. Die Inhaltsschutzoptionen werden in einer vertikalen Liste mit Registerkarten angezeigt. Klicke auf eine dieser Registerkarten, um den Inhaltsschutz für den jeweiligen Inhaltstyp festzulegen.
+
+![M2 Page Protection Settings](assets/images/M2_PageProtection.png)
+
+ PS Mitgliedschaften-Seitenschutzeinstellungen
 
    
 
-![M2 Comment & More Tag Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_CommentsMoreTagProtection.png)
+![M2 Comment & More Tag Protection](assets/images/M2_CommentsMoreTagProtection.png)
 
- M2 Comment & More Tag Protection
+ PS Mitgliedschaften Kommentar- und Mehr-Tag-Schutz
 
-  With no Add-Ons active, M2 allows you to protect pages, custom post types, comments and the "more" tag (see below for more about the available Add-Ons). It also provides settings for basic menu item protection.  
+Wenn keine Add-ons aktiviert sind, kannst Du mit PS Mitgliedschaften Seiten, benutzerdefinierte Beitragstypen, Kommentare und den „Mehr“-Tag schützen (weitere Informationen zu den verfügbaren Add-ons findest DU weiter unten). Außerdem bietet PS Mitgliedschaften Einstellungen für den grundlegenden Schutz von Menüelementen. 
 
-![M2 Menu Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_MenuProtection-700x838.png)
+![M2 Menu Protection](assets/images/M2_MenuProtection-700x838.png)
 
  M2 Menu Protection
 
