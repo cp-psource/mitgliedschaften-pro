@@ -359,51 +359,51 @@ Du wirst feststellen, dass Du in PS Mitgliedschaften noch einige weitere Einstel
 
   Belohne Dich mit einem Schulterklopfen, Du schaffst das!
 
-### Membership2 Add-Ons
+### PS Mitgliedschaften Add-Ons
 
-The real magic in Membership2 is in the Add Ons. All the Add-Ons are included, but only those that apply to your individual set-up can be enabled so you don't need to deal with any items you don't need. For example, if you do not have BuddyPress installed on your site, that Add-On will be greyed out with a message informing you that BuddyPress needs to activated before you can use it.  
+Der wahre Zauber von PS Mitgliedschaften liegt in den Add-Ons. Alle Add-Ons sind enthalten, Du kannst aber nur die für Dein individuelles Setup passenden aktivieren. So musst Du Dich nicht mit unnötigen Elementen herumschlagen. Wenn Du beispielsweise BuddyPress nicht auf Deiner Webseite installiert hast, wird dieses Add-On ausgegraut und Du erhältst eine Meldung, dass BuddyPress vor der Nutzung aktiviert werden muss. 
 
-![M2 Add Ons](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_AddOns.png)
+![M2 Add Ons](assets/images/M2_AddOns.png)
 
-    The following Add-Ons are included: _Additional Automated Messages_ - this add on allows you create custom auto-messages for members.  
+    Die folgenden Add-Ons sind enthalten: _Zusätzliche automatisierte Nachrichten_ – mit diesem Add-On kannst Du benutzerdefinierte automatische Nachrichten für Mitglieder erstellen.  
 
-![M2 Additional Automated Emails](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_AdditionalAutomatedEmails.png)
+![M2 Additional Automated Emails](assets/images/M2_AdditionalAutomatedEmails.png)
 
- M2 Additional Automated Emails
+ PS Mitgliedschaften Zusätzliche automatisierte E-Mails
 
-  _Admin Side Protection_ - Want to extend your content protection to your Admin area? This add on will do just that.  
+_Admin-Schutz_ – Möchtest Du Deinen Inhaltsschutz auf Deinen Admin-Bereich ausweiten? Dieses Add-on macht es möglich.  
 
-![M2 Admin Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-admin-protection.png)
+![M2 Admin Protection](assets/images/m2-1000-admin-protection.png)
 
- M2 Admin Side Protection
+ PS Mitgliedschaften Admin-Schutz
 
-  _Advanced Menu Protection_ - This Add-On has three options to allow the ultimate control over access to your navigation menus. Click the Details link in the Add-On to select the option you want.
+_Erweiterter Menüschutz_ – Dieses Add-on bietet drei Optionen für die optimale Kontrolle über den Zugriff auf Deine Navigationsmenüs. Klickeim Add-on auf den Link „Details“, um die gewünschte Option auszuwählen.
 
-*   Protect Single Menu Items (default)
-*   Replace Individual Menus
-*   Overwrite Contents of Menu Locations
+* Einzelne Menüpunkte schützen (Standard)
+* Einzelne Menüs ersetzen
+* Inhalt von Menüpositionen überschreiben
 
-The option you select will determine the additional settings that will become available at **Membership 2 > Protection Rules** so you can tweak the access rules for your menus.  
+Die gewählte Option bestimmt die zusätzlichen Einstellungen, die unter **Mitgliedschaften > Schutzregeln** verfügbar sind, sodass Du die Zugriffsregeln für Deine Menüs anpassen kannst.
 
-![M2 Advanced Menu Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-advanced-menu-protection.png)
+![M2 Advanced Menu Protection](assets/images/m2-1000-advanced-menu-protection.png)
 
- M2 Advanced Menu Protection
+ PS Mitgliedschaften Erweiterter Menüschutz
 
-  _bbPress Integration_ - If you're a bbPress user, you can protect your bbPress forums with this add on.  
+  _bbPress-Integration_ – Wenn Du bbPress nutzt, kannst Du Deine bbPress-Foren mit diesem Add-on schützen.  
 
-![M2 bbPress Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/m2-1000-bbpress-protection.png)
+![M2 bbPress Protection](assets/images/m2-1000-bbpress-protection.png)
 
- M2 bbPress Protection
+ PS Mitgliedschaften bbPress-Schutz
 
-  _BuddyPress integration_ - If your site uses BuddyPress, this add on will let you protect groups, profiles, and more.  
+  _BuddyPress-Integration_ – Wenn Deine Webseite BuddyPress verwendet, kannst Du mit diesem Add-on Gruppen, Profile und mehr schützen. 
 
-![M2 BuddyPress Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_BuddyPressProtection.png)
+![M2 BuddyPress Protection](assets/images/M2_BuddyPressProtection.png)
 
- M2 BuddyPress Protection
+ PS Mitgliedschaften BuddyPress-Schutz
 
-  _Category Protection_ - If you'd like to protect posts by category, this add on makes it super simple.  
+  _Kategorienschutz_ – Wenn Du Beiträge nach Kategorien schützen möchtest, ist dieses Add-on kinderleicht. 
 
-![M2 Category Protection](https://premium.wpmudev.org/wp-content/uploads/2015/06/M2_CategoryProtection.png)
+![M2 Category Protection](assets/images/M2_CategoryProtection.png)
 
  M2 Category Protection
 
