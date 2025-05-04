@@ -2363,7 +2363,7 @@ window.ms_init.view_settings = function init() {
             actions.each(function() {
                 var link = jQuery(this),
                     data = link.data('wpmui-ajax'),
-                    url = data.base + val;
+                    url = data.base + encodeURIComponent(val);
 
                 if (undefined === val || isNaN(val) || val < 1) {
                     link.addClass('disabled');
