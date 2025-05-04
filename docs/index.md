@@ -1,17 +1,15 @@
 ---
-title: PS Mitgliedschaften Plugin
+layout: psource-theme
+title: "PS Mitgliedschaften"
 ---
 
-<link rel="stylesheet" href="assets/style.css">
-
-<h2 align="center" style="color:#38c2bb;">📚 Inhaltsverzeichnis</h2>
+<h2 align="center" style="color:#38c2bb;">📚 PS Mitgliedschaften</h2>
 
 <div class="menu">
-  <a href="#features" style="color:#38c2bb;">🚀 Features</a> •
-  <a href="#schnelleinstieg" style="color:#38c2bb;">📖 Schnelleinstieg</a> •
-  <a href="https://github.com/cp-psource/mitgliedschaften-pro/discussions" style="color:#38c2bb;">💬 Forum</a> •
+  <a href="https://github.com/cp-psource/mitgliedschaften-pro/discussions" style="color:#38c2bb;">💬 Forum</a>
   <a href="https://github.com/cp-psource/mitgliedschaften-pro/releases" style="color:#38c2bb;">📝 Download</a>
 </div>
+
 
 
 ## Starte mit PS Mitgliedschaften eine Mitgliedschaftsseite, um ganz einfach jedes Mitgliedschaftssystem einzurichten, das Du Dir vorstellst.
@@ -487,9 +485,3 @@ _URL-Schutz_ – Wenn keines der anderen Add-ons ausreicht, kannst Du mit dem UR
 
 Cache-Plugins können die Funktionalität des Plugins beeinträchtigen. Wenn Deinen Nutzern nach erfolgreicher Zahlung und Anmeldung auf Deiner Webseite keine Mitgliedschaften zugewiesen werden, prüfe ob der Objekt-Cache in Deinem Cache-Plugin aktiviert ist. Füge in diesem Fall Folgendes zu den nicht persistenten Feldern/Gruppen hinzu: `MS_Model_Membership MS_Model_Member MS_Model_Communication_Invoice`
 
-<footer class="psource-footer">
-  <p>
-    ❤️ Entwickelt mit Liebe von <a href="https://github.com/cp-psource" target="_blank">PSOURCE</a><br>
-    © 2025 – Alle Rechte vorbehalten
-  </p>
-</footer>
