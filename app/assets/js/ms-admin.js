@@ -852,7 +852,7 @@ jQuery(document).ready(function() {
                     
                             jQuery(document).trigger('ms-inline-editor-updated', [the_item]);
                         } else {
-                            response = DOMPurify.sanitize(response).replace(/<.[^<>]*?>/g, '');
+                            response = DOMPurify.sanitize(response);
                             quickedit.find('.error').text(response).show();
                         }
                     } else {
