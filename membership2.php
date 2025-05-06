@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PS Mitgliedschaften
  * Plugin URI:  https://cp-psource.github.io/mitgliedschaften-pro/
- * Version:     1.2.6
+ * Version:     1.2.7
  * Description: Das leistungsstärkste, benutzerfreundlichste und flexibelste Mitgliedschafts-Plugin für ClassicPress-Seiten.
  * Requires at least: 4.6
  * Tested up to: 5.7
@@ -83,7 +83,7 @@ function membership2_pro_init_app() {
 	 *
 	 * @since  1.0.0
 	 */
-	define( 'MS_PLUGIN_VERSION', '1.2.6' );
+	define( 'MS_PLUGIN_VERSION', '1.2.7' );
 
 	/**
 	 * Free or pro plugin?
