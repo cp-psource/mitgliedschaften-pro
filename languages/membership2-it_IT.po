@@ -5862,7 +5862,7 @@ msgstr "Fatturato"
 
 #: app/model/class-ms-model-invoice.php:975
 #, fuzzy, php-format
-msgid "Rechnung für %s - %s"
+msgid "Invoice for %s - %s"
 msgstr "Calcolo per %s - %s"
 
 #: app/model/class-ms-model-invoice.php:1062

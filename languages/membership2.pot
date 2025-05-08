@@ -4766,7 +4766,7 @@ msgstr ""
 
 #: app/model/class-ms-model-invoice.php:975
 #, php-format
-msgid "Rechnung für %s - %s"
+msgid "Invoice for %s - %s"
 msgstr ""
 
 #: app/model/class-ms-model-invoice.php:1062

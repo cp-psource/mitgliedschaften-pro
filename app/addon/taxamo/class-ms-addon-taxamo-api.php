@@ -125,7 +125,7 @@ class MS_Addon_Taxamo_Api extends MS_Controller {
 
 				// Register the payment.
 				$information = sprintf(
-					__( 'Rechnung %1$sbezahlt über%2$s.', 'membership2' ),
+					__( 'Rechnung %1$s bezahlt über %2$s.', 'membership2' ),
 					$invoice_id,
 					$gateway
 				);

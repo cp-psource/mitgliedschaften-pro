@@ -149,11 +149,13 @@ function membership2_pro_init_app() {
 	 *   Example: membership2-en_EN.mo  /  membership2-de_DE.mo
 	 */
 	function _membership2_translate_plugin() {
-		load_plugin_textdomain(
-			'membership2',
-			false,
-			dirname( plugin_basename( __FILE__ ) ) . '/languages'
-		);
+		if ( !is_textdomain_loaded('membership2') ) {
+			load_plugin_textdomain(
+				'membership2',
+				false,
+				dirname( plugin_basename( __FILE__ ) ) . '/languages'
+			);
+		}
 	}
 	add_action( 'init', '_membership2_translate_plugin' );
 

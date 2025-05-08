@@ -5696,7 +5696,7 @@ msgstr "Invoiced"
 
 #: app/model/class-ms-model-invoice.php:975
 #, fuzzy, php-format
-msgid "Rechnung für %s - %s"
+msgid "Invoice for %s - %s"
 msgstr "Invoice for %s - %s"
 
 #: app/model/class-ms-model-invoice.php:1062
