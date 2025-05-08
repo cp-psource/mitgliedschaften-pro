@@ -202,11 +202,10 @@ if ( is_plugin_active( 'membership/membership.php' ) ) {
 	deactivate_plugins( array( 'membership/membership.php' ) );
 }
 
-// Ajaxurl global im Frontend verfügbar machen für Inline-JS
-add_action( 'wp_head', function() {
-	if ( ! is_admin() ) {
-		echo '<script type="text/javascript">var ajaxurl = "' . esc_url( admin_url( 'admin-ajax.php' ) ) . '";</script>';
-	}
-}, 1 );
+add_action( 'wp_footer', function() {
+    if ( ! is_admin() ) {
+        echo '<script type="text/javascript">var ajaxurl = "' . esc_url( admin_url( 'admin-ajax.php' ) ) . '";</script>';
+    }
+}, 100 ); // Späterer Hook, um sicherzustellen, dass der Header bereits gesendet wurde
 
 membership2_pro_init_app();
