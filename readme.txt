@@ -3,7 +3,7 @@ Contributors: PSOURCE
 Tags: classicpress-plugin, classicpress, membership, multisite
 Requires at least: 4.9
 Tested up to: 6.8.1
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -61,6 +61,10 @@ Use the opportunity to do so on GitHub or send your files to: webmaster@n3rds.wo
 
 
 == ChangeLog ==
+
+= 1.2.8 =
+
+* Fix: Fatal error Frontend-Invoice
 
 = 1.2.7 =
 
