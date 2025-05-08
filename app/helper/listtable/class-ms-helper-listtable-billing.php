@@ -8,6 +8,8 @@ class MS_Helper_ListTable_Billing extends MS_Helper_ListTable {
 
 	protected $id = 'billing';
 
+	public $_factory_id;
+
 	public function __construct() {
 		parent::__construct(
 			array(

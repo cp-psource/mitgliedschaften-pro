@@ -972,7 +972,7 @@ class MS_Model_Invoice extends MS_Model_CustomPostType {
 		$invoice->name 					= apply_filters(
 											'ms_model_invoice_name',
 											sprintf(
-												__( 'Rechnung für %s - %s', 'membership2' ),
+												__( 'Invoice for %s - %s', 'membership2' ),
 												$membership->name,
 												$member->username
 											)

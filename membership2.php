@@ -155,7 +155,7 @@ function membership2_pro_init_app() {
 			dirname( plugin_basename( __FILE__ ) ) . '/languages'
 		);
 	}
-	add_action( 'plugins_loaded', '_membership2_translate_plugin' );
+	add_action( 'init', '_membership2_translate_plugin' );
 
 	if ( (defined( 'WP_DEBUG' ) && WP_DEBUG) || (defined( 'WDEV_DEBUG' ) && WDEV_DEBUG) ) {
 		// Load development/testing code before the plugin is initialized.

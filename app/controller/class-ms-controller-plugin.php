@@ -900,14 +900,14 @@ class MS_Controller_Plugin extends MS_Controller {
 			// First look for themes 'm2-invoice-100.php' template (membership ID).
 			$template = get_query_template(
 				'm2',
-				'm2-invoice-' . $invoice->membership_id . '.php'
+				[ 'm2-invoice-' . $invoice->membership_id . '.php' ]
 			);
 
 			// Fallback to themes 'm2-invoice.php' template.
 			if ( ! $template ) {
 				$template = get_query_template(
 					'm2',
-					'm2-invoice.php'
+					[ 'm2-invoice.php' ]
 				);
 			}
 

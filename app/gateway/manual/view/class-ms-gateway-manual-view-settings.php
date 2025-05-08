@@ -46,7 +46,7 @@ class MS_Gateway_Manual_View_Settings extends MS_View {
 					'gateway-button' . $gateway->id
 				),
 				'type' => MS_Helper_Html::INPUT_TYPE_TEXT_AREA,
-				'value' => $gateway->payment_info,
+				'value' => $gateway->payment_info ?? '',
 				'field_options' => array( 'editor_class' => 'ms-field-wp-editor' ),
 				'class' => 'ms-text-large',
 				'ajax_data' => array( 1 ),
@@ -60,7 +60,7 @@ class MS_Gateway_Manual_View_Settings extends MS_View {
 					'gateway-button' . $gateway->id
 				),
 				'type' => MS_Helper_Html::INPUT_TYPE_TEXT,
-				'value' => $gateway->pay_button_url,
+				'value' => $gateway->pay_button_url ?? '',
 				'class' => 'ms-text-large',
 				'ajax_data' => array( 1 ),
 			),

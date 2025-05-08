@@ -18,5 +18,8 @@ get_header(); ?>
 </div><!-- #main-content -->
 
 <?php
-get_sidebar();
+
+if (is_active_sidebar('sidebar-1')) {
+    get_sidebar();
+}
 get_footer();
