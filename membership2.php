@@ -59,12 +59,6 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('master');
 
-ob_start(); // Ausgabe puffern
-add_action( 'plugins_loaded', function() {
-    if ( ! session_id() ) {
-        session_start();
-    }
-}, 1 );
 
 function membership2_pro_init_app() {
 	if ( defined( 'MS_PLUGIN' ) ) {
