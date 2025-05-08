@@ -59,6 +59,12 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('master');
 
+ob_start(); // Ausgabe puffern
+add_action( 'plugins_loaded', function() {
+    if ( ! session_id() ) {
+        session_start();
+    }
+}, 1 );
 
 function membership2_pro_init_app() {
 	if ( defined( 'MS_PLUGIN' ) ) {
@@ -202,10 +208,14 @@ if ( is_plugin_active( 'membership/membership.php' ) ) {
 	deactivate_plugins( array( 'membership/membership.php' ) );
 }
 
-add_action( 'wp_footer', function() {
-    if ( ! is_admin() ) {
-        echo '<script type="text/javascript">var ajaxurl = "' . esc_url( admin_url( 'admin-ajax.php' ) ) . '";</script>';
-    }
-}, 100 ); // Späterer Hook, um sicherzustellen, dass der Header bereits gesendet wurde
+add_action( 'wp_enqueue_scripts', function() {
+	if ( ! is_admin() ) {
+		wp_add_inline_script(
+			'jquery-core',
+			'var ajaxurl = "' . esc_js( admin_url( 'admin-ajax.php' ) ) . '";',
+			'before'
+		);
+	}
+} );
 
 membership2_pro_init_app();
