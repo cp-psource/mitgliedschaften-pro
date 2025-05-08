@@ -303,7 +303,7 @@ class MS_View_Member_Editor extends MS_View {
 					);
 
 					// Start date not yet reached:
-					if ( strtotime( $subscription->start_date ) > strtotime( MS_Helper_Period::current_date() ) ) {
+					if ( $subscription->start_date && strtotime( $subscription->start_date ) > strtotime( MS_Helper_Period::current_date() ) ) {
 						$valid_stati = array(
 							MS_Model_Relationship::STATUS_WAITING => true,
 							MS_Model_Relationship::STATUS_DEACTIVATED => true,
