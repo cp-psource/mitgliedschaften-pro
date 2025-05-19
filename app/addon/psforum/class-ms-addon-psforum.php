@@ -75,12 +75,19 @@ class MS_Addon_Psforum extends MS_Addon {
 	 * @return array The updated Add-Ons list.
 	 */
 	public function register( $list ) {
+		// Zeige das Add-On nur, wenn PS Forum installiert ist (Plugin-Datei vorhanden).
+		if ( ! file_exists( WP_PLUGIN_DIR . '/psforum/psforum.php' ) ) {
+			// PS Forum ist nicht installiert, also nicht anzeigen.
+			return $list;
+		}
+
 		$list[ self::ID ] = (object) array(
-			'name' 			=> __( 'PS Forum Integration', 'membership2' ),
-			'description' 	=> __( 'Aktiviere die Integration von PS Forum-Regeln.', 'membership2' ),
-			'icon' 			=> 'dashicons dashicons-format-chat',
+			'name'        => __( 'PS Forum Integration', 'membership2' ),
+			'description' => __( 'Aktiviere die Integration von PS Forum-Regeln.', 'membership2' ),
+			'icon'        => 'dashicons dashicons-format-chat',
 		);
 
+		// Wenn PS Forum installiert, aber nicht aktiviert ist, ausgrauen.
 		if ( ! self::psforum_active() ) {
 			$list[ self::ID ]->description .= sprintf(
 				'<br /><b>%s</b>',

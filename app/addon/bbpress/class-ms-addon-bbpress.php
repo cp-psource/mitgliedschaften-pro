@@ -75,12 +75,19 @@ class MS_Addon_Bbpress extends MS_Addon {
 	 * @return array The updated Add-Ons list.
 	 */
 	public function register( $list ) {
+		// Zeige das Add-On nur, wenn bbPress installiert ist (Plugin-Datei vorhanden).
+		if ( ! file_exists( WP_PLUGIN_DIR . '/bbpress/bbpress.php' ) ) {
+			// bbPress ist nicht installiert, also nicht anzeigen.
+			return $list;
+		}
+
 		$list[ self::ID ] = (object) array(
-			'name' 			=> __( 'bbPress Integration', 'membership2' ),
-			'description' 	=> __( 'Aktiviere die Integration von bbPress-Regeln.', 'membership2' ),
-			'icon' 			=> 'dashicons dashicons-format-chat',
+			'name'        => __( 'bbPress Integration', 'membership2' ),
+			'description' => __( 'Aktiviere die Integration von bbPress-Regeln.', 'membership2' ),
+			'icon'        => 'dashicons dashicons-format-chat',
 		);
 
+		// Wenn bbPress installiert, aber nicht aktiviert ist, ausgrauen.
 		if ( ! self::bbpress_active() ) {
 			$list[ self::ID ]->description .= sprintf(
 				'<br /><b>%s</b>',

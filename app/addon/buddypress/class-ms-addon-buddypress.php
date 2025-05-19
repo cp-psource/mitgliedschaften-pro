@@ -224,6 +224,12 @@ class MS_Addon_BuddyPress extends MS_Addon {
 	 * @return array The updated Add-Ons list.
 	 */
 	public function register( $list ) {
+		// Zeige das Add-On nur, wenn BuddyPress installiert ist (Plugin-Datei vorhanden).
+		if ( ! file_exists( WP_PLUGIN_DIR . '/buddypress/bp-loader.php' ) ) {
+			// BuddyPress ist nicht installiert, also nicht anzeigen.
+			return $list;
+		}
+
 		$list[ self::ID ] = (object) array(
 			'name' 			=> __( 'BuddyPress Integration', 'membership2' ),
 			'description' 	=> __( 'Integriere BuddyPress in Mitgliedschaften.', 'membership2' ),
@@ -248,7 +254,7 @@ class MS_Addon_BuddyPress extends MS_Addon {
 						'field' 	=> 'buddypress_registration',
 					),
 				),
-                array(
+				array(
 					'id' 	=> 'buddypress_xprofile',
 					'type' 	=> MS_Helper_Html::INPUT_TYPE_RADIO_SLIDER,
 					'title' => __( 'XProfile-Felder anzeigen', 'membership2' ),
@@ -263,6 +269,7 @@ class MS_Addon_BuddyPress extends MS_Addon {
 			),
 		);
 
+		// Wenn BuddyPress installiert, aber nicht aktiviert ist, ausgrauen.
 		if ( ! self::buddypress_active( true ) ) {
 			$list[ self::ID ]->description .= sprintf(
 				'<br /><b>%s</b>',
