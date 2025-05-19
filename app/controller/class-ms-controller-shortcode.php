@@ -679,7 +679,7 @@ class MS_Controller_Shortcode extends MS_Controller {
 					'show_note'       => true,   // Show the "you are not logged in" note?
 					'form'            => '',  // [login|lost|reset|logout]
 					'show_labels'     => false,
-					'autofocus'       => true,
+					'autofocus'       => false,
 					'nav_pos'         => 'top', // [top|bottom]
 
 					// form="login"
