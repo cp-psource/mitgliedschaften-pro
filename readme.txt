@@ -62,6 +62,10 @@ Use the opportunity to do so on GitHub or send your files to: webmaster@n3rds.wo
 
 == ChangeLog ==
 
+= 1.3.0 =
+
+* Anpassung von Bezeichnungen
+
 = 1.2.9 =
 
 * Fix: Autofocus Login-Widget

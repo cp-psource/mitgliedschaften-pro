@@ -115,7 +115,7 @@ class MS_Model_Pages extends MS_Model_Option {
 
 		if ( empty( $Page_types ) ) {
 			$Page_types = array(
-				self::MS_PAGE_MEMBERSHIPS 		=> __( 'Mitgliederliste', 'membership2' ),
+				self::MS_PAGE_MEMBERSHIPS 		=> __( 'Mitgliedschaften', 'membership2' ),
 				self::MS_PAGE_PROTECTED_CONTENT => __( 'Geschützter Inhalt', 'membership2' ),
 				self::MS_PAGE_REGISTER 			=> __( 'Registrierung', 'membership2' ),
 				self::MS_PAGE_REG_COMPLETE 		=> __( 'Danke Seite', 'membership2' ),

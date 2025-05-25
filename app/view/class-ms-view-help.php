@@ -1045,7 +1045,7 @@ class MS_View_Help extends MS_View {
 					<li>
 						<code>list_separator</code>
 						<?php _ex( '(Text)', 'help', 'membership2' ); ?>
-						<?php _ex( 'Wird verwendet, wenn der Feldwert eine Liste ist (d. H. Eine Mitgliederliste oder der Inhalt eines benutzerdefinierten Felds).', 'help', 'membership2' ); ?>
+						<?php _ex( 'Wird verwendet, wenn der Feldwert eine Liste ist (d. H. Eine Mitgliedschaften-Liste oder der Inhalt eines benutzerdefinierten Felds).', 'help', 'membership2' ); ?>
 						<span class="ms-help-default">
 							<?php _ex( 'Standard:', 'help', 'membership2' ); ?>
 							", "
@@ -1054,7 +1054,7 @@ class MS_View_Help extends MS_View {
 					<li>
 						<code>list_before</code>
 						<?php _ex( '(Text)', 'help', 'membership2' ); ?>
-						<?php _ex( 'Wird verwendet, wenn der Feldwert eine Liste ist (d. H. Eine Mitgliederliste oder der Inhalt eines benutzerdefinierten Felds).', 'help', 'membership2' ); ?>
+						<?php _ex( 'Wird verwendet, wenn der Feldwert eine Liste ist (d. H. Eine Mitgliedschaften-Liste oder der Inhalt eines benutzerdefinierten Felds).', 'help', 'membership2' ); ?>
 						<span class="ms-help-default">
 							<?php _ex( 'Standard:', 'help', 'membership2' ); ?>
 							""
@@ -1063,7 +1063,7 @@ class MS_View_Help extends MS_View {
 					<li>
 						<code>list_after</code>
 						<?php _ex( '(Text)', 'help', 'membership2' ); ?>
-						<?php _ex( 'Wird verwendet, wenn der Feldwert eine Liste ist (d. H. Eine Mitgliederliste oder der Inhalt eines benutzerdefinierten Felds).', 'help', 'membership2' ); ?>
+						<?php _ex( 'Wird verwendet, wenn der Feldwert eine Liste ist (d. H. Eine Mitgliedschaften-Liste oder der Inhalt eines benutzerdefinierten Felds).', 'help', 'membership2' ); ?>
 						<span class="ms-help-default">
 							<?php _ex( 'Standard:', 'help', 'membership2' ); ?>
 							""

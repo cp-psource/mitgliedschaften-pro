@@ -25,7 +25,7 @@ class MS_Helper_Member extends MS_Helper {
 				self::MSG_MEMBER_UPDATED 				=> __( 'Mitglied aktualisiert.', 'membership2' ),
 				self::MSG_MEMBER_ACTIVATION_TOGGLED 	=> __( 'Die Aktivierung des Mitglieds wurde umgeschaltet.', 'membership2' ),
 				self::MSG_MEMBER_BULK_UPDATED 			=> __( 'Mitglieder-Bulk aktualisiert.', 'membership2' ),
-				self::MSG_MEMBER_USER_ADDED 			=> __( 'Benutzer zur Mitgliedschaften-Mitgliederliste hinzugefügt.', 'membership2' ),
+				self::MSG_MEMBER_USER_ADDED 			=> __( 'Benutzer zur Mitgliedschaften-Liste hinzugefügt.', 'membership2' ),
 				self::MSG_MEMBER_NOT_ADDED 				=> __( 'Mitgliedschaft nicht hinzugefügt.', 'membership2' ),
 				self::MSG_MEMBER_NOT_DELETED 			=> __( 'Mitgliedschaft nicht gelöscht.', 'membership2' ),
 				self::MSG_MEMBER_NOT_UPDATED 			=> __( 'Mitglied nicht aktualisiert.', 'membership2' ),

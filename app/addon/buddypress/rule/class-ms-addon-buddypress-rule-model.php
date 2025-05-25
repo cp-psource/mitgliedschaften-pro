@@ -320,7 +320,7 @@ class MS_Addon_BuddyPress_Rule_Model extends MS_Rule {
 
 		$contents[ MS_Addon_BuddyPress_Rule::PROTECT_MEMBERS ] = (object) array(
 			'id' 			=> MS_Addon_BuddyPress_Rule::PROTECT_MEMBERS,
-			'name' 			=> __( 'Mitgliederliste', 'membership2' ),
+			'name' 			=> __( 'Mitgliedschaften', 'membership2' ),
 			'type' 			=> $this->rule_type,
 			'description' 	=> __( 'Nur Mitglieder können das BuddyPress-Mitgliederverzeichnis und die Mitgliederprofile anzeigen.', 'membership2' ),
 			'access' 		=> $this->get_rule_value( MS_Addon_BuddyPress_Rule::PROTECT_MEMBERS ),
