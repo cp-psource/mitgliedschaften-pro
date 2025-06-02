@@ -557,8 +557,9 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 			'description' => $description,
 			'automatic_payment_methods' => [
 				'enabled' => true,
-				'allow_redirects' => 'never',
+				//'allow_redirects' => 'never',
 			],
+			'return_url' => MS_Model_Pages::get_page_url( MS_Model_Pages::MS_PAGE_REG_COMPLETE ),
 		]);
 	}
 
@@ -577,5 +578,20 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 			'default_payment_method' => $payment_method_id,
 			'expand' => ['latest_invoice.payment_intent'],
 		]);
+	}
+
+	/**
+	 * Erstellt einen PaymentIntent für das Payment Element (Abo-Start, alle Zahlungsarten).
+	 */
+	public function create_subscription_payment_intent( $customer, $amount, $currency, $description = '' ) {
+		\Stripe\Stripe::setApiKey( $this->_gateway->get_secret_key() );
+		$intent = \Stripe\PaymentIntent::create([
+			'amount' => round( $amount * 100 ),
+			'currency' => strtolower( $currency ),
+			'customer' => $customer->id,
+			'automatic_payment_methods' => ['enabled' => true],
+			'description' => $description,
+		]);
+		return $intent->client_secret;
 	}
 }

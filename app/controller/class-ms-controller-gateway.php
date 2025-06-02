@@ -345,11 +345,54 @@ class MS_Controller_Gateway extends MS_Controller {
 				$member = $subscription->get_member();
 				$stripe_customer_id = $member->get_gateway_profile( 'stripe', 'customer_id' );
 				$stripe_price_id = MS_Gateway_Stripeplan::get_the_id( $membership->id, 'plan' );
-				$success_url = home_url('/erfolg');
-				$cancel_url = home_url('/abbruch');
+				$reg_complete_url = MS_Model_Pages::get_page_url( MS_Model_Pages::MS_PAGE_REG_COMPLETE );
+				$success_url = add_query_arg( 'redirect_status', 'success', $reg_complete_url );
+				$cancel_url  = add_query_arg( 'redirect_status', 'cancel',  $reg_complete_url );
+
+				// Für Subscription (Abo):
+				$allowed_methods_subscription = [
+					'card',
+					'sepa_debit',
+					'bancontact',
+					'ideal',
+					'sofort',
+					'bacs_debit',
+					'au_becs_debit',
+					'us_bank_account',
+					'acss_debit',
+					'afterpay_clearpay',
+					'affirm',
+					'klarna',
+				];
+
+				// Für Single-Payment:
+				$allowed_methods_single = [
+					'card',
+					'sofort',
+					'giropay',
+					'eps',
+					'bancontact',
+					'ideal',
+					'p24',
+					'alipay',
+					'wechat_pay',
+					'blik',
+					'boleto',
+					'oxxo',
+					'acss_debit',
+					'affirm',
+					'afterpay_clearpay',
+					'klarna',
+					'us_bank_account',
+					'au_becs_debit',
+					'sepa_debit',
+					// 'paypal', // NICHT aufnehmen!
+				];
+
+				//$allowed_methods = $allowed_methods_subscription;
 
 				$session = \Stripe\Checkout\Session::create([
-					'payment_method_types' => ['card'],
+					'payment_method_types' => $allowed_methods,
 					'mode' => 'subscription',
 					'customer' => $stripe_customer_id,
 					'line_items' => [[

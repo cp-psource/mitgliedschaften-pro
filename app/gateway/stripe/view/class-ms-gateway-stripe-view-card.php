@@ -35,35 +35,25 @@ class MS_Gateway_Stripe_View_Card extends MS_View {
 			<script>
 			document.addEventListener('DOMContentLoaded', function() {
 				var stripe = Stripe('<?php echo esc_js( $publishable_key ); ?>');
-				var elements = stripe.elements();
-				var card = elements.create('card');
-				card.mount('#ms-stripe-card-element');
-
-				card.on('change', function(event) {
-					var displayError = document.getElementById('ms-stripe-card-errors');
-					if (event.error) {
-						displayError.textContent = event.error.message;
-					} else {
-						displayError.textContent = '';
-					}
+				var elements = stripe.elements({
+					clientSecret: '<?php echo esc_js( $this->data["client_secret"] ); ?>'
 				});
+
+				var appearance = { theme: 'stripe' };
+				var paymentElement = elements.create('payment', {appearance});
+				paymentElement.mount('#ms-stripe-card-element');
 
 				var form = document.getElementById('ms-stripe-payment-form');
 				form.addEventListener('submit', function(event) {
 					event.preventDefault();
-					stripe.createPaymentMethod({
-						type: 'card',
-						card: card,
+					stripe.confirmPayment({
+						elements,
+						confirmParams: {
+							return_url: '<?php echo esc_js( MS_Model_Pages::get_page_url( MS_Model_Pages::MS_PAGE_REG_COMPLETE ) ); ?>'
+						}
 					}).then(function(result) {
 						if (result.error) {
 							document.getElementById('ms-stripe-card-errors').textContent = result.error.message;
-						} else {
-							var hiddenInput = document.createElement('input');
-							hiddenInput.setAttribute('type', 'hidden');
-							hiddenInput.setAttribute('name', 'stripePaymentMethod');
-							hiddenInput.setAttribute('value', result.paymentMethod.id);
-							form.appendChild(hiddenInput);
-							form.submit();
 						}
 					});
 				});

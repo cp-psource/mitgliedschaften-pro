@@ -388,20 +388,44 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 		);
 
 		$this->_api->set_gateway( $this );
+		$secret_key = $this->get_secret_key();
+		\Stripe\Stripe::setApiKey( $secret_key );
 
-        $secret_key = $this->get_secret_key();
-        \Stripe\Stripe::setApiKey( $secret_key );
-
-		// Make sure everyone is using the same API version. we can update this if/when necessary.
-		// If we don't set this, Stripe will use latest version, which may break our implementation.
-		//\Stripe\Stripe::setApiVersion( '2018-02-28' );
-
-		// retrieve the request's body and parse it as JSON
 		$body = @file_get_contents( 'php://input' );
-
 		$this->log( $body );
-		// grab the event information
 		$event_json = json_decode( $body );
+
+		// NEU: Payment Element Flow
+		if (isset($event_json->type) && $event_json->type === 'payment_intent.succeeded') {
+			$payment_intent_id = $event_json->data->object->id;
+			$customer_id = $event_json->data->object->customer;
+
+			$intent = \Stripe\PaymentIntent::retrieve($payment_intent_id);
+			$payment_method_id = $intent->payment_method;
+
+			$plan_id = isset($intent->metadata->plan_id) ? $intent->metadata->plan_id : null;
+			if (!$plan_id) {
+				$this->log('Plan-ID nicht gefunden!');
+				http_response_code(200);
+				exit;
+			}
+
+			$existing_subs = \Stripe\Subscription::all([
+				'customer' => $customer_id,
+				'limit' => 1,
+			]);
+			if (count($existing_subs->data) === 0) {
+				$subscription = \Stripe\Subscription::create([
+					'customer' => $customer_id,
+					'items' => [['plan' => $plan_id]],
+					'default_payment_method' => $payment_method_id,
+					'expand' => ['latest_invoice.payment_intent'],
+				]);
+				$this->log('Stripe-Abo angelegt: ' . $subscription->id);
+			}
+			http_response_code(200);
+			exit;
+		}
 
 		if( isset( $event_json->id ) ) {
 			try {
@@ -412,46 +436,46 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 				if ( $event && $this->valid_event( $event->type ) ) {
 					$stripe_invoice = $event->data->object;
 				if ( $stripe_invoice && isset( $stripe_invoice->id ) ) {
-						$stripe_invoice_amount 		= $stripe_invoice->total / 100.0;
-						$stripe_invoice_subtotal 	= $stripe_invoice->subtotal / 100.0;
-						$stripe_customer 		= \Stripe\Customer::retrieve( $stripe_invoice->customer );
-						$current_date 			= MS_Helper_Period::current_date( null, true );
+					$stripe_invoice_amount 		= $stripe_invoice->total / 100.0;
+					$stripe_invoice_subtotal 	= $stripe_invoice->subtotal / 100.0;
+					$stripe_customer 		= \Stripe\Customer::retrieve( $stripe_invoice->customer );
+					$current_date 			= MS_Helper_Period::current_date( null, true );
 				if ( $stripe_customer ) {
-							$email 	= $stripe_customer->email;
+					$email 	= $stripe_customer->email;
 							
 				if ( !function_exists( 'get_user_by' ) ) {
-								include_once( ABSPATH . 'wp-includes/pluggable.php' );
+					include_once( ABSPATH . 'wp-includes/pluggable.php' );
 				}
 	
-							$user 	= get_user_by( 'email', $email );
-							if ( $user && !is_wp_error( $user ) ) {
-								$member 	= MS_Factory::load( 'MS_Model_Member', $user->ID );
-								$success 	= false;
-								if ( $member ) {
+				$user 	= get_user_by( 'email', $email );
+				if ( $user && !is_wp_error( $user ) ) {
+					$member 	= MS_Factory::load( 'MS_Model_Member', $user->ID );
+					$success 	= false;
+					if ( $member ) {
 									
-									foreach ( $member->subscriptions as $subscription ) {
-										if ( $subscription ) {
-											if ( $subscription->is_system() ) { continue; }
-											$membership = $subscription->get_membership();
-											$stripe_sub = $this->_api->get_subscription_data(
-												$stripe_invoice->lines->data,
-												$membership
-											);
-											if ( $stripe_sub ) {
-												switch ( $event->type ){
-													case 'invoice.created' :
-														if ( $membership->has_trial() ) {
-															//$subscription->check_membership_status();                                                    
-															//if ( $subscription->trial_period_completed ) {
-															if( $subscription->status == MS_Model_Relationship::STATUS_TRIAL_EXPIRED &&
-																MS_Model_Addon::is_enabled( MS_Model_Addon::ADDON_TRIAL )){
+						foreach ( $member->subscriptions as $subscription ) {
+							if ( $subscription ) {
+								if ( $subscription->is_system() ) { continue; }
+								$membership = $subscription->get_membership();
+								$stripe_sub = $this->_api->get_subscription_data(
+								$stripe_invoice->lines->data,
+								$membership
+							);
+							if ( $stripe_sub ) {
+								switch ( $event->type ){
+									case 'invoice.created' :
+									if ( $membership->has_trial() ) {
+										//$subscription->check_membership_status();                                                    
+										//if ( $subscription->trial_period_completed ) {
+										if( $subscription->status == MS_Model_Relationship::STATUS_TRIAL_EXPIRED &&
+										MS_Model_Addon::is_enabled( MS_Model_Addon::ADDON_TRIAL )){
 																
-																$subscription->status = MS_Model_Relationship::STATUS_PENDING;
-																$subscription->save();
-															}
-														}
-													break;
-													case 'invoice.payment_succeeded' :
+											$subscription->status = MS_Model_Relationship::STATUS_PENDING;
+											$subscription->save();
+										}
+									}
+									break;
+									case 'invoice.payment_succeeded' :
 														if ( $current_date != $subscription->start_date ) {
 															$invoice = $subscription->get_current_invoice();															
 
