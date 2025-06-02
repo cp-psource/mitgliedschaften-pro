@@ -282,12 +282,10 @@ class MS_Controller_Gateway extends MS_Controller {
 	 * @since  1.0.0
 	 */
 	public function purchase_button( $subscription, $invoice ) {
-		// Get only active gateways
 		$gateways = MS_Model_Gateway::get_gateways( true );
 		$data = array();
 		$gateways_count = count( $gateways );
 
-		// Make sure free gateway is at last.
 		if ( isset( $gateways[ MS_Gateway_Free::ID ] ) ) {
 			$free = $gateways[ MS_Gateway_Free::ID ];
 			unset( $gateways[ MS_Gateway_Free::ID ] );
@@ -305,52 +303,66 @@ class MS_Controller_Gateway extends MS_Controller {
 			$is_free = true;
 		}
 
-		// show gateway purchase button for every active gateway
 		foreach ( $gateways as $gateway ) {
 			$view = null;
 
-			// Skip gateways that are not configured.
 			if ( ! $gateway->is_configured() ) { continue; }
 			if ( ! $membership->can_use_gateway( $gateway->id ) ) { continue; }
 
 			$data['ms_relationship'] = $subscription;
-			$data['gateway'] 	= $gateway;
-			$data['step'] 		= MS_Controller_Frontend::STEP_PROCESS_PURCHASE;
+			$data['gateway'] = $gateway;
+			$data['step'] = MS_Controller_Frontend::STEP_PROCESS_PURCHASE;
 
-			// Free membership, show only free gateway
 			if ( $is_free ) {
-				// If we need to create subscription on trial period.
 				if ( defined( 'MS_PAYPAL_TRIAL_SUBSCRIPTION' ) &&
-				     MS_PAYPAL_TRIAL_SUBSCRIPTION &&
-				     ! $membership->is_free() &&
-				     $invoice->amount > 0 &&
-				     $invoice->uses_trial &&
-				     $gateway->id === MS_Gateway_Paypalstandard::ID
+					MS_PAYPAL_TRIAL_SUBSCRIPTION &&
+					! $membership->is_free() &&
+					$invoice->amount > 0 &&
+					$invoice->uses_trial &&
+					$gateway->id === MS_Gateway_Paypalstandard::ID
 				) {
-					// Do not include PayPal standard in count.
 					$gateways_count = $gateways_count - 1;
-					// Action hook to run if subscription is forced on trial.
 					do_action(
 						'ms_controller_gateway_forced_subscription',
 						$gateway->id
 					);
 				} elseif ( MS_Gateway_Free::ID !== $gateway->id || $gateways_count <= 1 ) {
-					// If there are no other gateways active, do not show free button.
 					continue;
 				}
 			} elseif ( MS_Gateway_Free::ID === $gateway->id ) {
-				// Skip free gateway
 				continue;
 			}
 
 			$view_class = get_class( $gateway ) . '_View_Button';
 			$view = MS_Factory::create( $view_class );
 
+			// HIER Stripe Checkout Session erzeugen und URL ins $data legen!
+			if ( $gateway->id === MS_Gateway_Stripeplan::ID ) {
+				if ( ! class_exists( '\Stripe\Stripe' ) ) {
+					require_once( WP_PLUGIN_DIR . '/dein-stripe-autoloader-pfad/init.php' ); // ggf. anpassen!
+				}
+				\Stripe\Stripe::setApiKey( $gateway->get_secret_key() );
+				$member = $subscription->get_member();
+				$stripe_customer_id = $member->get_gateway_profile( 'stripe', 'customer_id' );
+				$stripe_price_id = MS_Gateway_Stripeplan::get_the_id( $membership->id, 'plan' );
+				$success_url = home_url('/erfolg');
+				$cancel_url = home_url('/abbruch');
+
+				$session = \Stripe\Checkout\Session::create([
+					'payment_method_types' => ['card'],
+					'mode' => 'subscription',
+					'customer' => $stripe_customer_id,
+					'line_items' => [[
+						'price' => $stripe_price_id,
+						'quantity' => 1,
+					]],
+					'success_url' => $success_url,
+					'cancel_url' => $cancel_url,
+				]);
+				$data['checkout_session_url'] = $session->url;
+			}
+
 			if ( MS_Gateway_Authorize::ID == $gateway->id ) {
-				/**
-				 *  set additional step for authorize.net (gateway specific form)
-				 *  @todo change to use popup, instead of another step (like stripe)
-				 */
 				$data['step'] = 'gateway_form';
 			}
 
@@ -377,7 +389,6 @@ class MS_Controller_Gateway extends MS_Controller {
 				echo $html;
 			}
 		}
-
 	}
 
 

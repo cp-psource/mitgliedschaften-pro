@@ -8,6 +8,10 @@
  * @package Membership2
  * @subpackage Model
  */
+if ( ! class_exists( '\Stripe\Stripe' ) ) {
+    require_once __DIR__ . '/../../../lib/vendor/autoload.php';
+}
+
 class MS_Gateway_Stripeplan extends MS_Gateway {
 
 	const ID = 'stripeplan';
@@ -385,12 +389,12 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 
 		$this->_api->set_gateway( $this );
 
-		$secret_key = $this->get_secret_key();
-		Stripe::setApiKey( $secret_key );
+        $secret_key = $this->get_secret_key();
+        \Stripe\Stripe::setApiKey( $secret_key );
 
 		// Make sure everyone is using the same API version. we can update this if/when necessary.
 		// If we don't set this, Stripe will use latest version, which may break our implementation.
-		Stripe::setApiVersion( '2018-02-28' );
+		\Stripe\Stripe::setApiVersion( '2018-02-28' );
 
 		// retrieve the request's body and parse it as JSON
 		$body = @file_get_contents( 'php://input' );
@@ -402,7 +406,7 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 		if( isset( $event_json->id ) ) {
 			try {
 				$event_id 	= $event_json->id;
-				$event 		= Stripe_Event::retrieve( $event_id );
+				$event 		= \Stripe\Event::retrieve( $event_id );
 				$log 		= false;
 				$invoice 	= false;
 				if ( $event && $this->valid_event( $event->type ) ) {
@@ -410,7 +414,7 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 				if ( $stripe_invoice && isset( $stripe_invoice->id ) ) {
 						$stripe_invoice_amount 		= $stripe_invoice->total / 100.0;
 						$stripe_invoice_subtotal 	= $stripe_invoice->subtotal / 100.0;
-						$stripe_customer 		= Stripe_Customer::retrieve( $stripe_invoice->customer );
+						$stripe_customer 		= \Stripe\Customer::retrieve( $stripe_invoice->customer );
 						$current_date 			= MS_Helper_Period::current_date( null, true );
 				if ( $stripe_customer ) {
 							$email 	= $stripe_customer->email;
@@ -808,7 +812,7 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 	 * @internal Called by process_purchase() and request_payment()
 	 *
 	 * @param  MS_Model_Relationship $subscription
-	 * @param  M2_Stripe_Subscription $stripe_sub
+	 * @param  M2_\Stripe\Subscription $stripe_sub
 	 */
 	protected function cancel_if_done( $subscription, $stripe_sub ) {
 		$membership = $subscription->get_membership();

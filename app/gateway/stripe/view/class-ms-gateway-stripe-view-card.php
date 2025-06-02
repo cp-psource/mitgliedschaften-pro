@@ -4,43 +4,73 @@ class MS_Gateway_Stripe_View_Card extends MS_View {
 
 	public function to_html() {
 		$fields = $this->prepare_fields();
-
+		$publishable_key = $this->data['publishable_key'];
 		ob_start();
 		?>
-			<div class="ms-wrap ms-card-info-wrapper">
-				<h2><?php _e( 'Kreditkarteninformationen', 'membership2' ); ?> </h2>
-				<table class="ms-table">
-					<tbody>
-						<tr>
-							<th><?php _e( 'Kartennummer', 'membership2' ); ?></th>
-							<th><?php _e( 'Kartenablaufdatum', 'membership2' ); ?></th>
-						</tr>
-						<tr>
-							<td><?php echo '**** **** **** '. $this->data['stripe']['card_num']; ?></td>
-							<td><?php echo '' . $this->data['stripe']['card_exp']; ?></td>
-						</tr>
-					</tbody>
-				</table>
-				<form action="" method="post">
-					<?php
-						foreach ( $fields as $field ) {
-							MS_Helper_Html::html_element( $field );
+		<div class="ms-wrap ms-card-info-wrapper">
+			<h2><?php _e( 'Kreditkarteninformationen', 'membership2' ); ?> </h2>
+			<table class="ms-table">
+				<tbody>
+					<tr>
+						<th><?php _e( 'Kartennummer', 'membership2' ); ?></th>
+						<th><?php _e( 'Kartenablaufdatum', 'membership2' ); ?></th>
+					</tr>
+					<tr>
+						<td><?php echo '**** **** **** '. $this->data['stripe']['card_num']; ?></td>
+						<td><?php echo '' . $this->data['stripe']['card_exp']; ?></td>
+					</tr>
+				</tbody>
+			</table>
+			<form id="ms-stripe-payment-form" action="" method="post">
+				<?php
+					foreach ( $fields as $field ) {
+						MS_Helper_Html::html_element( $field );
+					}
+				?>
+				<div id="ms-stripe-card-element"></div>
+				<div id="ms-stripe-card-errors" role="alert"></div>
+				<button id="ms-stripe-submit" type="submit"><?php _e( 'Kreditkarte ändern', 'membership2' ); ?></button>
+			</form>
+			<script src="https://js.stripe.com/v3/"></script>
+			<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				var stripe = Stripe('<?php echo esc_js( $publishable_key ); ?>');
+				var elements = stripe.elements();
+				var card = elements.create('card');
+				card.mount('#ms-stripe-card-element');
+
+				card.on('change', function(event) {
+					var displayError = document.getElementById('ms-stripe-card-errors');
+					if (event.error) {
+						displayError.textContent = event.error.message;
+					} else {
+						displayError.textContent = '';
+					}
+				});
+
+				var form = document.getElementById('ms-stripe-payment-form');
+				form.addEventListener('submit', function(event) {
+					event.preventDefault();
+					stripe.createPaymentMethod({
+						type: 'card',
+						card: card,
+					}).then(function(result) {
+						if (result.error) {
+							document.getElementById('ms-stripe-card-errors').textContent = result.error.message;
+						} else {
+							var hiddenInput = document.createElement('input');
+							hiddenInput.setAttribute('type', 'hidden');
+							hiddenInput.setAttribute('name', 'stripePaymentMethod');
+							hiddenInput.setAttribute('value', result.paymentMethod.id);
+							form.appendChild(hiddenInput);
+							form.submit();
 						}
-					?>
-					<script
-						src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-						data-key="<?php echo esc_attr( $this->data['publishable_key'] ); ?>"
-						data-amount="0"
-						data-name="<?php echo esc_attr( bloginfo( 'name' ) ); ?>"
-						data-description="<?php esc_attr_e( 'Ändere einfach die Karte', 'membership2' ); ?>"
-						data-panel-label="<?php esc_attr_e( 'Kreditkarte ändern', 'membership2' ); ?>"
-						data-email="<?php echo esc_attr( $this->data['member']->email ); ?>"
-						data-label="<?php esc_attr_e( 'Kartennummer ändern', 'membership2' ); ?>"
-						>
-					</script>
-				</form>
-				<div class="clear"></div>
-			</div>
+					});
+				});
+			});
+			</script>
+			<div class="clear"></div>
+		</div>
 		<?php
 		$html = ob_get_clean();
 		return $html;

@@ -8,6 +8,10 @@
  * @package Membership2
  * @subpackage Model
  */
+if ( ! class_exists( '\Stripe\Stripe' ) ) {
+    require_once __DIR__ . '/../../lib/vendor/autoload.php';
+}
+
 class MS_Gateway_Stripe extends MS_Gateway {
 
 	const ID = 'stripe';
@@ -136,11 +140,10 @@ class MS_Gateway_Stripe extends MS_Gateway {
 	 * @param MS_Model_Relationship $subscription The related membership relationship.
 	 */
 	public function process_purchase( $subscription ) {
-		$success 		= false;
-		$note 			= '';
-		$token 			= '';
-		$external_id 	= '';
-		$error 			= false;
+		$success      = false;
+		$note         = '';
+		$external_id  = '';
+		$error        = false;
 
 		do_action(
 			'ms_gateway_stripe_process_purchase_before',
@@ -149,40 +152,54 @@ class MS_Gateway_Stripe extends MS_Gateway {
 		);
 		$this->_api->set_gateway( $this );
 
-		$member 	= $subscription->get_member();
-		$invoice 	= $subscription->get_next_billable_invoice();
+		$member  = $subscription->get_member();
+		$invoice = $subscription->get_next_billable_invoice();
 
 		$note = 'Stripe Verarbeitung';
 
-		if ( ! empty( $_POST['stripeToken'] ) ) {
-			mslib3()->array->strip_slashes( $_POST, 'stripeToken' );
-
-			$token = $_POST['stripeToken'];
-			$external_id 	= $token;
+		// NEU: PaymentMethod-ID aus dem Formular holen
+		if ( ! empty( $_POST['stripePaymentMethod'] ) ) {
+			$payment_method_id = sanitize_text_field( $_POST['stripePaymentMethod'] );
 			try {
-				$customer 	= $this->_api->get_stripe_customer( $member, $token );
+				// Stripe Customer holen oder anlegen
+				$customer = $this->_api->get_stripe_customer( $member, null, $payment_method_id );
 
 				if ( 0 == $invoice->total ) {
-					// Free, just process.
+					// Kostenlos, einfach als bezahlt markieren
 					$invoice->changed();
-					$success 	= true;
-					$note 		= __( 'Keine Zahlung für die kostenlose Mitgliedschaft', 'membership2' );
+					$success = true;
+					$note    = __( 'Keine Zahlung für die kostenlose Mitgliedschaft', 'membership2' );
 				} else {
-					// Send request to gateway.
-					$charge = $this->_api->charge(
-						$customer,
-						$invoice->total,
-						$invoice->currency,
-						$invoice->name
-					);
-
-					if ( true == $charge->paid ) {
-						$invoice->pay_it( self::ID, $charge->id );
-						$note 		= __( 'Bezahlung erfolgreich', 'membership2' );
-						$note 		.= ' - Token: ' . $token;
-						$success 	= true;
+					// Prüfe, ob es ein Abo ist (z.B. über $subscription->is_recurring())
+					if ( $subscription->is_recurring() ) {
+						// Abo anlegen!
+						$stripe_subscription = $this->_api->subscribe( $customer, $invoice, $payment_method_id );
+						$external_id = $stripe_subscription->id;
+						if ( isset($stripe_subscription->status) && in_array($stripe_subscription->status, array('active', 'trialing')) ) {
+							$invoice->pay_it( self::ID, $stripe_subscription->id );
+							$note    = __( 'Abo erfolgreich angelegt', 'membership2' );
+							$success = true;
+						} else {
+							$note = __( 'Stripe-Abo konnte nicht angelegt werden', 'membership2' );
+						}
 					} else {
-						$note = __( 'Stripezahlung fehlgeschlagen', 'membership2' );
+						// Nur noch Einmalzahlung!
+						$intent = $this->_api->create_payment_intent(
+							$customer,
+							$payment_method_id,
+							$invoice->total,
+							$invoice->currency,
+							$invoice->name
+						);
+						$external_id = $intent->id;
+
+						if ( 'succeeded' === $intent->status ) {
+							$invoice->pay_it( self::ID, $intent->id );
+							$note    = __( 'Bezahlung erfolgreich', 'membership2' );
+							$success = true;
+						} else {
+							$note = __( 'Stripezahlung fehlgeschlagen', 'membership2' );
+						}
 					}
 				}
 			} catch ( Exception $e ) {
@@ -191,7 +208,7 @@ class MS_Gateway_Stripe extends MS_Gateway {
 				$error = $e;
 			}
 		} else {
-			$note = 'Stripe Gateway-Token nicht gefunden.';
+			$note = 'Stripe PaymentMethod nicht gefunden.';
 		}
 		$invoice->gateway_id = self::ID;
 		$invoice->save();
@@ -199,18 +216,18 @@ class MS_Gateway_Stripe extends MS_Gateway {
 
 		do_action(
 			'ms_gateway_transaction_log',
-			self::ID, // gateway ID
-			'process', // request|process|handle
-			$success, // success flag
-			$subscription->id, // subscription ID
-			$invoice->id, // invoice ID
-			$invoice->total, // charged amount
-			$note, // Descriptive text
-			$external_id // External ID
+			self::ID,
+			'process',
+			$success,
+			$subscription->id,
+			$invoice->id,
+			$invoice->total,
+			$note,
+			$external_id
 		);
 
 		if ( $error ) {
-			throw $e;
+			throw $error;
 		}
 
 		return apply_filters(
