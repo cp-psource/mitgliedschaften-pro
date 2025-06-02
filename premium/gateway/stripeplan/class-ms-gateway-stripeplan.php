@@ -394,7 +394,7 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 
 		// Make sure everyone is using the same API version. we can update this if/when necessary.
 		// If we don't set this, Stripe will use latest version, which may break our implementation.
-		\Stripe\Stripe::setApiVersion( '2018-02-28' );
+		//\Stripe\Stripe::setApiVersion( '2018-02-28' );
 
 		// retrieve the request's body and parse it as JSON
 		$body = @file_get_contents( 'php://input' );
@@ -592,10 +592,10 @@ class MS_Gateway_Stripeplan extends MS_Gateway {
 		if ( ! empty( $_POST['stripeToken'] ) ) {
 			mslib3()->array->strip_slashes( $_POST, 'stripeToken' );
 
-			$token = $_POST['stripeToken'];
-			$external_id = $token;
+			$payment_method_id = $_POST['stripeToken']; // Stripe v3: PaymentMethod-ID!
+			$external_id = $payment_method_id;
 			try {
-				$customer = $this->_api->get_stripe_customer( $member, $token );
+				$customer = $this->_api->get_stripe_customer( $member, null, $payment_method_id );
 
 				if ( 0 == $invoice->total ) {
 					// Free, just process.

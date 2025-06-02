@@ -170,36 +170,22 @@ class MS_Gateway_Stripe extends MS_Gateway {
 					$success = true;
 					$note    = __( 'Keine Zahlung für die kostenlose Mitgliedschaft', 'membership2' );
 				} else {
-					// Prüfe, ob es ein Abo ist (z.B. über $subscription->is_recurring())
-					if ( $subscription->is_recurring() ) {
-						// Abo anlegen!
-						$stripe_subscription = $this->_api->subscribe( $customer, $invoice, $payment_method_id );
-						$external_id = $stripe_subscription->id;
-						if ( isset($stripe_subscription->status) && in_array($stripe_subscription->status, array('active', 'trialing')) ) {
-							$invoice->pay_it( self::ID, $stripe_subscription->id );
-							$note    = __( 'Abo erfolgreich angelegt', 'membership2' );
-							$success = true;
-						} else {
-							$note = __( 'Stripe-Abo konnte nicht angelegt werden', 'membership2' );
-						}
-					} else {
-						// Nur noch Einmalzahlung!
-						$intent = $this->_api->create_payment_intent(
-							$customer,
-							$payment_method_id,
-							$invoice->total,
-							$invoice->currency,
-							$invoice->name
-						);
-						$external_id = $intent->id;
+					// Nur noch Einmalzahlung!
+					$intent = $this->_api->create_payment_intent(
+						$customer,
+						$payment_method_id,
+						$invoice->total,
+						$invoice->currency,
+						$invoice->name
+					);
+					$external_id = $intent->id;
 
-						if ( 'succeeded' === $intent->status ) {
-							$invoice->pay_it( self::ID, $intent->id );
-							$note    = __( 'Bezahlung erfolgreich', 'membership2' );
-							$success = true;
-						} else {
-							$note = __( 'Stripezahlung fehlgeschlagen', 'membership2' );
-						}
+					if ( 'succeeded' === $intent->status ) {
+						$invoice->pay_it( self::ID, $intent->id );
+						$note    = __( 'Bezahlung erfolgreich', 'membership2' );
+						$success = true;
+					} else {
+						$note = __( 'Stripezahlung fehlgeschlagen', 'membership2' );
 					}
 				}
 			} catch ( Exception $e ) {

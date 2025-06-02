@@ -47,7 +47,7 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 
 		if ( ! $Stripe_Loaded ) {
 			if ( ! class_exists( 'Stripe' ) ) {
-				require_once MS_Plugin::instance()->dir . '/lib/stripe-php/lib/Stripe.php';
+				require_once MS_Plugin::instance()->dir . '/lib/vendor/autoload.php';
 			}
 
 			do_action(
@@ -61,11 +61,11 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 		$this->_gateway = $gateway;
 
 		$secret_key = $this->_gateway->get_secret_key();
-		Stripe::setApiKey( $secret_key );
+		\Stripe\Stripe::setApiKey( $secret_key );
 
 		// Make sure everyone is using the same API version. we can update this if/when necessary.
 		// If we don't set this, Stripe will use latest version, which may break our implementation.
-		Stripe::setApiVersion( '2018-02-28' );
+		//\Stripe\Stripe::setApiVersion( '2018-02-28' );
 	}
 
 	/**
@@ -75,24 +75,37 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 	 * @internal
 	 *
 	 * @param MS_Model_Member $member The member.
-	 * @param string          $token  The credit card token.
+	 * @param string|null     $token  (früher Card-Token, jetzt nicht mehr genutzt)
+	 * @param string|null     $payment_method_id Stripe PaymentMethod-ID (neu!)
 	 *
 	 * @return \Stripe\Customer $customer
 	 */
-	public function get_stripe_customer( $member, $token ) {
+	public function get_stripe_customer( $member, $token = null, $payment_method_id = null ) {
 		$customer = $this->find_customer( $member );
 
 		if ( empty( $customer ) ) {
-			$customer = \Stripe\Customer::create(
-				array(
-					'card'  => $token,
-					'email' => $member->email,
-				)
-			);
+			$args = [
+				'email' => $member->email,
+			];
+			$customer = \Stripe\Customer::create( $args );
 			$member->set_gateway_profile( self::ID, 'customer_id', $customer->id );
 			$member->save();
-		} else {
-			$this->add_card( $member, $customer, $token );
+		}
+
+		// PaymentMethod an den Kunden anhängen, falls nötig
+		if ( $payment_method_id ) {
+			try {
+				$payment_method = \Stripe\PaymentMethod::retrieve($payment_method_id);
+				$payment_method->attach(['customer' => $customer->id]);
+			} catch (\Stripe\Exception\InvalidRequestException $e) {
+				// Schon angehängt? Dann ignorieren
+				if (false === strpos($e->getMessage(), 'is already attached')) {
+					throw $e;
+				}
+			}
+			\Stripe\Customer::update($customer->id, [
+				'invoice_settings' => ['default_payment_method' => $payment_method_id],
+			]);
 		}
 
 		return apply_filters(
@@ -412,7 +425,7 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 		     || ! is_a( $all_items[ $item_id ], 'Stripe_Plan' )
 		) {
 			try {
-				$item = Stripe_Plan::retrieve( $item_id );
+				$item = \Stripe\Plan::retrieve( $item_id );
 			} catch ( Exception $e ) {
 				// If the plan does not exist then stripe will throw an Exception.
 				$item = false;
@@ -432,7 +445,7 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 		}
 
 		if ( $plan_data['amount'] > 0 ) {
-			$item                  = Stripe_Plan::create( $plan_data );
+			$item                  = \Stripe\Plan::create( $plan_data );
 			$all_items[ $item_id ] = $item;
 		}
 
@@ -529,37 +542,40 @@ class MS_Gateway_Stripe_Api extends MS_Model_Option {
 		);
 	}
 
-	    /**
+	/**
      * Erstellt einen Payment Intent für Einmalzahlungen.
      */
-    public function create_payment_intent( $customer, $payment_method_id, $amount, $currency, $description ) {
-        \Stripe\Stripe::setApiKey( $this->get_secret_key() );
-        return \Stripe\PaymentIntent::create([
-            'amount' => round( $amount * 100 ),
-            'currency' => strtolower( $currency ),
-            'customer' => $customer->id,
-            'payment_method' => $payment_method_id,
-            'off_session' => false,
-            'confirm' => true,
-            'description' => $description,
-            'confirmation_method' => 'automatic',
-        ]);
-    }
+	public function create_payment_intent( $customer, $payment_method_id, $amount, $currency, $description ) {
+		\Stripe\Stripe::setApiKey( $this->_gateway->get_secret_key() );
+		return \Stripe\PaymentIntent::create([
+			'amount' => round( $amount * 100 ),
+			'currency' => strtolower( $currency ),
+			'customer' => $customer->id,
+			'payment_method' => $payment_method_id,
+			'off_session' => false,
+			'confirm' => true,
+			'description' => $description,
+			'automatic_payment_methods' => [
+				'enabled' => true,
+				'allow_redirects' => 'never',
+			],
+		]);
+	}
 
-    /**
-     * Erstellt ein Stripe-Abo (Subscription) mit PaymentMethod.
-     */
-    public function create_subscription( $customer, $payment_method_id, $plan_id ) {
-        \Stripe\Stripe::setApiKey( $this->get_secret_key() );
-        // PaymentMethod als Standard setzen
-        \Stripe\Customer::update($customer->id, [
-            'invoice_settings' => ['default_payment_method' => $payment_method_id],
-        ]);
-        return \Stripe\Subscription::create([
-            'customer' => $customer->id,
-            'items' => [['plan' => $plan_id]],
-            'default_payment_method' => $payment_method_id,
-            'expand' => ['latest_invoice.payment_intent'],
-        ]);
-    }
+	/**
+	 * Erstellt ein Stripe-Abo (Subscription) mit PaymentMethod.
+	 */
+	public function create_subscription( $customer, $payment_method_id, $plan_id ) {
+		\Stripe\Stripe::setApiKey( $this->_gateway->get_secret_key() );
+		// PaymentMethod als Standard setzen
+		\Stripe\Customer::update($customer->id, [
+			'invoice_settings' => ['default_payment_method' => $payment_method_id],
+		]);
+		return \Stripe\Subscription::create([
+			'customer' => $customer->id,
+			'items' => [['plan' => $plan_id]],
+			'default_payment_method' => $payment_method_id,
+			'expand' => ['latest_invoice.payment_intent'],
+		]);
+	}
 }
