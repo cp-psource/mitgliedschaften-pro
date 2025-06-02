@@ -3,7 +3,7 @@ Contributors: PSOURCE
 Tags: classicpress-plugin, classicpress, membership, multisite
 Requires at least: 4.9
 Tested up to: 6.8.1
-Stable tag: 1.2.9
+Stable tag: 1.3.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -65,6 +65,7 @@ Use the opportunity to do so on GitHub or send your files to: webmaster@n3rds.wo
 = 1.3.0 =
 
 * Anpassung von Bezeichnungen
+* Stripe Gateway v3
 
 = 1.2.9 =
 
